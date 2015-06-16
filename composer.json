@@ -10,7 +10,7 @@
       "php": ">=5.4",
       "symfony/symfony": "2.*"
     },
-    "target-dir": "steevanb/sf2-form-utils"
+    "target-dir": "steevanb/sf2-form-utils",
     "repositories": [
         {
             "type": "vcs",
