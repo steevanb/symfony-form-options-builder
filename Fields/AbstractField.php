@@ -36,7 +36,7 @@ class AbstractField
     /**
      * @return string
      */
-    public function getType()
+    public function getFieldType()
     {
         $fullClassName = get_class($this);
         $className = ($pos = strrpos($fullClassName, '\\')) ? substr($fullClassName, $pos + 1) : $fullClassName;
@@ -76,6 +76,6 @@ class AbstractField
 
     public function add()
     {
-        $this->builder->add($this->id, $this->getType(), $this->parameters);
+        $this->builder->add($this->id, $this->getFieldType(), $this->parameters);
     }
 }

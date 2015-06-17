@@ -11,7 +11,7 @@ trait Scale
      */
     public function setScale($scale)
     {
-        $this->setParameter('scale', $scale);
+        return $this->setParameter('scale', $scale);
     }
 
     /**
@@ -30,7 +30,7 @@ trait Scale
      */
     public function setPrecision($precision)
     {
-        $this->setParameter('precision', $precision);
+        return $this->setParameter('precision', $precision);
     }
 
     /**

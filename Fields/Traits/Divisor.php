@@ -11,7 +11,7 @@ trait Divisor
      */
     public function setDivisor($divisor)
     {
-        $this->setParameter('divisor', $divisor);
+        return $this->setParameter('divisor', $divisor);
     }
 
     /**
