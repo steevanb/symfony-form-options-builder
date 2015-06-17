@@ -2,6 +2,8 @@
 
 namespace steevanb\FormUtils\Fields\Traits;
 
+use Symfony\Component\Validator\Constraint;
+
 trait FormType
 {
     use BaseType;
