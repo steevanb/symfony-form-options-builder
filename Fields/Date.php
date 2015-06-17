@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\Fields;
 
-class Text extends AbstractField
+class Date extends AbstractField
 {
     use Traits\FormType;
 }

@@ -11,8 +11,14 @@ trait Grouping
      */
     public function setGrouping($grouping)
     {
-        $this->parameters['grouping'] = $grouping;
+        return $this->setParameter('grouping', $grouping);
+    }
 
-        return $this;
+    /**
+     * @return false|int
+     */
+    public function getGrouping()
+    {
+        return $this->getParameter('grouping', false);
     }
 }

@@ -2,17 +2,25 @@
 
 namespace steevanb\FormUtils\Fields\Traits;
 
+use Symfony\Component\Form\Extension\Core\DataTransformer\IntegerToLocalizedStringTransformer;
+
 trait RoundingMode
 {
     /**
-     * @param int $roudingMode
+     * @param int $roundingMode
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/integer.html#rounding-mode
      */
-    public function setRoundingMode($roudingMode)
+    public function setRoundingMode($roundingMode)
     {
-        $this->parameters['rouding_mode'] = $roudingMode;
+        return $this->setParameter('rounding_mode', $roundingMode);
+    }
 
-        return $this;
+    /**
+     * @return int
+     */
+    public function getRoundingMode()
+    {
+        return $this->getParameter('rounding_mode', IntegerToLocalizedStringTransformer::ROUND_DOWN);
     }
 }

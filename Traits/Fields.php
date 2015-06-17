@@ -10,9 +10,6 @@ trait Fields
     /** @var FormBuilderInterface */
     protected $builder;
 
-    /** @var bool */
-    protected $errorBubbling;
-
     /**
      * @param FormBuilderInterface $builder
      * @return $this
@@ -24,15 +21,9 @@ trait Fields
         return $this;
     }
 
-    /**
-     * @param bool $errorBubbling
-     * @return $this
-     */
-    public function setErrorBubbling($errorBubbling)
+    protected function getField($class, $id, $label)
     {
-        $this->errorBubbling = $errorBubbling;
 
-        return $this;
     }
 
     /**
@@ -43,10 +34,18 @@ trait Fields
      */
     public function getFieldText($id, $label, $required = true)
     {
-        $field = new FieldsType\Text($this->builder, $id);
+        $field = new FieldsType\Integer($this->builder, $id);
         $field->setLabel($label);
         $field->setRequired($required);
-        $field->setErrorBubbling($this->errorBubbling);
+
+        return $field;
+    }
+
+    public function getFieldDate($id, $label, $required = true)
+    {
+        $field = new FieldsType\Date($this->builder, $id);
+        $field->setLabel($label);
+        $field->setRequired($required);
 
         return $field;
     }
