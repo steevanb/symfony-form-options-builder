@@ -7,6 +7,10 @@ use Symfony\Component\Validator\Constraint;
 trait FormType
 {
     use BaseType;
+    use ErrorBubbling;
+    use Data;
+    use Mapped;
+    use PropertyPath;
 
     /**
      * @param array $constraints
@@ -32,29 +36,12 @@ trait FormType
     }
 
     /**
+     * @param null|array $default
      * @return array
      */
-    public function getConstraints()
+    public function getConstraints($default = array())
     {
-        return $this->getParameter('constraints', array());
-    }
-
-    /**
-     * @param mixed $data
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
-     */
-    public function setData($data)
-    {
-        return $this->setParameter('data', $data);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getData()
-    {
-        return $this->getParameter('data');
+        return $this->getParameter('constraints', $default);
     }
 
     /**
@@ -73,24 +60,6 @@ trait FormType
     public function getEmptyData()
     {
         return $this->getParameter('empty_data');
-    }
-
-    /**
-     * @param bool $errorBubbling
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-bubbling
-     */
-    public function setErrorBubbling($errorBubbling = true)
-    {
-        return $this->setParameter('error_bubbling', $errorBubbling);
-    }
-
-    /**
-     * @return null|bool
-     */
-    public function getErrorBubbling()
-    {
-        return $this->getParameter('error_bubbling');
     }
 
     /**
@@ -122,64 +91,12 @@ trait FormType
     }
 
     /**
+     * @param null|array $default
      * @return array
      */
-    public function getInvalidMessageParameters()
+    public function getInvalidMessageParameters($default = array())
     {
-        return $this->getParameter('invalid_message_parameters', array());
-    }
-
-    /**
-     * @param array $attr
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label-attr
-     */
-    public function setLabelAttr(array $attr)
-    {
-        return $this->setParameter('label_attr', $attr);
-    }
-
-    /**
-     * @return array
-     */
-    public function getLabelAttr()
-    {
-        return $this->getParameter('label_attr', array());
-    }
-
-    /**
-     * @param bool $mapped
-     * @return $this
-     */
-    public function setMapped($mapped = true)
-    {
-        return $this->setParameter('mapped', boolval($mapped));
-    }
-
-    /**
-     * @return bool
-     */
-    public function getMapped()
-    {
-        return $this->getParameter('mapped', true);
-    }
-
-    /**
-     * @param string $path
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
-     */
-    public function setPropertyPath($path)
-    {
-        return $this->setParameter('property_path', $path);
-    }
-
-    /**
-     * @return string
-     */
-    public function getPropertyPath()
-    {
-        return $this->getParameter('property_path', $this->getId());
+        return $this->getParameter('invalid_message_parameters', $default);
     }
 
     /**
@@ -193,11 +110,12 @@ trait FormType
     }
 
     /**
+     * @param null|bool $default
      * @return bool
      */
-    public function getReadOnly()
+    public function getReadOnly($default = false)
     {
-        return $this->getParameter('read_only', false);
+        return $this->getParameter('read_only', $default);
     }
 
     /**
@@ -211,11 +129,12 @@ trait FormType
     }
 
     /**
+     * @param null|bool $default
      * @return bool
      */
-    public function getRequired()
+    public function getRequired($default = true)
     {
-        return $this->getParameter('required', true);
+        return $this->getParameter('required', $default);
     }
 
     /**
@@ -229,11 +148,12 @@ trait FormType
     }
 
     /**
+     * @param null|bool $default
      * @return bool
      */
-    public function getTrim()
+    public function getTrim($default = true)
     {
-        return $this->getParameter('trim', true);
+        return $this->getParameter('trim', $default);
     }
 
     /**
@@ -247,10 +167,11 @@ trait FormType
     }
 
     /**
+     * @param null|bool $default
      * @return bool
      */
-    public function getAutoInitialize()
+    public function getAutoInitialize($default = true)
     {
-        return $this->getParameter('auto_initialize', true);
+        return $this->getParameter('auto_initialize', $default);
     }
 }

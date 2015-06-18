@@ -2,11 +2,10 @@
 
 namespace steevanb\FormUtils\Fields;
 
-class Date extends AbstractField
+class Time extends AbstractField
 {
     use Traits\DateTimeCommon;
-    use Traits\DateType;
-    use Traits\HTML5;
+    use Traits\TimeType;
 
     const WIDGET_CHOICE = 'choice';
     const WIDGET_TEXT = 'text';

@@ -6,6 +6,10 @@ class Url extends AbstractField
 {
     use Traits\FormType;
 
+    const PROTOCOL_HTTP = 'http';
+    const PROTOCOL_HTTPS = 'https';
+    const PROTOCOL_FTP = 'ftp';
+
     /**
      * @param mixed $protocol
      * @return $this
@@ -17,10 +21,11 @@ class Url extends AbstractField
     }
 
     /**
+     * @param null|string $default
      * @return mixed
      */
-    public function getDefaultProtocol()
+    public function getDefaultProtocol($default = self::PROTOCOL_HTTP)
     {
-        return $this->getParameter('default_protocol', 'http');
+        return $this->getParameter('default_protocol', $default);
     }
 }

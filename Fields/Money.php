@@ -11,19 +11,21 @@ class Money extends AbstractField
     use Traits\Scale;
 
     /**
+     * @param null|int $default
      * @return int
      */
-    public function getScale()
+    public function getScale($default = 2)
     {
-        return $this->getParameter('scale', 2);
+        return $this->getParameter('scale', $default);
     }
 
     /**
+     * @param null|int $default
      * @return int
      * @deprecated Since 2.7
      */
-    public function getPrecision()
+    public function getPrecision($default = 2)
     {
-        return $this->getParameter('precision', 2);
+        return $this->getParameter('precision', $default);
     }
 }

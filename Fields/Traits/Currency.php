@@ -15,10 +15,11 @@ trait Currency
     }
 
     /**
+     * @param null|string $default
      * @return false|string
      */
-    public function getCurrency()
+    public function getCurrency($default = 'EUR')
     {
-        return $this->getParameter('currency', 'EUR');
+        return $this->getParameter('currency', $default);
     }
 }

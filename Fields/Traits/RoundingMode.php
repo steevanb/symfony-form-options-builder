@@ -17,10 +17,11 @@ trait RoundingMode
     }
 
     /**
+     * @param null|int $default
      * @return int
      */
-    public function getRoundingMode()
+    public function getRoundingMode($default = IntegerToLocalizedStringTransformer::ROUND_DOWN)
     {
-        return $this->getParameter('rounding_mode', IntegerToLocalizedStringTransformer::ROUND_DOWN);
+        return $this->getParameter('rounding_mode', $default);
     }
 }

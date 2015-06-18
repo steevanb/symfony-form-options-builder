@@ -55,6 +55,25 @@ trait BaseType
     }
 
     /**
+     * @param array $attr
+     * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label-attr
+     */
+    public function setLabelAttr(array $attr)
+    {
+        return $this->setParameter('label_attr', $attr);
+    }
+
+    /**
+     * @param null|array $default
+     * @return array
+     */
+    public function getLabelAttr($default = array())
+    {
+        return $this->getParameter('label_attr', $default);
+    }
+
+    /**
      * @param bool $disabled
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
@@ -65,11 +84,12 @@ trait BaseType
     }
 
     /**
+     * @param null|bool $default
      * @return bool
      */
-    public function getDisabled()
+    public function getDisabled($default = false)
     {
-        return $this->getParameter('disabled', false);
+        return $this->getParameter('disabled', $default);
     }
 
     /**
@@ -83,10 +103,11 @@ trait BaseType
     }
 
     /**
+     * @param null|string $default
      * @return string
      */
-    public function getTranslationDomain()
+    public function getTranslationDomain($default = 'messages')
     {
-        return $this->getParameter('translation_domain', 'messages');
+        return $this->getParameter('translation_domain', $default);
     }
 }
