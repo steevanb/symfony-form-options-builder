@@ -4,6 +4,19 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait TimeType
 {
+    use ParameterAccessors;
+
+    /**
+     * @param string $widget
+     * @return $this
+     */
+    abstract public function setWidget($widget);
+
+    /**
+     * @return string
+     */
+    abstract public function getWidget();
+
     /**
      * @param null|array $hours
      * @return $this
