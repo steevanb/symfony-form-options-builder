@@ -39,7 +39,7 @@ trait Fields
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @param string $label
      * @return FieldsType\Button
      */
@@ -52,7 +52,7 @@ trait Fields
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @param string $label
      * @return FieldsType\Reset
      */
@@ -65,7 +65,7 @@ trait Fields
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @param string $label
      * @param array $validationGroups
      * @return FieldsType\Submit
@@ -146,7 +146,7 @@ trait Fields
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @param string $label
      * @param int|string format
      * @param string $widget
@@ -165,7 +165,7 @@ trait Fields
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @param string $label
      * @param int|string format
      * @param string $widget
@@ -184,7 +184,7 @@ trait Fields
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @param string $label
      * @param int|string format
      * @param string $widget
@@ -200,7 +200,7 @@ trait Fields
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @param string $label
      * @param int|string format
      * @param string $widget
