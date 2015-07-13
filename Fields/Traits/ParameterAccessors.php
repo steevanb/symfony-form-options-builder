@@ -2,27 +2,19 @@
 
 namespace steevanb\FormUtils\Fields\Traits;
 
-use Symfony\Component\Form\Extension\Core\ChoiceList\ChoiceListInterface;
-
-trait ChoicesList
+trait ParameterAccessors
 {
     /**
-     * ChoiceListInterface is deprecated since 2.7, but for use with < 2.7, continue to use it
-     *
-     * @param ChoiceListInterface $choices
+     * @param string $name
+     * @param mixed $value
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#choices
      */
-    public function setChoicesList(ChoiceListInterface $choices)
-    {
-        return $this->setParameter('choices_list', $choices);
-    }
+    abstract public function setParameter($name, $value);
 
     /**
-     * @return null|ChoiceListInterface
+     * @param string $name
+     * @param mixed $default
+     * @return mixed
      */
-    public function getChoicesList()
-    {
-        return $this->getParameter('choices_list');
-    }
+    abstract public function getParameter($name, $default = null);
 }

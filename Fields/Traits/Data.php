@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait Data
 {
+    use ParameterAccessors;
+
     /**
      * @param mixed $data
      * @return $this

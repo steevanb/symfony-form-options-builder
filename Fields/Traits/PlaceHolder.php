@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait PlaceHolder
 {
+    use ParameterAccessors;
+
     /**
      * @param false|string $placeholder
      * @return $this

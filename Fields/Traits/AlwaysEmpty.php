@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait AlwaysEmpty
 {
+    use ParameterAccessors;
+
     /**
      * @param bool $alwaysEmpty
      * @return $this
@@ -17,8 +19,8 @@ trait AlwaysEmpty
     /**
      * @return int
      */
-    public function getDivisor()
+    public function getAlwaysEmpty()
     {
-        return $this->getAlwaysEmpty('always_empty', true);
+        return $this->getParameter('always_empty', true);
     }
 }

@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait PropertyPath
 {
+    use ParameterAccessors;
+
     /**
      * @param string $path
      * @return $this

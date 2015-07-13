@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait Divisor
 {
+    use ParameterAccessors;
+
     /**
      * @param int $divisor
      * @return $this

@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait ErrorBubbling
 {
+    use ParameterAccessors;
+
     /**
      * @param bool $errorBubbling
      * @return $this

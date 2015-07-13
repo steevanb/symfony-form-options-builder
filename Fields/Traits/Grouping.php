@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait Grouping
 {
+    use ParameterAccessors;
+
     /**
      * @param false|int $grouping
      * @return $this

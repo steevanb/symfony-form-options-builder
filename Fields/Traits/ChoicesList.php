@@ -6,6 +6,8 @@ use Symfony\Component\Form\Extension\Core\ChoiceList\ChoiceListInterface;
 
 trait ChoicesList
 {
+    use ParameterAccessors;
+
     /**
      * ChoiceListInterface is deprecated since 2.7, but for use with < 2.7, continue to use it
      *

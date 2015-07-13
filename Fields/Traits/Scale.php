@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait Scale
 {
+    use ParameterAccessors;
+
     /**
      * @param int $scale
      * @return $this

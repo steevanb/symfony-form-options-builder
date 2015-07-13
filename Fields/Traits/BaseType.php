@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait BaseType
 {
+    use ParameterAccessors;
+
     /**
      * @param array $attr
      * @return array

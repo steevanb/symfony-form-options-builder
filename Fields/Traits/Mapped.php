@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait Mapped
 {
+    use ParameterAccessors;
+
     /**
      * @param bool $mapped
      * @return $this

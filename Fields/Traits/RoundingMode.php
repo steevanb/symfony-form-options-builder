@@ -6,6 +6,8 @@ use Symfony\Component\Form\Extension\Core\DataTransformer\IntegerToLocalizedStri
 
 trait RoundingMode
 {
+    use ParameterAccessors;
+
     /**
      * @param int $roundingMode
      * @return $this

@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait HTML5
 {
+    use ParameterAccessors;
+
     /**
      * @param bool $html5
      * @return $this

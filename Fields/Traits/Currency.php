@@ -4,6 +4,8 @@ namespace steevanb\FormUtils\Fields\Traits;
 
 trait Currency
 {
+    use ParameterAccessors;
+
     /**
      * @param false|string $currency
      * @return $this
