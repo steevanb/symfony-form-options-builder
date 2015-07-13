@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\Fields;
 
-use  Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class DateTime extends AbstractField
 {
