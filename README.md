@@ -12,13 +12,24 @@ SF2FormUtils helps you writing your SF2 FormType, with some traits and methods t
 
 [Changelog](Documentation/changelog.md)
 
-Documentation
--------------
+Traits\Fields
+--------------------------------
 
-steevanb\FormUtils\Traits\Name : FormType::getName() always same return syntax
+FormType::buildForm() object oriented instead of array
 
-[steevanb\FormUtils\Traits\Fields](Documentation/fields.md) : FormType::buildForm() object oriented instead of array
+[Documentation](Documentation/fields.md)
 
-steevanb\FormUtils\Traits\TranslatorAware : add setTranslator(TranslatorInterface $translator) and getTranslator()
+Traits\Name
+------------------------------
 
-steevanb\FormUtils\Traits\TranslatorAwareWithConstruct : based on TranslatorAware, add setTranslator() call in __construct(TranslatorInterface $translator)
+Define getName(), allows to always return same syntax for form type name
+
+Traits\TranslatorAware
+-----------------------------------------
+
+Add setTranslator(TranslatorInterface $translator) and getTranslator()
+
+Traits\TranslatorAwareWithConstruct
+------------------------------------------------------
+
+Based on TranslatorAware, add setTranslator() call in __construct(TranslatorInterface $translator)
