@@ -17,6 +17,7 @@ class Checkbox extends AbstractField
     }
 
     /**
+     * @param int $default
      * @return mixed
      */
     public function getValue($default = 1)
