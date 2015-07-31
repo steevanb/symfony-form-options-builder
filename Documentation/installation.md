@@ -10,7 +10,7 @@ Or add it manually :
 # composer.json
 {
     "require": {
-        "steevanb/sf2-form-utils": "1.0*"
+        "steevanb/sf2-form-utils": "1.0.*"
     }
 }
 ```
