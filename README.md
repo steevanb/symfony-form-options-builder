@@ -22,7 +22,7 @@ FormType::buildForm() object oriented instead of array
 Traits\Name
 ------------------------------
 
-Define getName(), allows to always return same syntax for form type name
+Add getName(), allows to always return same syntax for form type name
 
 Traits\TranslatorAware
 -----------------------------------------
@@ -32,4 +32,4 @@ Add setTranslator(TranslatorInterface $translator) and getTranslator()
 Traits\TranslatorAwareWithConstruct
 ------------------------------------------------------
 
-Based on TranslatorAware, add setTranslator() call in __construct(TranslatorInterface $translator)
+Based on TranslatorAware, add __construct(TranslatorInterface $translator) with setTranslator($translator) call
