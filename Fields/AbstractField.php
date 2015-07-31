@@ -74,13 +74,8 @@ class AbstractField
         return $this->parameters;
     }
 
-    /**
-     * @return $this
-     */
     public function add()
     {
         $this->builder->add($this->id, $this->getFieldType(), $this->parameters);
-
-        return $this;
     }
 }
