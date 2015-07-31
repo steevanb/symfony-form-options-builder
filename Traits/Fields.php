@@ -4,6 +4,7 @@ namespace steevanb\FormUtils\Traits;
 
 use Symfony\Component\Form\FormBuilderInterface;
 use steevanb\FormUtils\Fields as FieldsType;
+use Symfony\Component\Form\FormTypeInterface;
 
 trait Fields
 {
@@ -387,5 +388,20 @@ trait Fields
     protected function getFieldCheckbox($id, $label = null, $required = true)
     {
         return $this->getField('Checkbox', $id, $label, $required);
+    }
+
+    /**
+     * @param string $id
+     * @param string|FormTypeInterface $type
+     * @param string $label
+     * @param bool $required
+     * @return FieldsType\Collection
+     */
+    protected function getFieldCollection($id, $type, $label = null, $required = true)
+    {
+        $field = $this->getField('Collection', $id, $label, $required);
+        $field->setType($type);
+
+        return $field;
     }
 }
