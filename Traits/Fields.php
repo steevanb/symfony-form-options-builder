@@ -392,7 +392,7 @@ trait Fields
 
     /**
      * @param string $id
-     * @param string|FormTypeInterface $type
+     * @param FormTypeInterface|string $type
      * @param string $label
      * @param bool $required
      * @return FieldsType\Collection
