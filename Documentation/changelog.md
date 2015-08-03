@@ -1,9 +1,10 @@
-master
-------
+1.1.0 (2015-08-03)
+------------------
 
 - Add getFieldCollection() to steevanb\FormUtils\Traits\Fields
 - Add steevanb\FormUtils\Traits\TranslatorAware
 - Add steevanb\FormUtils\Traits\TranslatorAwareWithConstruct
+- Create documentation
 
 1.0.0 (2015-07-13)
 ------------------
