@@ -1,3 +1,10 @@
+1.1.1 (2015-08-11)
+------------------
+
+- Add $name parameter to getAttr()
+- Fix setPlaceHolder() and getPlaceHolder()
+- Add PlaceHolder trait to Text field
+
 1.1.0 (2015-08-03)
 ------------------
 
