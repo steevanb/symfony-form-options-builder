@@ -31,11 +31,22 @@ trait BaseType
     }
 
     /**
-     * @return array
+     * @param string $name
+     * @return array|mixed
      */
-    public function getAttr()
+    public function getAttr($name = null)
     {
-        return $this->getParameter('attr');
+        if (empty($name)) {
+            return $this->getParameter('attr');
+        }
+
+        foreach ($this->getParameter('attr') as $attrName => $attrValue) {
+            if ($attrName == $name) {
+                return $attrValue;
+            }
+        }
+
+        return null;
     }
 
     /**
