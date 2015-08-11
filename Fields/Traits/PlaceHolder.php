@@ -13,7 +13,7 @@ trait PlaceHolder
      */
     public function setPlaceHolder($placeholder)
     {
-        return $this->setParameter('placeholder', $placeholder);
+        return $this->addAttr('placeholder', $placeholder);
     }
 
     /**
@@ -21,6 +21,6 @@ trait PlaceHolder
      */
     public function getPlaceHolder()
     {
-        return $this->getParameter('placeholder');
+        return $this->getAttr('placeholder');
     }
 }
