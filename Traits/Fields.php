@@ -374,7 +374,9 @@ trait Fields
     protected function getFieldHidden($id, $data = null)
     {
         $field = new FieldsType\Hidden($this->builder, $id);
-        $field->setData($data);
+        if ($data !== null) {
+            $field->setData($data);
+        }
 
         return $field;
     }
