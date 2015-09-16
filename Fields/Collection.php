@@ -14,7 +14,7 @@ class Collection extends AbstractField
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/collection.html#allow-add
      */
-    public function setAllowAdd($allow)
+    public function setAllowAdd($allow = true)
     {
         return $this->setParameter('allow_add', boolval($allow));
     }
@@ -33,7 +33,7 @@ class Collection extends AbstractField
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/collection.html#allow-delete
      */
-    public function setAllowDelete($allow)
+    public function setAllowDelete($allow = true)
     {
         return $this->setParameter('allow_delete', boolval($allow));
     }
@@ -52,7 +52,7 @@ class Collection extends AbstractField
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/collection.html#delete-empty
      */
-    public function setDeleteEmpty($delete)
+    public function setDeleteEmpty($delete = true)
     {
         return $this->setParameter('delete_empty', boolval($delete));
     }
@@ -91,11 +91,11 @@ class Collection extends AbstractField
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/collection.html#prototype
      */
-    public function setPrototype($prototype, $setAllowAdd = true)
+    public function setPrototype($prototype = true, $setAllowAdd = true)
     {
         $this->setParameter('prototype', boolval($prototype));
         if ($prototype && $setAllowAdd) {
-            $this->setAllowAdd(true);
+            $this->setAllowAdd();
         }
 
         return $this;
@@ -120,7 +120,7 @@ class Collection extends AbstractField
     {
         $this->setParameter('prototype_name', $name);
         if ($setAllowAdd) {
-            $this->setPrototype(true);
+            $this->setPrototype();
         }
 
         return $this;
@@ -149,7 +149,7 @@ class Collection extends AbstractField
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/collection.html#by-reference
      */
-    public function setByReference($byReference)
+    public function setByReference($byReference = true)
     {
         return $this->setParameter('by_reference', boolval($byReference));
     }

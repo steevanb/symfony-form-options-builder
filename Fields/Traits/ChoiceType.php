@@ -51,7 +51,7 @@ trait ChoiceType
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/choice.html#expanded
      */
-    public function setExpanded($expanded)
+    public function setExpanded($expanded = true)
     {
         return $this->setParameter('expanded', $expanded);
     }

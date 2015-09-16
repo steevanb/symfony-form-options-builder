@@ -11,7 +11,7 @@ trait CascadeValidation
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/collection.html#cascade-validation
      */
-    public function setCascadeValidation($validation)
+    public function setCascadeValidation($validation = true)
     {
         return $this->setParameter('cascade_validation', boolval($validation));
     }
