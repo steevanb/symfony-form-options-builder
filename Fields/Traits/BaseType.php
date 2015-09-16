@@ -107,7 +107,7 @@ trait BaseType
 
     /**
      * @param string $domain
-     * @return string
+     * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
      */
     public function setTranslationDomain($domain)
