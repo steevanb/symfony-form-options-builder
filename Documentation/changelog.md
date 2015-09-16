@@ -1,3 +1,10 @@
+1.2.0 (2015-09-16)
+------------------
+
+- Add default value to true to setAllowAdd(), setAllowDelete(), setDeleteEmpty(), setPrototype(), setCascadeValidation(), setExpanded() and setByReference()
+- Add setRepositoryMethod() to getFieldEntity()
+- Fix PHPDoc @return for setTranslationDomain()
+
 1.1.2 (2015-08-21)
 ------------------
 
