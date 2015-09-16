@@ -2,6 +2,7 @@
 
 namespace steevanb\FormUtils\Fields;
 
+use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 
 class Entity extends AbstractField
@@ -115,5 +116,17 @@ class Entity extends AbstractField
     public function getQueryBuilder()
     {
         return $this->getParameter('query_builder');
+    }
+
+    /**
+     * @param string $method
+     * @param array $params
+     * @return $this
+     */
+    public function setRepositoryMethod($method, $params = array())
+    {
+        return $this->setParameter('query_builder', function (EntityRepository $repository) use ($method, $params) {
+            return call_user_func(array($repository, $method), $params);
+        });
     }
 }
