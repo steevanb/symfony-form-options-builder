@@ -1,3 +1,9 @@
+1.3.0 (2015-09-18)
+------------------
+
+- Add BaseType::removeAttr()
+- Add setAutofocus() and getAutofocus() on Button, Email, Entity, Integer, Money, Number, Password, Percent, Reset, Search, Submit, Text, Textarea, DateTimeCommon and Url
+
 1.2.0 (2015-09-16)
 ------------------
 
