@@ -50,6 +50,23 @@ trait BaseType
     }
 
     /**
+     * @param string $name
+     * @return $this
+     */
+    public function removeAttr($name)
+    {
+        $attr = array();
+        foreach ($this->getParameter('attr') as $attrName => $attrValue) {
+            if ($attrName != $name) {
+                $attr[$attrName] = $attrValue;
+            }
+        }
+        $this->setAttr($attr);
+
+        return $this;
+    }
+
+    /**
      * @param string $label
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
