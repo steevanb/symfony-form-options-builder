@@ -5,6 +5,7 @@ namespace steevanb\FormUtils\Fields;
 class Submit extends AbstractField
 {
     use Traits\BaseType;
+    use Traits\Autofocus;
 
     /**
      * @param null|false|array $groups

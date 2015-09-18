@@ -6,6 +6,7 @@ trait DateTimeCommon
 {
     use FormType;
     use PlaceHolder;
+    use Autofocus;
 
     /**
      * @param string $input

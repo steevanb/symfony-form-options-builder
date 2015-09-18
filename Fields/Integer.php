@@ -8,4 +8,5 @@ class Integer extends AbstractField
     use Traits\Grouping;
     use Traits\Scale;
     use Traits\RoundingMode;
+    use Traits\Autofocus;
 }

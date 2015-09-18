@@ -101,7 +101,7 @@ class Entity extends AbstractField
     }
 
     /**
-     * @param QueryBuilder|Closure $queryBuilder
+     * @param QueryBuilder|\Closure $queryBuilder
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/entity.html#query-builder
      */
