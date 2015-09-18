@@ -9,6 +9,7 @@ class Money extends AbstractField
     use Traits\Divisor;
     use Traits\Grouping;
     use Traits\Scale;
+    use Traits\PlaceHolder;
     use Traits\Autofocus;
 
     /**

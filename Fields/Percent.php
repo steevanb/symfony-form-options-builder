@@ -6,6 +6,7 @@ class Percent extends AbstractField
 {
     use Traits\FormType;
     use Traits\Scale;
+    use Traits\PlaceHolder;
     use Traits\Autofocus;
 
     const TYPE_FRACTIONAL = 'fractional';

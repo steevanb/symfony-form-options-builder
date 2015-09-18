@@ -5,6 +5,7 @@ namespace steevanb\FormUtils\Fields;
 class Url extends AbstractField
 {
     use Traits\FormType;
+    use Traits\PlaceHolder;
     use Traits\Autofocus;
 
     const PROTOCOL_HTTP = 'http';
