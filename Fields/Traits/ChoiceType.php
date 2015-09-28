@@ -27,6 +27,24 @@ trait ChoiceType
     }
 
     /**
+     * @param mixed $attr
+     * @return $this
+     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     */
+    public function setChoiceAttr($attr)
+    {
+        return $this->setParameter('choice_attr', $attr);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChoiceAttr()
+    {
+        return $this->getParameter('choice_attr');
+    }
+
+    /**
      * @param false|string $value
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/choice.html#placeholder
