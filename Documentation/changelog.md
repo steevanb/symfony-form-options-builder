@@ -1,3 +1,8 @@
+1.3.2 (2015-09-28)
+------------------
+
+- Add setChoiceAttr() and getChoiceAttr() to getFieldEntity(), getFieldCountry() and getFieldLocale()
+
 1.3.1 (2015-09-18)
 ------------------
 
