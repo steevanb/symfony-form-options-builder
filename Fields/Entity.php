@@ -9,6 +9,7 @@ class Entity extends AbstractField
 {
     use Traits\ChoiceType;
     use Traits\ChoicesList;
+    use Traits\ByReference;
 
     /**
      * @param string $class
