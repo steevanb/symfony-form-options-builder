@@ -1,7 +1,14 @@
+1.3.4 (2015-10-01)
+------------------
+
+- Add asMultipleSelect(), asSelect(), asRadioButtons() and asCheckboxes() to Choice types.
+  Imply added to getFieldChoice(), getFieldCountry(), getFieldCurrency(), getFieldEntity(), getFieldLanguage(), getFieldLocale(), getFieldTimezone().
+
 1.3.3 (2015-09-30)
 ------------------
 
-- Add steevanb\FormUtils\Fields\Traits\ByReference, use it in getFieldCollection() and add it to getFieldEntity(). This allows both to call setByReference() and getByReference()
+- Add steevanb\FormUtils\Fields\Traits\ByReference, use it in getFieldCollection() and add it to getFieldEntity().
+  This allows both to call setByReference() and getByReference()
 
 1.3.2 (2015-09-28)
 ------------------
