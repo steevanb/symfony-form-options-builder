@@ -1,7 +1,7 @@
-[![version](https://img.shields.io/badge/version-1.3.4-green.svg)](https://github.com/steevanb/sf2-form-utils/tree/1.3.4)
+[![version](https://img.shields.io/badge/version-1.4.0-green.svg)](https://github.com/steevanb/sf2-form-utils/tree/1.4.0)
 [![symfony](https://img.shields.io/badge/symfony-%3E%3D%202.3-blue.svg)](https://symfony.com/)
-[![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/0f599bbe-1431-4f4c-aa7a-2b25c4c121df/analyses/18)
-[![Scrutinizer](https://img.shields.io/badge/scrutinizer-10%2F10-brightgreen.svg)](https://scrutinizer-ci.com/g/steevanb/sf2-form-utils/inspections/d7a12ac5-c856-4d39-86a7-93e6f5591059)
+[![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/0f599bbe-1431-4f4c-aa7a-2b25c4c121df/analyses/19)
+[![Scrutinizer](https://img.shields.io/badge/scrutinizer-10%2F10-brightgreen.svg)](https://scrutinizer-ci.com/g/steevanb/sf2-form-utils/inspections/ca2cd7e4-c008-4c94-84ea-e98b5f4545ab)
 
 sf2-form-utils
 ==============
