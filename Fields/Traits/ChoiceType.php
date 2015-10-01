@@ -27,6 +27,60 @@ trait ChoiceType
     }
 
     /**
+     * @param mixed $label
+     * @return $this
+     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     */
+    public function setChoiceLabel($label)
+    {
+        return $this->setParameter('choice_label', $label);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChoiceLabel()
+    {
+        return $this->getParameter('choice_label');
+    }
+
+    /**
+     * @param mixed $name
+     * @return $this
+     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     */
+    public function setChoiceName($name)
+    {
+        return $this->setParameter('choice_name', $name);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChoiceName()
+    {
+        return $this->getParameter('choice_name');
+    }
+
+    /**
+     * @param mixed $value
+     * @return $this
+     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     */
+    public function setChoiceValue($value)
+    {
+        return $this->setParameter('choice_value', $value);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChoiceValue()
+    {
+        return $this->getParameter('choice_value');
+    }
+
+    /**
      * @param mixed $attr
      * @return $this
      * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
@@ -42,6 +96,42 @@ trait ChoiceType
     public function getChoiceAttr()
     {
         return $this->getParameter('choice_attr');
+    }
+
+    /**
+     * @param mixed $groupBy
+     * @return $this
+     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     */
+    public function setGroupBy($groupBy)
+    {
+        return $this->setParameter('group_by', $groupBy);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGroupBy()
+    {
+        return $this->getParameter('group_by');
+    }
+
+    /**
+     * @param bool $asValues
+     * @return $this
+     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     */
+    public function setChoicesAsValues($asValues = true)
+    {
+        return $this->setParameter('choices_as_values', $asValues);
+    }
+
+    /**
+     * @return bool
+     */
+    public function getChoicesAsValues()
+    {
+        return $this->getParameter('choices_as_values', false);
     }
 
     /**
