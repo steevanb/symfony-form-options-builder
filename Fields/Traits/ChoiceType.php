@@ -103,6 +103,38 @@ trait ChoiceType
     }
 
     /**
+     * @return $this
+     */
+    public function asMultipleSelect()
+    {
+        return $this->setMultiple()->setExpanded(false);
+    }
+
+    /**
+     * @return $this
+     */
+    public function asSelect()
+    {
+        return $this->setMultiple(false)->setExpanded(false);
+    }
+
+    /**
+     * @return $this
+     */
+    public function asRadioButtons()
+    {
+        return $this->setMultiple(false)->setExpanded();
+    }
+
+    /**
+     * @return $this
+     */
+    public function asCheckboxes()
+    {
+        return $this->setMultiple()->setExpanded();
+    }
+
+    /**
      * @param array $choices
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/choice.html#preferred-choices
