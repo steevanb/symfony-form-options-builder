@@ -1,7 +1,7 @@
 1.4.0 (2015-10-01)
 ------------------
 
-- Add all new Symfony 2.7 Choice options : setChoiceLabel(), setChoiceName(), setChoiceValue(), setGroupBy() and setChoicesAsValues().
+- Add all new Symfony 2.7 Choice options : setChoiceLabel(), setChoiceTranslationDomain(), setChoiceLabelNotTranslatable(), setChoiceName(), setChoiceValue(), setGroupBy() and setChoicesAsValues().
   Imply added to getFieldChoice(), getFieldCountry(), getFieldCurrency(), getFieldEntity(), getFieldLanguage(), getFieldLocale(), getFieldTimezone().
 
 1.3.4 (2015-10-01)

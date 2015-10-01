@@ -45,6 +45,31 @@ trait ChoiceType
     }
 
     /**
+     * @param string|false $domain
+     * @return $this
+     */
+    public function setChoiceTranslationDomain($domain)
+    {
+        return $this->setParameter('choice_translation_domain', $domain);
+    }
+
+    /**
+     * @return string|false
+     */
+    public function getChoiceTranslationDomain()
+    {
+        return $this->getParameter('choice_translation_domain');
+    }
+
+    /**
+     * @return $this
+     */
+    public function setChoiceLabelNotTranslatable()
+    {
+        return $this->setChoiceTranslationDomain(false);
+    }
+
+    /**
      * @param mixed $name
      * @return $this
      * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
