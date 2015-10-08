@@ -67,7 +67,7 @@ trait BaseType
     }
 
     /**
-     * @param string $label
+     * @param string|false $label
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
      */
@@ -77,7 +77,7 @@ trait BaseType
     }
 
     /**
-     * @return string
+     * @return string|false
      */
     public function getLabel()
     {
@@ -123,7 +123,7 @@ trait BaseType
     }
 
     /**
-     * @param string $domain
+     * @param string|false $domain
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
      */
@@ -133,7 +133,7 @@ trait BaseType
     }
 
     /**
-     * @param null|string $default
+     * @param string|false $default
      * @return string
      */
     public function getTranslationDomain($default = 'messages')
