@@ -1,3 +1,8 @@
+master
+------
+
+- Add false type for setLabel() and setTranslationDomain() parameter
+
 1.4.0 (2015-10-01)
 ------------------
 
