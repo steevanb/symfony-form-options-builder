@@ -133,7 +133,7 @@ trait BaseType
     }
 
     /**
-     * @param string|false $default
+     * @param null|string|false $default
      * @return string
      */
     public function getTranslationDomain($default = 'messages')
