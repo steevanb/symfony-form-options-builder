@@ -32,9 +32,9 @@ trait Autocomplete
     public function setAutocomplete($autocomplete = true)
     {
         if ($autocomplete) {
-            return $this->addAttr('autocomplete', '');
-        } else {
             return $this->removeAttr('autocomplete');
+        } else {
+            return $this->addAttr('autocomplete', 'off');
         }
     }
 
@@ -43,6 +43,6 @@ trait Autocomplete
      */
     public function getAutocomplete()
     {
-        return $this->getAttr('autocomplete') !== null;
+        return $this->getAttr('autocomplete') !== 'off';
     }
 }
