@@ -8,6 +8,7 @@ class Percent extends AbstractField
     use Traits\Scale;
     use Traits\PlaceHolder;
     use Traits\Autofocus;
+    use Traits\Autocomplete;
 
     const TYPE_FRACTIONAL = 'fractional';
     const TYPE_INTEGER = 'integer';

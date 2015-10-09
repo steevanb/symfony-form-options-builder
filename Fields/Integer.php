@@ -10,4 +10,5 @@ class Integer extends AbstractField
     use Traits\RoundingMode;
     use Traits\PlaceHolder;
     use Traits\Autofocus;
+    use Traits\Autocomplete;
 }

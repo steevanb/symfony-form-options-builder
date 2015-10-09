@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\Fields\Traits;
 
-trait Autofocus
+trait Autocomplete
 {
     use ParameterAccessors;
 
@@ -26,23 +26,23 @@ trait Autofocus
     abstract public function removeAttr($name);
 
     /**
-     * @param bool $autofocus
+     * @param bool $autocomplete
      * @return $this
      */
-    public function setAutofocus($autofocus = true)
+    public function setAutocomplete($autocomplete = true)
     {
-        if ($autofocus) {
-            return $this->addAttr('autofocus', '');
+        if ($autocomplete) {
+            return $this->addAttr('autocomplete', '');
         } else {
-            return $this->removeAttr('autofocus');
+            return $this->removeAttr('autocomplete');
         }
     }
 
     /**
      * @return bool
      */
-    public function getAutofocus()
+    public function getAutocomplete()
     {
-        return $this->getAttr('autofocus') !== null;
+        return $this->getAttr('autocomplete') !== null;
     }
 }

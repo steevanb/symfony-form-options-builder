@@ -11,6 +11,7 @@ class Money extends AbstractField
     use Traits\Scale;
     use Traits\PlaceHolder;
     use Traits\Autofocus;
+    use Traits\Autocomplete;
 
     /**
      * @param null|int $default

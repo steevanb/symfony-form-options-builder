@@ -8,4 +8,5 @@ class Password extends AbstractField
     use Traits\AlwaysEmpty;
     use Traits\PlaceHolder;
     use Traits\Autofocus;
+    use Traits\Autocomplete;
 }

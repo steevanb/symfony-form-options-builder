@@ -7,6 +7,7 @@ class Url extends AbstractField
     use Traits\FormType;
     use Traits\PlaceHolder;
     use Traits\Autofocus;
+    use Traits\Autocomplete;
 
     const PROTOCOL_HTTP = 'http';
     const PROTOCOL_HTTPS = 'https';
