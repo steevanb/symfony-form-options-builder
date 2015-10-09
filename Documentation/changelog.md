@@ -1,7 +1,9 @@
-master
-------
+1.4.1 (2015-10-09)
+------------------
 
-- Add false type for setLabel() and setTranslationDomain() parameter
+- Fix PHPDoc for setLabel() and setTranslationDomain() parameter
+- Add setAutocomplete() and getAutocomplete() for getFieldEmail(), getFieldInteger(), getFieldMoney(), getFieldNumber(), getFieldPassword(), getFieldPercent(), getFieldText() and getFieldUrl()
+- Fix PHPDoc return type for getAutofocus() 
 
 1.4.0 (2015-10-01)
 ------------------
