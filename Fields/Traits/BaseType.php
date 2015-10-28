@@ -40,7 +40,7 @@ trait BaseType
             return $this->getParameter('attr');
         }
 
-        foreach ($this->getParameter('attr') as $attrName => $attrValue) {
+        foreach ($this->getParameter('attr', array()) as $attrName => $attrValue) {
             if ($attrName == $name) {
                 return $attrValue;
             }
@@ -56,7 +56,7 @@ trait BaseType
     public function removeAttr($name)
     {
         $attr = array();
-        foreach ($this->getParameter('attr') as $attrName => $attrValue) {
+        foreach ($this->getParameter('attr', array()) as $attrName => $attrValue) {
             if ($attrName != $name) {
                 $attr[$attrName] = $attrValue;
             }
