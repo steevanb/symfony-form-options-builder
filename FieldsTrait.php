@@ -35,11 +35,11 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\AbstractField
+     * @return Field\AbstractField
      */
     protected function getField($class, $id, $label = null, $required = true)
     {
-        $fullClass = 'steevanb\\FormUtils\\Fields\\' . $class;
+        $fullClass = 'steevanb\\FormUtils\\Field\\' . $class;
         $field = new $fullClass($this->builder, $id);
         $field->setLabel($label);
         $field->setRequired($required);
@@ -50,11 +50,11 @@ trait FieldsTrait
     /**
      * @param string $id
      * @param string $label
-     * @return Fields\Button
+     * @return Field\Button
      */
     protected function getFieldButton($id, $label = null)
     {
-        $field = new Fields\Button($this->builder, $id);
+        $field = new Field\Button($this->builder, $id);
         $field->setLabel($label);
 
         return $field;
@@ -63,11 +63,11 @@ trait FieldsTrait
     /**
      * @param string $id
      * @param string $label
-     * @return Fields\Reset
+     * @return Field\Reset
      */
     protected function getFieldReset($id, $label = null)
     {
-        $field = new Fields\Reset($this->builder, $id);
+        $field = new Field\Reset($this->builder, $id);
         $field->setLabel($label);
 
         return $field;
@@ -77,11 +77,11 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param array $validationGroups
-     * @return Fields\Submit
+     * @return Field\Submit
      */
     protected function getFieldSubmit($id, $label = null, array $validationGroups = null)
     {
-        $field = new Fields\Submit($this->builder, $id);
+        $field = new Field\Submit($this->builder, $id);
         $field->setLabel($label);
         $field->setValidationGroups($validationGroups);
 
@@ -92,7 +92,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Text
+     * @return Field\Text
      */
     protected function getFieldText($id, $label = null, $required = true)
     {
@@ -103,7 +103,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Email
+     * @return Field\Email
      */
     protected function getFieldEmail($id, $label = null, $required = true)
     {
@@ -114,7 +114,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Password
+     * @return Field\Password
      */
     protected function getFieldPassword($id, $label = null, $required = true)
     {
@@ -125,7 +125,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Search
+     * @return Field\Search
      */
     protected function getFieldSearch($id, $label = null, $required = true)
     {
@@ -136,7 +136,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Url
+     * @return Field\Url
      */
     protected function getFieldUrl($id, $label = null, $required = true)
     {
@@ -147,7 +147,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Textarea
+     * @return Field\Textarea
      */
     protected function getFieldTextArea($id, $label = null, $required = true)
     {
@@ -160,9 +160,9 @@ trait FieldsTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Fields\Date
+     * @return Field\Date
      */
-    protected function getFieldDate($id, $label = null, $format = null, $widget = Fields\Date::WIDGET_CHOICE, $required = true)
+    protected function getFieldDate($id, $label = null, $format = null, $widget = Field\Date::WIDGET_CHOICE, $required = true)
     {
         $field = $this->getField('Date', $id, $label, $required);
         if ($format !== null) {
@@ -179,9 +179,9 @@ trait FieldsTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Fields\Birthday
+     * @return Field\Birthday
      */
-    protected function getFieldBirthday($id, $label = null, $format = null, $widget = Fields\Birthday::WIDGET_CHOICE, $required = true)
+    protected function getFieldBirthday($id, $label = null, $format = null, $widget = Field\Birthday::WIDGET_CHOICE, $required = true)
     {
         $field = $this->getField('Birthday', $id, $label, $required);
         if ($format !== null) {
@@ -198,9 +198,9 @@ trait FieldsTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Fields\Time
+     * @return Field\Time
      */
-    protected function getFieldTime($id, $label = null, $widget = Fields\Time::WIDGET_CHOICE, $required = true)
+    protected function getFieldTime($id, $label = null, $widget = Field\Time::WIDGET_CHOICE, $required = true)
     {
         $field = $this->getField('Time', $id, $label, $required);
         $field->setWidget($widget);
@@ -214,9 +214,9 @@ trait FieldsTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Fields\DateTime
+     * @return Field\DateTime
      */
-    protected function getFieldDateTime($id, $label = null, $dateFormat = null, $widget = Fields\DateTime::WIDGET_CHOICE, $required = true)
+    protected function getFieldDateTime($id, $label = null, $dateFormat = null, $widget = Field\DateTime::WIDGET_CHOICE, $required = true)
     {
         $field = $this->getField('DateTime', $id, $label, $required);
         if ($dateFormat !== null) {
@@ -231,7 +231,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Integer
+     * @return Field\Integer
      */
     protected function getFieldInteger($id, $label = null, $required = true)
     {
@@ -242,7 +242,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Number
+     * @return Field\Number
      */
     protected function getFieldNumber($id, $label = null, $required = true)
     {
@@ -254,9 +254,9 @@ trait FieldsTrait
      * @param string $label
      * @param string $type Use steevanb\FormUtils\Field\Percent::TYPE_XXX
      * @param bool $required
-     * @return Fields\Percent
+     * @return Field\Percent
      */
-    protected function getFieldPercent($id, $label = null, $type = Fields\Percent::TYPE_FRACTIONAL, $required = true)
+    protected function getFieldPercent($id, $label = null, $type = Field\Percent::TYPE_FRACTIONAL, $required = true)
     {
         $field = $this->getField('Percent', $id, $label, $required);
         $field->setType($type);
@@ -269,7 +269,7 @@ trait FieldsTrait
      * @param string $label
      * @param string $currency
      * @param bool $required
-     * @return Fields\Money
+     * @return Field\Money
      */
     protected function getFieldMoney($id, $label = null, $currency = 'EUR', $required = true)
     {
@@ -284,7 +284,7 @@ trait FieldsTrait
      * @param string $label
      * @param array $choices
      * @param bool $required
-     * @return Fields\Choice
+     * @return Field\Choice
      */
     protected function getFieldChoice($id, $label = null, array $choices = array(), $required = true)
     {
@@ -300,7 +300,7 @@ trait FieldsTrait
      * @param string $property
      * @param string $label
      * @param bool $required
-     * @return Fields\Entity
+     * @return Field\Entity
      */
     protected function getFieldEntity($id, $class, $property = null, $label = null, $required = true)
     {
@@ -315,7 +315,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Country
+     * @return Field\Country
      */
     protected function getFieldCountry($id, $label = null, $required = true)
     {
@@ -326,7 +326,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Language
+     * @return Field\Language
      */
     protected function getFieldLanguage($id, $label = null, $required = true)
     {
@@ -337,7 +337,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Locale
+     * @return Field\Locale
      */
     protected function getFieldLocale($id, $label = null, $required = true)
     {
@@ -348,7 +348,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Timezone
+     * @return Field\Timezone
      */
     protected function getFieldTimezone($id, $label = null, $required = true)
     {
@@ -359,7 +359,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Currency
+     * @return Field\Currency
      */
     protected function getFieldCurrency($id, $label = null, $required = true)
     {
@@ -369,11 +369,11 @@ trait FieldsTrait
     /**
      * @param string $id
      * @param string $data
-     * @return Fields\Hidden
+     * @return Field\Hidden
      */
     protected function getFieldHidden($id, $data = null)
     {
-        $field = new Fields\Hidden($this->builder, $id);
+        $field = new Field\Hidden($this->builder, $id);
         if ($data !== null) {
             $field->setData($data);
         }
@@ -385,7 +385,7 @@ trait FieldsTrait
      * @param string $id
      * @param string $label
      * @param bool $required
-     * @return Fields\Checkbox
+     * @return Field\Checkbox
      */
     protected function getFieldCheckbox($id, $label = null, $required = true)
     {
@@ -397,7 +397,7 @@ trait FieldsTrait
      * @param FormTypeInterface|string $type
      * @param string $label
      * @param bool $required
-     * @return Fields\Collection
+     * @return Field\Collection
      */
     protected function getFieldCollection($id, $type, $label = null, $required = true)
     {
