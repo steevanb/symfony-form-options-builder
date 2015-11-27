@@ -1,4 +1,4 @@
-1.4.2 -2015-28-09)
+1.4.2 (2015-28-09)
 ------------------
 
 - Fix default value for getParameter(), in getAttr() and removeAttr()
