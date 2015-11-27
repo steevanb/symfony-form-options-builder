@@ -130,6 +130,7 @@ trait FieldTrait
      */
     protected function getFieldDate($label = null, $format = null, $widget = Field\Date::WIDGET_CHOICE, $required = true)
     {
+        /** @var Field\Date $field */
         $field = $this->getField('Date', $label, $required);
         if ($format !== null) {
             $field->setFormat($format);
@@ -148,6 +149,7 @@ trait FieldTrait
      */
     protected function getFieldBirthday($label = null, $format = null, $widget = Field\Birthday::WIDGET_CHOICE, $required = true)
     {
+        /** @var Field\Birthday $field */
         $field = $this->getField('Birthday', $label, $required);
         if ($format !== null) {
             $field->setFormat($format);
@@ -166,6 +168,7 @@ trait FieldTrait
      */
     protected function getFieldTime($label = null, $widget = Field\Time::WIDGET_CHOICE, $required = true)
     {
+        /** @var Field\Time $field */
         $field = $this->getField('Time', $label, $required);
         $field->setWidget($widget);
 
@@ -181,6 +184,7 @@ trait FieldTrait
      */
     protected function getFieldDateTime($label = null, $dateFormat = null, $widget = Field\DateTime::WIDGET_CHOICE, $required = true)
     {
+        /** @var Field\DateTime $field */
         $field = $this->getField('DateTime', $label, $required);
         if ($dateFormat !== null) {
             $field->setDateFormat($dateFormat);
@@ -218,6 +222,7 @@ trait FieldTrait
      */
     protected function getFieldPercent($label = null, $type = Field\Percent::TYPE_FRACTIONAL, $required = true)
     {
+        /** @var Field\Percent $field */
         $field = $this->getField('Percent', $label, $required);
         $field->setType($type);
 
@@ -232,6 +237,7 @@ trait FieldTrait
      */
     protected function getFieldMoney($label = null, $currency = 'EUR', $required = true)
     {
+        /** @var Field\Money $field */
         $field = $this->getField('Money', $label, $required);
         $field->setCurrency($currency);
 
@@ -246,6 +252,7 @@ trait FieldTrait
      */
     protected function getFieldChoice($label = null, array $choices = array(), $required = true)
     {
+        /** @var Field\Choice $field */
         $field = $this->getField('Choice', $label, $required);
         $field->setChoices($choices);
 
@@ -261,6 +268,7 @@ trait FieldTrait
      */
     protected function getFieldEntity($class, $property = null, $label = null, $required = true)
     {
+        /** @var Field\Entity $field */
         $field = $this->getField('Entity',  $label, $required);
         $field->setClass($class);
         $field->setProperty($property);
@@ -350,6 +358,7 @@ trait FieldTrait
      */
     protected function getFieldCollection($type, $label = null, $required = true)
     {
+        /** @var Field\Collection $field */
         $field = $this->getField('Collection', $label, $required);
         $field->setType($type);
 
