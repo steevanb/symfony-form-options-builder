@@ -11,7 +11,9 @@ SF2FormUtils helps you writing your SF2 FormType, with some traits and methods t
 
 [Installation](Documentation/installation.md)
 
-[Changelog](Documentation/changelog.md)
+[Changelog 2.x](Documentation/changelog_2_x.md)
+
+[Changelog 1.x](Documentation/changelog_1_x.md)
 
 Traits\Fields
 --------------------------------
