@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils;
 
-use steevanb\FormUtils\Field;
+use steevanb\FormUtils\OptionsBuilder;
 use Symfony\Component\Form\FormTypeInterface;
 
 trait FieldTrait
@@ -11,11 +11,11 @@ trait FieldTrait
      * @param string $class
      * @param string $label
      * @param bool $required
-     * @return Field\AbstractField
+     * @return OptionsBuilder\AbstractOptionBuilder
      */
-    protected function getField($class, $label = null, $required = true)
+    protected function getFieldOptionsBuilder($class, $label = null, $required = true)
     {
-        $fullClass = 'steevanb\\FormUtils\\Field\\' . $class;
+        $fullClass = 'steevanb\\FormUtils\\OptionsBuilder\\' . $class;
         $field = new $fullClass();
         $field->setLabel($label);
         $field->setRequired($required);
@@ -25,11 +25,11 @@ trait FieldTrait
 
     /**
      * @param string $label
-     * @return Field\Button
+     * @return OptionsBuilder\Button
      */
-    protected function getFieldButton($label = null)
+    protected function getButtonOptionsBuilder($label = null)
     {
-        $field = new Field\Button();
+        $field = new OptionsBuilder\Button();
         $field->setLabel($label);
 
         return $field;
@@ -37,11 +37,11 @@ trait FieldTrait
 
     /**
      * @param string $label
-     * @return Field\Reset
+     * @return OptionsBuilder\Reset
      */
-    protected function getFieldReset($label = null)
+    protected function getResetOptionsBuilder($label = null)
     {
-        $field = new Field\Reset();
+        $field = new OptionsBuilder\Reset();
         $field->setLabel($label);
 
         return $field;
@@ -50,11 +50,11 @@ trait FieldTrait
     /**
      * @param string $label
      * @param array $validationGroups
-     * @return Field\Submit
+     * @return OptionsBuilder\Submit
      */
-    protected function getFieldSubmit($label = null, array $validationGroups = null)
+    protected function getSubmitOptionsBuilder($label = null, array $validationGroups = null)
     {
-        $field = new Field\Submit();
+        $field = new OptionsBuilder\Submit();
         $field->setLabel($label);
         $field->setValidationGroups($validationGroups);
 
@@ -64,61 +64,61 @@ trait FieldTrait
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Text
+     * @return OptionsBuilder\Text
      */
-    protected function getFieldText($label = null, $required = true)
+    protected function getTextOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Text', $label, $required);
+        return $this->getFieldOptionsBuilder('Text', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Email
+     * @return OptionsBuilder\Email
      */
-    protected function getFieldEmail($label = null, $required = true)
+    protected function getEmailOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Email', $label, $required);
+        return $this->getFieldOptionsBuilder('Email', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Password
+     * @return OptionsBuilder\Password
      */
-    protected function getFieldPassword($label = null, $required = true)
+    protected function getPasswordOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Password', $label, $required);
+        return $this->getFieldOptionsBuilder('Password', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Search
+     * @return OptionsBuilder\Search
      */
-    protected function getFieldSearch($label = null, $required = true)
+    protected function getSearchOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Search', $label, $required);
+        return $this->getFieldOptionsBuilder('Search', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Url
+     * @return OptionsBuilder\Url
      */
-    protected function getFieldUrl($label = null, $required = true)
+    protected function getUrlOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Url', $label, $required);
+        return $this->getFieldOptionsBuilder('Url', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Textarea
+     * @return OptionsBuilder\Textarea
      */
-    protected function getFieldTextArea($label = null, $required = true)
+    protected function getTextAreaOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Textarea', $label, $required);
+        return $this->getFieldOptionsBuilder('Textarea', $label, $required);
     }
 
     /**
@@ -126,12 +126,12 @@ trait FieldTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Field\Date
+     * @return OptionsBuilder\Date
      */
-    protected function getFieldDate($label = null, $format = null, $widget = Field\Date::WIDGET_CHOICE, $required = true)
+    protected function getDateOptionsBuilder($label = null, $format = null, $widget = OptionsBuilder\Date::WIDGET_CHOICE, $required = true)
     {
-        /** @var Field\Date $field */
-        $field = $this->getField('Date', $label, $required);
+        /** @var OptionsBuilder\Date $field */
+        $field = $this->getFieldOptionsBuilder('Date', $label, $required);
         if ($format !== null) {
             $field->setFormat($format);
         }
@@ -145,12 +145,12 @@ trait FieldTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Field\Birthday
+     * @return OptionsBuilder\Birthday
      */
-    protected function getFieldBirthday($label = null, $format = null, $widget = Field\Birthday::WIDGET_CHOICE, $required = true)
+    protected function getBirthdayOptionsBuilder($label = null, $format = null, $widget = OptionsBuilder\Birthday::WIDGET_CHOICE, $required = true)
     {
-        /** @var Field\Birthday $field */
-        $field = $this->getField('Birthday', $label, $required);
+        /** @var OptionsBuilder\Birthday $field */
+        $field = $this->getFieldOptionsBuilder('Birthday', $label, $required);
         if ($format !== null) {
             $field->setFormat($format);
         }
@@ -164,12 +164,12 @@ trait FieldTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Field\Time
+     * @return OptionsBuilder\Time
      */
-    protected function getFieldTime($label = null, $widget = Field\Time::WIDGET_CHOICE, $required = true)
+    protected function getTimeOptionsBuilder($label = null, $widget = OptionsBuilder\Time::WIDGET_CHOICE, $required = true)
     {
-        /** @var Field\Time $field */
-        $field = $this->getField('Time', $label, $required);
+        /** @var OptionsBuilder\Time $field */
+        $field = $this->getFieldOptionsBuilder('Time', $label, $required);
         $field->setWidget($widget);
 
         return $field;
@@ -180,12 +180,12 @@ trait FieldTrait
      * @param int|string format
      * @param string $widget
      * @param bool $required
-     * @return Field\DateTime
+     * @return OptionsBuilder\DateTime
      */
-    protected function getFieldDateTime($label = null, $dateFormat = null, $widget = Field\DateTime::WIDGET_CHOICE, $required = true)
+    protected function getDateTimeOptionsBuilder($label = null, $dateFormat = null, $widget = OptionsBuilder\DateTime::WIDGET_CHOICE, $required = true)
     {
-        /** @var Field\DateTime $field */
-        $field = $this->getField('DateTime', $label, $required);
+        /** @var OptionsBuilder\DateTime $field */
+        $field = $this->getFieldOptionsBuilder('DateTime', $label, $required);
         if ($dateFormat !== null) {
             $field->setDateFormat($dateFormat);
         }
@@ -197,33 +197,33 @@ trait FieldTrait
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Integer
+     * @return OptionsBuilder\Integer
      */
-    protected function getFieldInteger($label = null, $required = true)
+    protected function getIntegerOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Integer', $label, $required);
+        return $this->getFieldOptionsBuilder('Integer', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Number
+     * @return OptionsBuilder\Number
      */
-    protected function getFieldNumber($label = null, $required = true)
+    protected function getNumberOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Number', $label, $required);
+        return $this->getFieldOptionsBuilder('Number', $label, $required);
     }
 
     /**
      * @param string $label
-     * @param string $type Use steevanb\FormUtils\Field\Percent::TYPE_XXX
+     * @param string $type Use steevanb\FormUtils\OptionsBuilder\Percent::TYPE_XXX
      * @param bool $required
-     * @return Field\Percent
+     * @return OptionsBuilder\Percent
      */
-    protected function getFieldPercent($label = null, $type = Field\Percent::TYPE_FRACTIONAL, $required = true)
+    protected function getPercentOptionsBuilder($label = null, $type = OptionsBuilder\Percent::TYPE_FRACTIONAL, $required = true)
     {
-        /** @var Field\Percent $field */
-        $field = $this->getField('Percent', $label, $required);
+        /** @var OptionsBuilder\Percent $field */
+        $field = $this->getFieldOptionsBuilder('Percent', $label, $required);
         $field->setType($type);
 
         return $field;
@@ -233,12 +233,12 @@ trait FieldTrait
      * @param string $label
      * @param string $currency
      * @param bool $required
-     * @return Field\Money
+     * @return OptionsBuilder\Money
      */
-    protected function getFieldMoney($label = null, $currency = 'EUR', $required = true)
+    protected function getMoneyOptionsBuilder($label = null, $currency = 'EUR', $required = true)
     {
-        /** @var Field\Money $field */
-        $field = $this->getField('Money', $label, $required);
+        /** @var OptionsBuilder\Money $field */
+        $field = $this->getFieldOptionsBuilder('Money', $label, $required);
         $field->setCurrency($currency);
 
         return $field;
@@ -248,12 +248,12 @@ trait FieldTrait
      * @param string $label
      * @param array $choices
      * @param bool $required
-     * @return Field\Choice
+     * @return OptionsBuilder\Choice
      */
-    protected function getFieldChoice($label = null, array $choices = array(), $required = true)
+    protected function getChoiceOptionsBuilder($label = null, array $choices = array(), $required = true)
     {
-        /** @var Field\Choice $field */
-        $field = $this->getField('Choice', $label, $required);
+        /** @var OptionsBuilder\Choice $field */
+        $field = $this->getFieldOptionsBuilder('Choice', $label, $required);
         $field->setChoices($choices);
 
         return $field;
@@ -264,12 +264,12 @@ trait FieldTrait
      * @param string $property
      * @param string $label
      * @param bool $required
-     * @return Field\Entity
+     * @return OptionsBuilder\Entity
      */
-    protected function getFieldEntity($class, $property = null, $label = null, $required = true)
+    protected function getEntityOptionsBuilder($class, $property = null, $label = null, $required = true)
     {
-        /** @var Field\Entity $field */
-        $field = $this->getField('Entity',  $label, $required);
+        /** @var OptionsBuilder\Entity $field */
+        $field = $this->getFieldOptionsBuilder('Entity',  $label, $required);
         $field->setClass($class);
         $field->setProperty($property);
 
@@ -279,60 +279,60 @@ trait FieldTrait
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Country
+     * @return OptionsBuilder\Country
      */
-    protected function getFieldCountry($label = null, $required = true)
+    protected function getCountryOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Country', $label, $required);
+        return $this->getFieldOptionsBuilder('Country', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Language
+     * @return OptionsBuilder\Language
      */
-    protected function getFieldLanguage( $label = null, $required = true)
+    protected function getLanguage( $label = null, $required = true)
     {
-        return $this->getField('Language', $label, $required);
+        return $this->getFieldOptionsBuilder('Language', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Locale
+     * @return OptionsBuilder\Locale
      */
-    protected function getFieldLocale($label = null, $required = true)
+    protected function getLocaleOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Locale', $label, $required);
+        return $this->getFieldOptionsBuilder('Locale', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Timezone
+     * @return OptionsBuilder\Timezone
      */
-    protected function getFieldTimezone($label = null, $required = true)
+    protected function getTimezoneOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Timezone', $label, $required);
+        return $this->getFieldOptionsBuilder('Timezone', $label, $required);
     }
 
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Currency
+     * @return OptionsBuilder\Currency
      */
-    protected function getFieldCurrency($label = null, $required = true)
+    protected function getCurrencyOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Currency', $label, $required);
+        return $this->getFieldOptionsBuilder('Currency', $label, $required);
     }
 
     /**
      * @param string $data
-     * @return Field\Hidden
+     * @return OptionsBuilder\Hidden
      */
-    protected function getFieldHidden($data = null)
+    protected function getHiddenOptionsBuilder($data = null)
     {
-        $field = new Field\Hidden();
+        $field = new OptionsBuilder\Hidden();
         if ($data !== null) {
             $field->setData($data);
         }
@@ -343,23 +343,23 @@ trait FieldTrait
     /**
      * @param string $label
      * @param bool $required
-     * @return Field\Checkbox
+     * @return OptionsBuilder\Checkbox
      */
-    protected function getFieldCheckbox($label = null, $required = true)
+    protected function getCheckboxOptionsBuilder($label = null, $required = true)
     {
-        return $this->getField('Checkbox', $label, $required);
+        return $this->getFieldOptionsBuilder('Checkbox', $label, $required);
     }
 
     /**
      * @param FormTypeInterface|string $type
      * @param string $label
      * @param bool $required
-     * @return Field\Collection
+     * @return OptionsBuilder\Collection
      */
-    protected function getFieldCollection($type, $label = null, $required = true)
+    protected function getCollectionOptionsBuilder($type, $label = null, $required = true)
     {
-        /** @var Field\Collection $field */
-        $field = $this->getField('Collection', $label, $required);
+        /** @var OptionsBuilder\Collection $field */
+        $field = $this->getFieldOptionsBuilder('Collection', $label, $required);
         $field->setType($type);
 
         return $field;

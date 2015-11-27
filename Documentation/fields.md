@@ -1,4 +1,4 @@
-steevanb\FormUtils\FieldTrait
+steevanb\FormUtils\OptionsBuilderTrait
 ================================
 
 This trait offer you an object vision of generating options for FormType fields.
@@ -9,7 +9,7 @@ Usage in buildForm()
 ```php
 class BarType extends AbstractType
 {
-    use steevanb\FormUtils\FieldTrait;
+    use steevanb\FormUtils\OptionsBuilderTrait;
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -36,7 +36,7 @@ Usage in form event
 ```php
 class BarType extends AbstractType
 {
-    use steevanb\FormUtils\FieldTrait;
+    use steevanb\FormUtils\OptionsBuilderTrait;
 
     public function onPreSetData(FormEvent $event)
     {
@@ -63,33 +63,33 @@ Helpers for SF2 form types
 --------------------------
 
 ```php
-getFieldButton($label = null) : Field\Button
-getFieldReset($label = null) : Field\Reset
-getFieldSubmit($label = null, array $validationGroups = null) :  Field\Submit
-getFieldText($label = null, $required = true) : Field\Text
-getFieldEmail($label = null, $required = true) : Field\Email
-getFieldPassword($label = null, $required = true) : Field\Password
-getFieldSearch($label = null, $required = true) : Field\Search
-getFieldUrl($label = null, $required = true) : Field\Url
-getFieldTextArea($label = null, $required = true) : Field\Textarea
-getFieldDate($label = null, $format = null, $widget = Field\Date::WIDGET_CHOICE, $required = true) : Field\Date
-getFieldBirthday($label = null, $format = null, $widget = FieldsType\Birthday::WIDGET_CHOICE, $required = true) : Field\Birthday
-getFieldTime($label = null, $widget = Field\Time::WIDGET_CHOICE, $required = true) : Field\Time
-getFieldDateTime($label = null, $dateFormat = null, $widget = Field\DateTime::WIDGET_CHOICE, $required = true) : Field\DateTime
-getFieldInteger($label = null, $required = true) : Field\Integer
-getFieldNumber($label = null, $required = true) : Field\Number
-getFieldPercent($label = null, $type = Field\Percent::TYPE_FRACTIONAL, $required = true) : Field\Percent
-getFieldMoney($label = null, $currency = 'EUR', $required = true) : Field\Money
-getFieldChoice($label = null, array $choices = array(), $required = true) : Field\Choice
-getFieldEntity($class, $property = null, $label = null, $required = true) : Field\Entity
-getFieldCountry($label = null, $required = true) : Field\Country
-getFieldLanguage($label = null, $required = true) : Field\Language
-getFieldLocale($label = null, $required = true) : Field\Locale
-getFieldTimezone($label = null, $required = true) : Field\Timezone
-getFieldCurrency($label = null, $required = true) : Field\Currency
-getFieldHidden($data = null) : Field\Hidden
-getFieldCheckbox($label = null, $required = true) : Field\Checkbox
-getFieldCollection($type, $label = null, $required = true) : Field\Collection
+getFieldButton($label = null) : OptionsBuilder\Button
+getFieldReset($label = null) : OptionsBuilder\Reset
+getFieldSubmit($label = null, array $validationGroups = null) :  OptionsBuilder\Submit
+getFieldText($label = null, $required = true) : OptionsBuilder\Text
+getFieldEmail($label = null, $required = true) : OptionsBuilder\Email
+getFieldPassword($label = null, $required = true) : OptionsBuilder\Password
+getFieldSearch($label = null, $required = true) : OptionsBuilder\Search
+getFieldUrl($label = null, $required = true) : OptionsBuilder\Url
+getFieldTextArea($label = null, $required = true) : OptionsBuilder\Textarea
+getFieldDate($label = null, $format = null, $widget = OptionsBuilder\Date::WIDGET_CHOICE, $required = true) : OptionsBuilder\Date
+getFieldBirthday($label = null, $format = null, $widget = FieldsType\Birthday::WIDGET_CHOICE, $required = true) : OptionsBuilder\Birthday
+getFieldTime($label = null, $widget = OptionsBuilder\Time::WIDGET_CHOICE, $required = true) : OptionsBuilder\Time
+getFieldDateTime($label = null, $dateFormat = null, $widget = OptionsBuilder\DateTime::WIDGET_CHOICE, $required = true) : OptionsBuilder\DateTime
+getFieldInteger($label = null, $required = true) : OptionsBuilder\Integer
+getFieldNumber($label = null, $required = true) : OptionsBuilder\Number
+getFieldPercent($label = null, $type = OptionsBuilder\Percent::TYPE_FRACTIONAL, $required = true) : OptionsBuilder\Percent
+getFieldMoney($label = null, $currency = 'EUR', $required = true) : OptionsBuilder\Money
+getFieldChoice($label = null, array $choices = array(), $required = true) : OptionsBuilder\Choice
+getFieldEntity($class, $property = null, $label = null, $required = true) : OptionsBuilder\Entity
+getFieldCountry($label = null, $required = true) : OptionsBuilder\Country
+getFieldLanguage($label = null, $required = true) : OptionsBuilder\Language
+getFieldLocale($label = null, $required = true) : OptionsBuilder\Locale
+getFieldTimezone($label = null, $required = true) : OptionsBuilder\Timezone
+getFieldCurrency($label = null, $required = true) : OptionsBuilder\Currency
+getFieldHidden($data = null) : OptionsBuilder\Hidden
+getFieldCheckbox($label = null, $required = true) : OptionsBuilder\Checkbox
+getFieldCollection($type, $label = null, $required = true) : OptionsBuilder\Collection
 ```
 
 [Back to index](../README.md)
