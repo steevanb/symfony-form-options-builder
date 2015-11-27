@@ -20,7 +20,7 @@ class Url extends AbstractField
      */
     public function setDefaultProtocol($protocol)
     {
-        return $this->setParameter('default_protocol', $protocol);
+        return $this->setOption('default_protocol', $protocol);
     }
 
     /**
@@ -29,6 +29,6 @@ class Url extends AbstractField
      */
     public function getDefaultProtocol($default = self::PROTOCOL_HTTP)
     {
-        return $this->getParameter('default_protocol', $default);
+        return $this->getOption('default_protocol', $default);
     }
 }

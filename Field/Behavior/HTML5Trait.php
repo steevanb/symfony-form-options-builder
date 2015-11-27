@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait HTML5Trait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param bool $html5
@@ -13,7 +13,7 @@ trait HTML5Trait
      */
     public function setHTML5($html5 = true)
     {
-        return $this->setParameter('html5', $html5);
+        return $this->setOption('html5', $html5);
     }
 
     /**
@@ -22,6 +22,6 @@ trait HTML5Trait
      */
     public function getHTML5($default = true)
     {
-        return $this->getParameter('html5', $default);
+        return $this->getOption('html5', $default);
     }
 }

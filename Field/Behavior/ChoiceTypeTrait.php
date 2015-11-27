@@ -14,7 +14,7 @@ trait ChoiceTypeTrait
      */
     public function setChoices(array $choices)
     {
-        return $this->setParameter('choices', $choices);
+        return $this->setOption('choices', $choices);
     }
 
     /**
@@ -23,7 +23,7 @@ trait ChoiceTypeTrait
      */
     public function getChoices($default = array())
     {
-        return $this->getParameter('choices', $default);
+        return $this->getOption('choices', $default);
     }
 
     /**
@@ -33,7 +33,7 @@ trait ChoiceTypeTrait
      */
     public function setChoiceLabel($label)
     {
-        return $this->setParameter('choice_label', $label);
+        return $this->setOption('choice_label', $label);
     }
 
     /**
@@ -41,7 +41,7 @@ trait ChoiceTypeTrait
      */
     public function getChoiceLabel()
     {
-        return $this->getParameter('choice_label');
+        return $this->getOption('choice_label');
     }
 
     /**
@@ -50,7 +50,7 @@ trait ChoiceTypeTrait
      */
     public function setChoiceTranslationDomain($domain)
     {
-        return $this->setParameter('choice_translation_domain', $domain);
+        return $this->setOption('choice_translation_domain', $domain);
     }
 
     /**
@@ -58,7 +58,7 @@ trait ChoiceTypeTrait
      */
     public function getChoiceTranslationDomain()
     {
-        return $this->getParameter('choice_translation_domain');
+        return $this->getOption('choice_translation_domain');
     }
 
     /**
@@ -76,7 +76,7 @@ trait ChoiceTypeTrait
      */
     public function setChoiceName($name)
     {
-        return $this->setParameter('choice_name', $name);
+        return $this->setOption('choice_name', $name);
     }
 
     /**
@@ -84,7 +84,7 @@ trait ChoiceTypeTrait
      */
     public function getChoiceName()
     {
-        return $this->getParameter('choice_name');
+        return $this->getOption('choice_name');
     }
 
     /**
@@ -94,7 +94,7 @@ trait ChoiceTypeTrait
      */
     public function setChoiceValue($value)
     {
-        return $this->setParameter('choice_value', $value);
+        return $this->setOption('choice_value', $value);
     }
 
     /**
@@ -102,7 +102,7 @@ trait ChoiceTypeTrait
      */
     public function getChoiceValue()
     {
-        return $this->getParameter('choice_value');
+        return $this->getOption('choice_value');
     }
 
     /**
@@ -112,7 +112,7 @@ trait ChoiceTypeTrait
      */
     public function setChoiceAttr($attr)
     {
-        return $this->setParameter('choice_attr', $attr);
+        return $this->setOption('choice_attr', $attr);
     }
 
     /**
@@ -120,7 +120,7 @@ trait ChoiceTypeTrait
      */
     public function getChoiceAttr()
     {
-        return $this->getParameter('choice_attr');
+        return $this->getOption('choice_attr');
     }
 
     /**
@@ -130,7 +130,7 @@ trait ChoiceTypeTrait
      */
     public function setGroupBy($groupBy)
     {
-        return $this->setParameter('group_by', $groupBy);
+        return $this->setOption('group_by', $groupBy);
     }
 
     /**
@@ -138,7 +138,7 @@ trait ChoiceTypeTrait
      */
     public function getGroupBy()
     {
-        return $this->getParameter('group_by');
+        return $this->getOption('group_by');
     }
 
     /**
@@ -148,7 +148,7 @@ trait ChoiceTypeTrait
      */
     public function setChoicesAsValues($asValues = true)
     {
-        return $this->setParameter('choices_as_values', $asValues);
+        return $this->setOption('choices_as_values', $asValues);
     }
 
     /**
@@ -156,7 +156,7 @@ trait ChoiceTypeTrait
      */
     public function getChoicesAsValues()
     {
-        return $this->getParameter('choices_as_values', false);
+        return $this->getOption('choices_as_values', false);
     }
 
     /**
@@ -167,7 +167,7 @@ trait ChoiceTypeTrait
      */
     public function setEmptyValue($value)
     {
-        return $this->setParameter('empty_value', $value);
+        return $this->setOption('empty_value', $value);
     }
 
     /**
@@ -176,7 +176,7 @@ trait ChoiceTypeTrait
      */
     public function getEmptyValue()
     {
-        return $this->getParameter('empty_value');
+        return $this->getOption('empty_value');
     }
 
     /**
@@ -186,7 +186,7 @@ trait ChoiceTypeTrait
      */
     public function setExpanded($expanded = true)
     {
-        return $this->setParameter('expanded', $expanded);
+        return $this->setOption('expanded', $expanded);
     }
 
     /**
@@ -195,7 +195,7 @@ trait ChoiceTypeTrait
      */
     public function getExpanded($default = false)
     {
-        return $this->getParameter('expanded', $default);
+        return $this->getOption('expanded', $default);
     }
 
     /**
@@ -205,7 +205,7 @@ trait ChoiceTypeTrait
      */
     public function setMultiple($multiple = true)
     {
-        return $this->setParameter('multiple', $multiple);
+        return $this->setOption('multiple', $multiple);
     }
 
     /**
@@ -214,7 +214,7 @@ trait ChoiceTypeTrait
      */
     public function getMultiple($default = false)
     {
-        return $this->getParameter('multiple', $default);
+        return $this->getOption('multiple', $default);
     }
 
     /**
@@ -256,7 +256,7 @@ trait ChoiceTypeTrait
      */
     public function setPreferredChoices(array $choices)
     {
-        return $this->setParameter('preferred_choices', $choices);
+        return $this->setOption('preferred_choices', $choices);
     }
 
     /**
@@ -265,6 +265,6 @@ trait ChoiceTypeTrait
      */
     public function getPreferredChoices($default = array())
     {
-        return $this->getParameter('preferred_choices', $default);
+        return $this->getOption('preferred_choices', $default);
     }
 }

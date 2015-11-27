@@ -6,7 +6,7 @@ use Symfony\Component\Form\Extension\Core\ChoiceList\ChoiceListInterface;
 
 trait ChoicesListTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * ChoiceListInterface is deprecated since 2.7, but for use with < 2.7, continue to use it
@@ -17,7 +17,7 @@ trait ChoicesListTrait
      */
     public function setChoicesList(ChoiceListInterface $choices)
     {
-        return $this->setParameter('choices_list', $choices);
+        return $this->setOption('choices_list', $choices);
     }
 
     /**
@@ -25,6 +25,6 @@ trait ChoicesListTrait
      */
     public function getChoicesList()
     {
-        return $this->getParameter('choices_list');
+        return $this->getOption('choices_list');
     }
 }

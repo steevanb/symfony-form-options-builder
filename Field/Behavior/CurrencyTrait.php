@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait CurrencyTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param false|string $currency
@@ -13,7 +13,7 @@ trait CurrencyTrait
      */
     public function setCurrency($currency)
     {
-        return $this->setParameter('currency', $currency);
+        return $this->setOption('currency', $currency);
     }
 
     /**
@@ -22,6 +22,6 @@ trait CurrencyTrait
      */
     public function getCurrency($default = 'EUR')
     {
-        return $this->getParameter('currency', $default);
+        return $this->getOption('currency', $default);
     }
 }

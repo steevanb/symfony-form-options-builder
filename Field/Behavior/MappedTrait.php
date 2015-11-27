@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait MappedTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param bool $mapped
@@ -12,7 +12,7 @@ trait MappedTrait
      */
     public function setMapped($mapped = true)
     {
-        return $this->setParameter('mapped', boolval($mapped));
+        return $this->setOption('mapped', boolval($mapped));
     }
 
     /**
@@ -21,6 +21,6 @@ trait MappedTrait
      */
     public function getMapped($default = true)
     {
-        return $this->getParameter('mapped', $default);
+        return $this->getOption('mapped', $default);
     }
 }

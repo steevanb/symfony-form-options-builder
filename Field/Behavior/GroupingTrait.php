@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait GroupingTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param false|int $grouping
@@ -13,7 +13,7 @@ trait GroupingTrait
      */
     public function setGrouping($grouping)
     {
-        return $this->setParameter('grouping', $grouping);
+        return $this->setOption('grouping', $grouping);
     }
 
     /**
@@ -22,6 +22,6 @@ trait GroupingTrait
      */
     public function getGrouping($default = false)
     {
-        return $this->getParameter('grouping', $default);
+        return $this->getOption('grouping', $default);
     }
 }

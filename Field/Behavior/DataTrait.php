@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait DataTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param mixed $data
@@ -13,7 +13,7 @@ trait DataTrait
      */
     public function setData($data)
     {
-        return $this->setParameter('data', $data);
+        return $this->setOption('data', $data);
     }
 
     /**
@@ -21,6 +21,6 @@ trait DataTrait
      */
     public function getData()
     {
-        return $this->getParameter('data');
+        return $this->getOption('data');
     }
 }

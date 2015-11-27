@@ -15,7 +15,7 @@ trait DateTimeCommonTrait
      */
     public function setInput($input)
     {
-        return $this->setParameter('input', $input);
+        return $this->setOption('input', $input);
     }
 
     /**
@@ -24,7 +24,7 @@ trait DateTimeCommonTrait
      */
     public function getInput($default = 'datetime')
     {
-        return $this->getParameter('input', $default);
+        return $this->getOption('input', $default);
     }
 
     /**
@@ -34,7 +34,7 @@ trait DateTimeCommonTrait
      */
     public function setModelTimezone($timezone)
     {
-        return $this->setParameter('model_timezone', $timezone);
+        return $this->setOption('model_timezone', $timezone);
     }
 
     /**
@@ -42,7 +42,7 @@ trait DateTimeCommonTrait
      */
     public function getModelTimezone()
     {
-        return $this->getParameter('model_timezone');
+        return $this->getOption('model_timezone');
     }
 
     /**
@@ -52,7 +52,7 @@ trait DateTimeCommonTrait
      */
     public function setViewTimezone($viewTimezone)
     {
-        return $this->setParameter('view_timezone', $viewTimezone);
+        return $this->setOption('view_timezone', $viewTimezone);
     }
 
     /**
@@ -60,7 +60,7 @@ trait DateTimeCommonTrait
      */
     public function getViewTimezone()
     {
-        return $this->getParameter('view_timezone');
+        return $this->getOption('view_timezone');
     }
 
     /**
@@ -70,7 +70,7 @@ trait DateTimeCommonTrait
      */
     public function setWidget($widget)
     {
-        return $this->setParameter('widget', $widget);
+        return $this->setOption('widget', $widget);
     }
 
     /**
@@ -78,6 +78,6 @@ trait DateTimeCommonTrait
      */
     public function getWidget()
     {
-        return $this->getParameter('widget');
+        return $this->getOption('widget');
     }
 }

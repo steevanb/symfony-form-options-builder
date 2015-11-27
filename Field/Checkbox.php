@@ -13,7 +13,7 @@ class Checkbox extends AbstractField
      */
     public function setValue($value)
     {
-        return $this->setParameter('value', $value);
+        return $this->setOption('value', $value);
     }
 
     /**
@@ -22,6 +22,6 @@ class Checkbox extends AbstractField
      */
     public function getValue($default = 1)
     {
-        return $this->getParameter('value', $default);
+        return $this->getOption('value', $default);
     }
 }

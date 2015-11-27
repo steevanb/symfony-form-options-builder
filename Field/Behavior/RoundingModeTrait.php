@@ -6,7 +6,7 @@ use Symfony\Component\Form\Extension\Core\DataTransformer\IntegerToLocalizedStri
 
 trait RoundingModeTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param int $roundingMode
@@ -15,7 +15,7 @@ trait RoundingModeTrait
      */
     public function setRoundingMode($roundingMode)
     {
-        return $this->setParameter('rounding_mode', $roundingMode);
+        return $this->setOption('rounding_mode', $roundingMode);
     }
 
     /**
@@ -24,6 +24,6 @@ trait RoundingModeTrait
      */
     public function getRoundingMode($default = IntegerToLocalizedStringTransformer::ROUND_DOWN)
     {
-        return $this->getParameter('rounding_mode', $default);
+        return $this->getOption('rounding_mode', $default);
     }
 }

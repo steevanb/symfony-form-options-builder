@@ -6,7 +6,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use steevanb\FormUtils\Field;
 use Symfony\Component\Form\FormTypeInterface;
 
-trait FieldsTrait
+trait FieldTrait
 {
     /** @var FormBuilderInterface */
     protected $builder;

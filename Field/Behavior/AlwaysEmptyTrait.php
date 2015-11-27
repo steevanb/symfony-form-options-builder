@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait AlwaysEmptyTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param bool $alwaysEmpty
@@ -13,7 +13,7 @@ trait AlwaysEmptyTrait
      */
     public function setAlwaysEmpty($alwaysEmpty)
     {
-        return $this->setParameter('always_empty', $alwaysEmpty);
+        return $this->setOption('always_empty', $alwaysEmpty);
     }
 
     /**
@@ -21,6 +21,6 @@ trait AlwaysEmptyTrait
      */
     public function getAlwaysEmpty()
     {
-        return $this->getParameter('always_empty', true);
+        return $this->getOption('always_empty', true);
     }
 }

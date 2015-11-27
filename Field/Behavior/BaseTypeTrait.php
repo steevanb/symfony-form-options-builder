@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait BaseTypeTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param array $attr
@@ -13,7 +13,7 @@ trait BaseTypeTrait
      */
     public function setAttr(array $attr)
     {
-        return $this->setParameter('attr', $attr);
+        return $this->setOption('attr', $attr);
     }
 
     /**
@@ -37,10 +37,10 @@ trait BaseTypeTrait
     public function getAttr($name = null)
     {
         if (empty($name)) {
-            return $this->getParameter('attr');
+            return $this->getOption('attr');
         }
 
-        foreach ($this->getParameter('attr', array()) as $attrName => $attrValue) {
+        foreach ($this->getOption('attr', array()) as $attrName => $attrValue) {
             if ($attrName == $name) {
                 return $attrValue;
             }
@@ -56,7 +56,7 @@ trait BaseTypeTrait
     public function removeAttr($name)
     {
         $attr = array();
-        foreach ($this->getParameter('attr', array()) as $attrName => $attrValue) {
+        foreach ($this->getOption('attr', array()) as $attrName => $attrValue) {
             if ($attrName != $name) {
                 $attr[$attrName] = $attrValue;
             }
@@ -73,7 +73,7 @@ trait BaseTypeTrait
      */
     public function setLabel($label)
     {
-        return $this->setParameter('label', $label);
+        return $this->setOption('label', $label);
     }
 
     /**
@@ -81,7 +81,7 @@ trait BaseTypeTrait
      */
     public function getLabel()
     {
-        return $this->getParameter('label');
+        return $this->getOption('label');
     }
 
     /**
@@ -91,7 +91,7 @@ trait BaseTypeTrait
      */
     public function setLabelAttr(array $attr)
     {
-        return $this->setParameter('label_attr', $attr);
+        return $this->setOption('label_attr', $attr);
     }
 
     /**
@@ -100,7 +100,7 @@ trait BaseTypeTrait
      */
     public function getLabelAttr($default = array())
     {
-        return $this->getParameter('label_attr', $default);
+        return $this->getOption('label_attr', $default);
     }
 
     /**
@@ -110,7 +110,7 @@ trait BaseTypeTrait
      */
     public function setDisabled($disabled = true)
     {
-        return $this->setParameter('disabled', boolval($disabled));
+        return $this->setOption('disabled', boolval($disabled));
     }
 
     /**
@@ -119,7 +119,7 @@ trait BaseTypeTrait
      */
     public function getDisabled($default = false)
     {
-        return $this->getParameter('disabled', $default);
+        return $this->getOption('disabled', $default);
     }
 
     /**
@@ -129,7 +129,7 @@ trait BaseTypeTrait
      */
     public function setTranslationDomain($domain)
     {
-        return $this->setParameter('translation_domain', $domain);
+        return $this->setOption('translation_domain', $domain);
     }
 
     /**
@@ -138,6 +138,6 @@ trait BaseTypeTrait
      */
     public function getTranslationDomain($default = 'messages')
     {
-        return $this->getParameter('translation_domain', $default);
+        return $this->getOption('translation_domain', $default);
     }
 }

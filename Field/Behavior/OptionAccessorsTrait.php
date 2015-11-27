@@ -2,19 +2,19 @@
 
 namespace steevanb\FormUtils\Field\Behavior;
 
-trait ParameterAccessors
+trait OptionAccessorsTrait
 {
     /**
      * @param string $name
      * @param mixed $value
      * @return $this
      */
-    abstract public function setParameter($name, $value);
+    abstract public function setOption($name, $value);
 
     /**
      * @param string $name
      * @param mixed $default
      * @return mixed
      */
-    abstract public function getParameter($name, $default = null);
+    abstract public function getOption($name, $default = null);
 }

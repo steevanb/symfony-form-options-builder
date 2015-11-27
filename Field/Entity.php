@@ -18,7 +18,7 @@ class Entity extends AbstractField
      */
     public function setClass($class)
     {
-        return $this->setParameter('class', $class);
+        return $this->setOption('class', $class);
     }
 
     /**
@@ -26,7 +26,7 @@ class Entity extends AbstractField
      */
     public function getClass()
     {
-        return $this->getParameter('class');
+        return $this->getOption('class');
     }
 
     /**
@@ -36,7 +36,7 @@ class Entity extends AbstractField
      */
     public function setDataClass($dataClass)
     {
-        return $this->setParameter('data_class', $dataClass);
+        return $this->setOption('data_class', $dataClass);
     }
 
     /**
@@ -44,7 +44,7 @@ class Entity extends AbstractField
      */
     public function getDataClass()
     {
-        return $this->getParameter('data_class');
+        return $this->getOption('data_class');
     }
 
     /**
@@ -54,7 +54,7 @@ class Entity extends AbstractField
      */
     public function setEm($em)
     {
-        return $this->setParameter('em', $em);
+        return $this->setOption('em', $em);
     }
 
     /**
@@ -62,7 +62,7 @@ class Entity extends AbstractField
      */
     public function getEm()
     {
-        return $this->getParameter('em');
+        return $this->getOption('em');
     }
 
     /**
@@ -72,7 +72,7 @@ class Entity extends AbstractField
      */
     public function setGroupBy($groupBy)
     {
-        return $this->setParameter('group_by', $groupBy);
+        return $this->setOption('group_by', $groupBy);
     }
 
     /**
@@ -80,7 +80,7 @@ class Entity extends AbstractField
      */
     public function getGroupBy()
     {
-        return $this->getParameter('group_by');
+        return $this->getOption('group_by');
     }
 
     /**
@@ -90,7 +90,7 @@ class Entity extends AbstractField
      */
     public function setProperty($property)
     {
-        return $this->setParameter('property', $property);
+        return $this->setOption('property', $property);
     }
 
     /**
@@ -98,7 +98,7 @@ class Entity extends AbstractField
      */
     public function getProperty()
     {
-        return $this->getParameter('property');
+        return $this->getOption('property');
     }
 
     /**
@@ -108,7 +108,7 @@ class Entity extends AbstractField
      */
     public function setQueryBuilder($queryBuilder)
     {
-        return $this->setParameter('query_builder', $queryBuilder);
+        return $this->setOption('query_builder', $queryBuilder);
     }
 
     /**
@@ -116,7 +116,7 @@ class Entity extends AbstractField
      */
     public function getQueryBuilder()
     {
-        return $this->getParameter('query_builder');
+        return $this->getOption('query_builder');
     }
 
     /**
@@ -126,7 +126,7 @@ class Entity extends AbstractField
      */
     public function setRepositoryMethod($method, $params = array())
     {
-        return $this->setParameter('query_builder', function (EntityRepository $repository) use ($method, $params) {
+        return $this->setOption('query_builder', function (EntityRepository $repository) use ($method, $params) {
             return call_user_func(array($repository, $method), $params);
         });
     }

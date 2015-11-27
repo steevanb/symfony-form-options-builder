@@ -13,7 +13,7 @@ class AbstractField
     protected $id;
 
     /** @var array */
-    protected $parameters = array();
+    protected $options = array();
 
     /**
      * @param FormBuilderInterface $builder
@@ -49,9 +49,9 @@ class AbstractField
      * @param mixed $value
      * @return $this
      */
-    public function setParameter($name, $value)
+    public function setOption($name, $value)
     {
-        $this->parameters[$name] = $value;
+        $this->options[$name] = $value;
 
         return $this;
     }
@@ -61,21 +61,21 @@ class AbstractField
      * @param mixed $default
      * @return mixed
      */
-    public function getParameter($name, $default = null)
+    public function getOption($name, $default = null)
     {
-        return (array_key_exists($name, $this->parameters)) ? $this->parameters[$name] : $default;
+        return (array_key_exists($name, $this->options)) ? $this->options[$name] : $default;
     }
 
     /**
      * @return array
      */
-    public function getParameters()
+    public function getOptions()
     {
-        return $this->parameters;
+        return $this->options;
     }
 
     public function add()
     {
-        $this->builder->add($this->id, $this->getFieldType(), $this->parameters);
+        $this->builder->add($this->id, $this->getFieldType(), $this->options);
     }
 }

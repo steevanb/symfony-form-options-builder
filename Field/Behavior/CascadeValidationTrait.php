@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait CascadeValidationTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param $validation
@@ -13,7 +13,7 @@ trait CascadeValidationTrait
      */
     public function setCascadeValidation($validation = true)
     {
-        return $this->setParameter('cascade_validation', boolval($validation));
+        return $this->setOption('cascade_validation', boolval($validation));
     }
 
     /**
@@ -22,6 +22,6 @@ trait CascadeValidationTrait
      */
     public function getCascadeValidation($default = false)
     {
-        return $this->getParameter('cascade_validation', $default);
+        return $this->getOption('cascade_validation', $default);
     }
 }

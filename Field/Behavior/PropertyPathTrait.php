@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait PropertyPathTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param string $path
@@ -13,7 +13,7 @@ trait PropertyPathTrait
      */
     public function setPropertyPath($path)
     {
-        return $this->setParameter('property_path', $path);
+        return $this->setOption('property_path', $path);
     }
 
     /**
@@ -21,6 +21,6 @@ trait PropertyPathTrait
      */
     public function getPropertyPath()
     {
-        return $this->getParameter('property_path');
+        return $this->getOption('property_path');
     }
 }

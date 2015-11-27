@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait DivisorTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param int $divisor
@@ -13,7 +13,7 @@ trait DivisorTrait
      */
     public function setDivisor($divisor)
     {
-        return $this->setParameter('divisor', $divisor);
+        return $this->setOption('divisor', $divisor);
     }
 
     /**
@@ -22,6 +22,6 @@ trait DivisorTrait
      */
     public function getDivisor($default = 1)
     {
-        return $this->getParameter('divisor', $default);
+        return $this->getOption('divisor', $default);
     }
 }

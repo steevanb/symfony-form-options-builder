@@ -14,7 +14,7 @@ class Submit extends AbstractField
      */
     public function setValidationGroups($groups)
     {
-        return $this->setParameter('validation_groups', $groups);
+        return $this->setOption('validation_groups', $groups);
     }
 
     /**
@@ -22,6 +22,6 @@ class Submit extends AbstractField
      */
     public function getValidationGroups()
     {
-        return $this->getParameter('validation_groups');
+        return $this->getOption('validation_groups');
     }
 }

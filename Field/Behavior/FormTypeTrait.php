@@ -19,7 +19,7 @@ trait FormTypeTrait
      */
     public function setConstraints(array $constraints)
     {
-        return $this->setParameter('constraints', $constraints);
+        return $this->setOption('constraints', $constraints);
     }
 
     /**
@@ -41,7 +41,7 @@ trait FormTypeTrait
      */
     public function getConstraints($default = array())
     {
-        return $this->getParameter('constraints', $default);
+        return $this->getOption('constraints', $default);
     }
 
     /**
@@ -51,7 +51,7 @@ trait FormTypeTrait
      */
     public function setEmptyData($emptyData)
     {
-        return $this->setParameter('empty_data', $emptyData);
+        return $this->setOption('empty_data', $emptyData);
     }
 
     /**
@@ -59,7 +59,7 @@ trait FormTypeTrait
      */
     public function getEmptyData()
     {
-        return $this->getParameter('empty_data');
+        return $this->getOption('empty_data');
     }
 
     /**
@@ -69,7 +69,7 @@ trait FormTypeTrait
      */
     public function setInvalidMessage($message)
     {
-        return $this->setParameter('invalid_message', $message);
+        return $this->setOption('invalid_message', $message);
     }
 
     /**
@@ -77,7 +77,7 @@ trait FormTypeTrait
      */
     public function getInvalidMessage()
     {
-        return $this->getParameter('invalid_message');
+        return $this->getOption('invalid_message');
     }
 
     /**
@@ -87,7 +87,7 @@ trait FormTypeTrait
      */
     public function setInvalidMessageParameters(array $parameters)
     {
-        return $this->setParameter('invalid_message_parameters', $parameters);
+        return $this->setOption('invalid_message_parameters', $parameters);
     }
 
     /**
@@ -96,7 +96,7 @@ trait FormTypeTrait
      */
     public function getInvalidMessageParameters($default = array())
     {
-        return $this->getParameter('invalid_message_parameters', $default);
+        return $this->getOption('invalid_message_parameters', $default);
     }
 
     /**
@@ -106,7 +106,7 @@ trait FormTypeTrait
      */
     public function setReadOnly($readOnly = true)
     {
-        return $this->setParameter('read_only', boolval($readOnly));
+        return $this->setOption('read_only', boolval($readOnly));
     }
 
     /**
@@ -115,7 +115,7 @@ trait FormTypeTrait
      */
     public function getReadOnly($default = false)
     {
-        return $this->getParameter('read_only', $default);
+        return $this->getOption('read_only', $default);
     }
 
     /**
@@ -125,7 +125,7 @@ trait FormTypeTrait
      */
     public function setRequired($required = true)
     {
-        return $this->setParameter('required', boolval($required));
+        return $this->setOption('required', boolval($required));
     }
 
     /**
@@ -134,7 +134,7 @@ trait FormTypeTrait
      */
     public function getRequired($default = true)
     {
-        return $this->getParameter('required', $default);
+        return $this->getOption('required', $default);
     }
 
     /**
@@ -144,7 +144,7 @@ trait FormTypeTrait
      */
     public function setTrim($trim = true)
     {
-        return $this->setParameter('trim', boolval($trim));
+        return $this->setOption('trim', boolval($trim));
     }
 
     /**
@@ -153,7 +153,7 @@ trait FormTypeTrait
      */
     public function getTrim($default = true)
     {
-        return $this->getParameter('trim', $default);
+        return $this->getOption('trim', $default);
     }
 
     /**
@@ -163,7 +163,7 @@ trait FormTypeTrait
      */
     public function setAutoInitialize($autoInitialize = true)
     {
-        return $this->setParameter('auto_initialize', boolval($autoInitialize));
+        return $this->setOption('auto_initialize', boolval($autoInitialize));
     }
 
     /**
@@ -172,6 +172,6 @@ trait FormTypeTrait
      */
     public function getAutoInitialize($default = true)
     {
-        return $this->getParameter('auto_initialize', $default);
+        return $this->getOption('auto_initialize', $default);
     }
 }

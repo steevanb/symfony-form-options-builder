@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait DateTypeTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param string $widget
@@ -24,7 +24,7 @@ trait DateTypeTrait
      */
     public function setDays(array $days = null)
     {
-        $this->setParameter('days', $days);
+        $this->setOption('days', $days);
         if (is_array($days)) {
             $this->setWidget('choice');
         }
@@ -37,7 +37,7 @@ trait DateTypeTrait
      */
     public function getDays()
     {
-        return $this->getParameter('days');
+        return $this->getOption('days');
     }
 
     /**
@@ -47,7 +47,7 @@ trait DateTypeTrait
      */
     public function setFormat($format)
     {
-        $this->setParameter('format', $format);
+        $this->setOption('format', $format);
         if (is_string($format)) {
             $this->setWidget('single_text');
         }
@@ -60,7 +60,7 @@ trait DateTypeTrait
      */
     public function getFormat()
     {
-        return $this->getParameter('format');
+        return $this->getOption('format');
     }
 
     /**
@@ -70,7 +70,7 @@ trait DateTypeTrait
      */
     public function setMonths(array $months = null)
     {
-        $this->setParameter('months', $months);
+        $this->setOption('months', $months);
         if (is_array($months)) {
             $this->setWidget('choice');
         }
@@ -83,7 +83,7 @@ trait DateTypeTrait
      */
     public function getMonths()
     {
-        return $this->getParameter('months');
+        return $this->getOption('months');
     }
 
     /**
@@ -93,7 +93,7 @@ trait DateTypeTrait
      */
     public function setYears(array $years = null)
     {
-        $this->setParameter('years', $years);
+        $this->setOption('years', $years);
         if (is_array($years)) {
             $this->setWidget('choice');
         }
@@ -106,6 +106,6 @@ trait DateTypeTrait
      */
     public function getYears()
     {
-        return $this->getParameter('years');
+        return $this->getOption('years');
     }
 }

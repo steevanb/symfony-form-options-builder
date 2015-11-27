@@ -20,7 +20,7 @@ class Percent extends AbstractField
      */
     public function setType($type)
     {
-        return $this->setParameter('type', $type);
+        return $this->setOption('type', $type);
     }
 
     /**
@@ -29,6 +29,6 @@ class Percent extends AbstractField
      */
     public function getType($default = self::TYPE_FRACTIONAL)
     {
-        return $this->getParameter('type', $default);
+        return $this->getOption('type', $default);
     }
 }

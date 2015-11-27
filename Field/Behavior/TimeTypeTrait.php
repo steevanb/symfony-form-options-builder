@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait TimeTypeTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param string $widget
@@ -24,7 +24,7 @@ trait TimeTypeTrait
      */
     public function setHours(array $hours = null)
     {
-        $this->setParameter('hours', $hours);
+        $this->setOption('hours', $hours);
         if (is_array($hours)) {
             $this->setWidget('choice');
         }
@@ -37,7 +37,7 @@ trait TimeTypeTrait
      */
     public function getHours()
     {
-        return $this->getParameter('hours');
+        return $this->getOption('hours');
     }
 
     /**
@@ -47,7 +47,7 @@ trait TimeTypeTrait
      */
     public function setMinutes(array $minutes = null)
     {
-        $this->setParameter('minutes', $minutes);
+        $this->setOption('minutes', $minutes);
         if (is_array($minutes)) {
             $this->setWidget('choice');
         }
@@ -60,7 +60,7 @@ trait TimeTypeTrait
      */
     public function getMinutes()
     {
-        return $this->getParameter('minutes');
+        return $this->getOption('minutes');
     }
 
     /**
@@ -70,7 +70,7 @@ trait TimeTypeTrait
      */
     public function setSeconds(array $seconds = null)
     {
-        $this->setParameter('seconds', $seconds);
+        $this->setOption('seconds', $seconds);
         if (is_array($seconds)) {
             $this->setWidget('choice');
         }
@@ -83,7 +83,7 @@ trait TimeTypeTrait
      */
     public function getSeconds()
     {
-        return $this->getParameter('seconds');
+        return $this->getOption('seconds');
     }
 
     /**
@@ -93,7 +93,7 @@ trait TimeTypeTrait
      */
     public function setWithMinutes($withMinutes = true)
     {
-        return $this->setParameter('with_minutes', boolval($withMinutes));
+        return $this->setOption('with_minutes', boolval($withMinutes));
     }
 
     /**
@@ -102,7 +102,7 @@ trait TimeTypeTrait
      */
     public function getWithMinutes($default = true)
     {
-        return $this->getParameter('with_minutes', $default);
+        return $this->getOption('with_minutes', $default);
     }
 
     /**
@@ -112,7 +112,7 @@ trait TimeTypeTrait
      */
     public function setWithSeconds($withSeconds = true)
     {
-        return $this->setParameter('with_seconds', boolval($withSeconds));
+        return $this->setOption('with_seconds', boolval($withSeconds));
     }
 
     /**
@@ -121,6 +121,6 @@ trait TimeTypeTrait
      */
     public function getWithSeconds($default = false)
     {
-        return $this->getParameter('with_seconds', $default);
+        return $this->getOption('with_seconds', $default);
     }
 }

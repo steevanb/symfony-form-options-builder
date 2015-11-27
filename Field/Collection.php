@@ -17,7 +17,7 @@ class Collection extends AbstractField
      */
     public function setAllowAdd($allow = true)
     {
-        return $this->setParameter('allow_add', boolval($allow));
+        return $this->setOption('allow_add', boolval($allow));
     }
 
     /**
@@ -26,7 +26,7 @@ class Collection extends AbstractField
      */
     public function getAllowAdd($default = false)
     {
-        return $this->getParameter('allow_add', $default);
+        return $this->getOption('allow_add', $default);
     }
 
     /**
@@ -36,7 +36,7 @@ class Collection extends AbstractField
      */
     public function setAllowDelete($allow = true)
     {
-        return $this->setParameter('allow_delete', boolval($allow));
+        return $this->setOption('allow_delete', boolval($allow));
     }
 
     /**
@@ -45,7 +45,7 @@ class Collection extends AbstractField
      */
     public function getAllowDelete($default = false)
     {
-        return $this->getParameter('allow_delete', $default);
+        return $this->getOption('allow_delete', $default);
     }
 
     /**
@@ -55,7 +55,7 @@ class Collection extends AbstractField
      */
     public function setDeleteEmpty($delete = true)
     {
-        return $this->setParameter('delete_empty', boolval($delete));
+        return $this->setOption('delete_empty', boolval($delete));
     }
 
     /**
@@ -64,7 +64,7 @@ class Collection extends AbstractField
      */
     public function getDeleteEmpty($default = false)
     {
-        return $this->getParameter('delete_empty', $default);
+        return $this->getOption('delete_empty', $default);
     }
 
     /**
@@ -74,7 +74,7 @@ class Collection extends AbstractField
      */
     public function setOptions(array $options)
     {
-        return $this->setParameter('options', $options);
+        return $this->setOption('options', $options);
     }
 
     /**
@@ -83,7 +83,7 @@ class Collection extends AbstractField
      */
     public function getOptions($default = array())
     {
-        return $this->getParameter('options', $default);
+        return $this->getOption('options', $default);
     }
 
     /**
@@ -94,7 +94,7 @@ class Collection extends AbstractField
      */
     public function setPrototype($prototype = true, $setAllowAdd = true)
     {
-        $this->setParameter('prototype', boolval($prototype));
+        $this->setOption('prototype', boolval($prototype));
         if ($prototype && $setAllowAdd) {
             $this->setAllowAdd();
         }
@@ -108,7 +108,7 @@ class Collection extends AbstractField
      */
     public function getPrototype($default = true)
     {
-        return $this->getParameter('prototype', $default);
+        return $this->getOption('prototype', $default);
     }
 
     /**
@@ -119,7 +119,7 @@ class Collection extends AbstractField
      */
     public function setPrototypeName($name, $setAllowAdd = true)
     {
-        $this->setParameter('prototype_name', $name);
+        $this->setOption('prototype_name', $name);
         if ($setAllowAdd) {
             $this->setPrototype();
         }
@@ -134,7 +134,7 @@ class Collection extends AbstractField
      */
     public function setType($type)
     {
-        return $this->setParameter('type', $type);
+        return $this->setOption('type', $type);
     }
 
     /**
@@ -142,6 +142,6 @@ class Collection extends AbstractField
      */
     public function getType()
     {
-        return $this->getParameter('type');
+        return $this->getOption('type');
     }
 }

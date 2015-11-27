@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait ByReferenceTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param bool $byReference
@@ -13,7 +13,7 @@ trait ByReferenceTrait
      */
     public function setByReference($byReference = true)
     {
-        return $this->setParameter('by_reference', boolval($byReference));
+        return $this->setOption('by_reference', boolval($byReference));
     }
 
     /**
@@ -22,6 +22,6 @@ trait ByReferenceTrait
      */
     public function getByReference($default = true)
     {
-        return $this->getParameter('by_reference', $default);
+        return $this->getOption('by_reference', $default);
     }
 }

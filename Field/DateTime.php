@@ -22,7 +22,7 @@ class DateTime extends AbstractField
      */
     public function setFormat($format)
     {
-        return $this->setParameter('format', $format);
+        return $this->setOption('format', $format);
     }
 
     /**
@@ -31,7 +31,7 @@ class DateTime extends AbstractField
      */
     public function getFormat($default = DateTimeType::HTML5_FORMAT)
     {
-        return $this->getParameter('format', $default);
+        return $this->getOption('format', $default);
     }
 
     /**
@@ -41,7 +41,7 @@ class DateTime extends AbstractField
      */
     public function setDateFormat($format)
     {
-        return $this->setParameter('date_format', $format);
+        return $this->setOption('date_format', $format);
     }
 
     /**
@@ -50,7 +50,7 @@ class DateTime extends AbstractField
      */
     public function getDateFormat($default = \IntlDateFormatter::MEDIUM)
     {
-        return $this->getParameter('date_format', $default);
+        return $this->getOption('date_format', $default);
     }
 
     /**
@@ -60,7 +60,7 @@ class DateTime extends AbstractField
      */
     public function setDateWidget($widget)
     {
-        return $this->setParameter('date_widget', $widget);
+        return $this->setOption('date_widget', $widget);
     }
 
     /**
@@ -69,7 +69,7 @@ class DateTime extends AbstractField
      */
     public function getDateWidget($default = 'choice')
     {
-        return $this->getParameter('date_widget', $default);
+        return $this->getOption('date_widget', $default);
     }
 
     /**
@@ -79,7 +79,7 @@ class DateTime extends AbstractField
      */
     public function setTimeWidget($widget)
     {
-        return $this->setParameter('time_widget', $widget);
+        return $this->setOption('time_widget', $widget);
     }
 
     /**
@@ -88,6 +88,6 @@ class DateTime extends AbstractField
      */
     public function getTimeWidget($default = 'choice')
     {
-        return $this->getParameter('time_widget', $default);
+        return $this->getOption('time_widget', $default);
     }
 }

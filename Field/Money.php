@@ -19,7 +19,7 @@ class Money extends AbstractField
      */
     public function getScale($default = 2)
     {
-        return $this->getParameter('scale', $default);
+        return $this->getOption('scale', $default);
     }
 
     /**
@@ -29,6 +29,6 @@ class Money extends AbstractField
      */
     public function getPrecision($default = 2)
     {
-        return $this->getParameter('precision', $default);
+        return $this->getOption('precision', $default);
     }
 }

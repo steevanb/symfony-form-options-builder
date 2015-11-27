@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait ErrorBubblingTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param bool $errorBubbling
@@ -13,7 +13,7 @@ trait ErrorBubblingTrait
      */
     public function setErrorBubbling($errorBubbling = true)
     {
-        return $this->setParameter('error_bubbling', $errorBubbling);
+        return $this->setOption('error_bubbling', $errorBubbling);
     }
 
     /**
@@ -21,6 +21,6 @@ trait ErrorBubblingTrait
      */
     public function getErrorBubbling()
     {
-        return $this->getParameter('error_bubbling');
+        return $this->getOption('error_bubbling');
     }
 }

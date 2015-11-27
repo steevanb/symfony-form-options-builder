@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\Field\Behavior;
 
 trait ScaleTrait
 {
-    use ParameterAccessors;
+    use OptionAccessorsTrait;
 
     /**
      * @param int $scale
@@ -13,7 +13,7 @@ trait ScaleTrait
      */
     public function setScale($scale)
     {
-        return $this->setParameter('scale', $scale);
+        return $this->setOption('scale', $scale);
     }
 
     /**
@@ -21,7 +21,7 @@ trait ScaleTrait
      */
     public function getScale()
     {
-        return $this->getParameter('scale');
+        return $this->getOption('scale');
     }
 
     /**
@@ -32,7 +32,7 @@ trait ScaleTrait
      */
     public function setPrecision($precision)
     {
-        return $this->setParameter('precision', $precision);
+        return $this->setOption('precision', $precision);
     }
 
     /**
@@ -41,6 +41,6 @@ trait ScaleTrait
      */
     public function getPrecision()
     {
-        return $this->getParameter('precision');
+        return $this->getOption('precision');
     }
 }
