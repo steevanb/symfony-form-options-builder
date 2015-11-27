@@ -5,3 +5,5 @@
 - Rename steevanb\FormUtils\Fields\Traits to steevanb\FormUtils\Field\Behavior
 - Add Trait suffix to traits
 - Remove TranslatorAware and TranslatorAwareWithConstruct
+- Remove AbstractField::add(), AbstractField::getFieldType(), builder and field id
+- Add AbstractField::asArray()
