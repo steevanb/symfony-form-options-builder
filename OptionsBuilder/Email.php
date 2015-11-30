@@ -2,9 +2,8 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Email extends AbstractOptionBuilder
+class Email extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;

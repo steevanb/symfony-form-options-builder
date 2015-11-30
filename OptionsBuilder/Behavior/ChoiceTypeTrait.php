@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
 trait ChoiceTypeTrait
 {
-    use FormTypeTrait;
+    use OptionAccessorsTrait;
     use PlaceHolderTrait;
 
     /**

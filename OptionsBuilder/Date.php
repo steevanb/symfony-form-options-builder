@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Date extends AbstractOptionBuilder
+class Date extends AbstractOptionsBuilder
 {
     use Behavior\DateTimeCommonTrait;
     use Behavior\DateTypeTrait;

@@ -2,9 +2,8 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Search extends AbstractOptionBuilder
+class Search extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
 }

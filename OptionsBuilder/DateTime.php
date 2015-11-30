@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
-class DateTime extends AbstractOptionBuilder
+class DateTime extends AbstractOptionsBuilder
 {
     use Behavior\DateTimeCommonTrait;
     use Behavior\DateTypeTrait;

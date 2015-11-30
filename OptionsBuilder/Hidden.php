@@ -2,10 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Hidden extends AbstractOptionBuilder
+class Hidden extends AbstractOptionsBuilder
 {
-    use Behavior\ErrorBubblingTrait;
-    use Behavior\DataTrait;
-    use Behavior\MappedTrait;
-    use Behavior\PropertyPathTrait;
+
 }

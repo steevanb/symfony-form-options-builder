@@ -2,9 +2,11 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Checkbox extends AbstractOptionBuilder
+use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+
+class Checkbox extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
+    use OptionAccessorsTrait;
 
     /**
      * @param mixed $value

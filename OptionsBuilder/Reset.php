@@ -2,8 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Reset extends AbstractOptionBuilder
+class Reset extends AbstractOptionsBuilder
 {
-    use Behavior\BaseTypeTrait;
     use Behavior\AutofocusTrait;
 }

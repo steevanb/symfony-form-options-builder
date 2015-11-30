@@ -2,9 +2,11 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Money extends AbstractOptionBuilder
+use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+
+class Money extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
+    use OptionAccessorsTrait;
     use Behavior\CurrencyTrait;
     use Behavior\DivisorTrait;
     use Behavior\GroupingTrait;

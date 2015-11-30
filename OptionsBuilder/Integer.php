@@ -2,9 +2,8 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Integer extends AbstractOptionBuilder
+class Integer extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
     use Behavior\GroupingTrait;
     use Behavior\ScaleTrait;
     use Behavior\RoundingModeTrait;

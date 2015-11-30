@@ -2,9 +2,11 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Percent extends AbstractOptionBuilder
+use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+
+class Percent extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
+    use OptionAccessorsTrait;
     use Behavior\ScaleTrait;
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;

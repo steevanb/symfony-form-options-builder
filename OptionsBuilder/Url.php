@@ -2,9 +2,11 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Url extends AbstractOptionBuilder
+use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+
+class Url extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
+    use OptionAccessorsTrait;
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;

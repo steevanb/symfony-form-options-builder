@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
 trait DateTimeCommonTrait
 {
-    use FormTypeTrait;
+    use OptionAccessorsTrait;
     use PlaceHolderTrait;
     use AutofocusTrait;
 

@@ -2,11 +2,12 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
+use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\FormTypeInterface;
 
-class Collection extends AbstractOptionBuilder
+class Collection extends AbstractOptionsBuilder
 {
-    use Behavior\FormTypeTrait;
+    use OptionAccessorsTrait;
     use Behavior\CascadeValidationTrait;
     use Behavior\ByReferenceTrait;
 

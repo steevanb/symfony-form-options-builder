@@ -2,8 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Button extends AbstractOptionBuilder
+class Button extends AbstractOptionsBuilder
 {
-    use Behavior\BaseTypeTrait;
     use Behavior\AutofocusTrait;
 }

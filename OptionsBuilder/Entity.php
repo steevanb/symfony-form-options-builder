@@ -5,7 +5,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 
-class Entity extends AbstractOptionBuilder
+class Entity extends AbstractOptionsBuilder
 {
     use Behavior\ChoiceTypeTrait;
     use Behavior\ChoicesListTrait;
