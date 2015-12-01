@@ -377,7 +377,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
 
     /**
      * @param bool $autoInitialize
-     * @return bool
+     * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
      */
     public function setAutoInitialize($autoInitialize = true)

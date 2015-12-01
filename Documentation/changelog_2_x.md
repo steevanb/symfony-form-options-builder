@@ -1,9 +1,6 @@
 2.0.0 (2015-11-27)
 ------------------
 
-- Rename steevanb\FormUtils\Fields to steevanb\FormUtils\OptionsBuilder
-- Rename steevanb\FormUtils\Fields\Traits to steevanb\FormUtils\OptionsBuilder\Behavior
-- Add Trait suffix to traits
-- Remove TranslatorAware and TranslatorAwareWithConstruct
-- Remove AbstractOptionBuilder::add(), AbstractOptionBuilder::getFieldType(), builder and field id
-- Add AbstractOptionBuilder::asArray()
+- Completly rewritten
+- Remove default value for getters and __construct()
+- You can use PHP 5.6 variadic syntax to add your options easily

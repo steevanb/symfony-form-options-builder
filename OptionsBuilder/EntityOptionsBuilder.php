@@ -12,7 +12,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\ByReferenceTrait;
 
     /**
-     * @param \stdClass $class
+     * @param string $class
      * @return $this
      */
     public function setRequiredOptions($class)

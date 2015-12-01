@@ -15,12 +15,12 @@ SF2FormUtils helps you writing your SF2 FormType, with some traits and methods t
 
 [Changelog 1.x](Documentation/changelog_1_x.md)
 
-Traits\Fields
---------------------------------
+Object oriented FormType
+------------------------
 
 FormType::buildForm() object oriented instead of array
 
-[Documentation](Documentation/fields.md)
+[Documentation](Documentation/optionsbuilder.md)
 
 Traits\Name
 ------------------------------
