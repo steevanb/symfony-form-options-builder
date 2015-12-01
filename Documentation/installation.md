@@ -1,7 +1,7 @@
 Composer
 --------
 ```
-composer require steevanb/sf2-form-utils 1.4.*
+composer require steevanb/sf2-form-utils 2.0.*
 ```
 
 Or add it manually :
@@ -10,7 +10,7 @@ Or add it manually :
 # composer.json
 {
     "require": {
-        "steevanb/sf2-form-utils": "1.4.*"
+        "steevanb/sf2-form-utils": "2.0.*"
     }
 }
 ```
