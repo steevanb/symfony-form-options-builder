@@ -13,8 +13,7 @@ trait OptionAccessorsTrait
 
     /**
      * @param string $name
-     * @param mixed $default
      * @return mixed
      */
-    abstract public function getOption($name, $default = null);
+    abstract public function getOption($name);
 }

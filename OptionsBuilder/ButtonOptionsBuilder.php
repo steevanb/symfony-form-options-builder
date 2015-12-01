@@ -2,8 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Textarea extends AbstractOptionsBuilder
+class ButtonOptionsBuilder extends AbstractOptionsBuilder
 {
-    use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
 }

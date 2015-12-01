@@ -93,16 +93,15 @@ trait TimeTypeTrait
      */
     public function setWithMinutes($withMinutes = true)
     {
-        return $this->setOption('with_minutes', boolval($withMinutes));
+        return $this->setOption('with_minutes', $withMinutes);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getWithMinutes($default = true)
+    public function getWithMinutes()
     {
-        return $this->getOption('with_minutes', $default);
+        return $this->getOption('with_minutes');
     }
 
     /**
@@ -112,15 +111,14 @@ trait TimeTypeTrait
      */
     public function setWithSeconds($withSeconds = true)
     {
-        return $this->setOption('with_seconds', boolval($withSeconds));
+        return $this->setOption('with_seconds', $withSeconds);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getWithSeconds($default = false)
+    public function getWithSeconds()
     {
-        return $this->getOption('with_seconds', $default);
+        return $this->getOption('with_seconds');
     }
 }

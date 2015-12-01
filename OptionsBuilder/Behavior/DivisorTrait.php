@@ -17,11 +17,10 @@ trait DivisorTrait
     }
 
     /**
-     * @param null|int $default
      * @return int
      */
-    public function getDivisor($default = 1)
+    public function getDivisor()
     {
-        return $this->getOption('divisor', $default);
+        return $this->getOption('divisor');
     }
 }

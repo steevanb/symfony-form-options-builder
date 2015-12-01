@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Hidden extends AbstractOptionsBuilder
+class HiddenOptionsBuilder extends AbstractOptionsBuilder
 {
 
 }

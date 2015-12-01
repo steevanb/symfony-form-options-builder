@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Currency extends AbstractOptionsBuilder
+class CurrencyOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\ChoiceTypeTrait;
 }

@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Integer extends AbstractOptionsBuilder
+class IntegerOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\GroupingTrait;
     use Behavior\ScaleTrait;

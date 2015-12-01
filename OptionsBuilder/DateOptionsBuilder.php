@@ -2,10 +2,11 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Birthday extends AbstractOptionsBuilder
+class DateOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\DateTimeCommonTrait;
     use Behavior\DateTypeTrait;
+    use Behavior\HTML5Trait;
 
     const WIDGET_CHOICE = 'choice';
     const WIDGET_TEXT = 'text';

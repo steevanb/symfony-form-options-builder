@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
 
-class Money extends AbstractOptionsBuilder
+class MoneyOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
     use Behavior\CurrencyTrait;
@@ -16,21 +16,19 @@ class Money extends AbstractOptionsBuilder
     use Behavior\AutocompleteTrait;
 
     /**
-     * @param null|int $default
      * @return int
      */
-    public function getScale($default = 2)
+    public function getScale()
     {
-        return $this->getOption('scale', $default);
+        return $this->getOption('scale');
     }
 
     /**
-     * @param null|int $default
      * @return int
      * @deprecated Since 2.7
      */
-    public function getPrecision($default = 2)
+    public function getPrecision()
     {
-        return $this->getOption('precision', $default);
+        return $this->getOption('precision');
     }
 }

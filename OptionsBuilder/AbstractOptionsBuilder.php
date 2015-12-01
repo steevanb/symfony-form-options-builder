@@ -4,10 +4,31 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 use Symfony\Component\Validator\Constraint;
 
-class AbstractOptionsBuilder implements OptionsBuilderInterface
+abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
 {
+    const OPTION_DEFAULT_VALUE = '%%if-value-is-set-then-default-value-is-overidden%%';
+
     /** @var array */
     protected $options = array();
+
+    /**
+     * @return static
+     */
+    public static function create()
+    {
+        return new static();
+    }
+
+    /**
+     * @return string
+     */
+    public static function getBuilderType()
+    {
+        $fullClass = get_called_class();
+        $class = substr($fullClass, strrpos($fullClass, '\\') + 1);
+
+        return strtolower(substr($class, 0, -14));
+    }
 
     /**
      * @param string $name
@@ -16,19 +37,35 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function setOption($name, $value)
     {
-        $this->options[$name] = $value;
+        if ($value === self::OPTION_DEFAULT_VALUE) {
+            $this->removeOption($name);
+        } else {
+            $this->options[$name] = $value;
+        }
 
         return $this;
     }
 
     /**
      * @param string $name
-     * @param mixed $default
      * @return mixed
      */
-    public function getOption($name, $default = null)
+    public function getOption($name)
     {
-        return (array_key_exists($name, $this->options)) ? $this->options[$name] : $default;
+        return (array_key_exists($name, $this->options)) ? $this->options[$name] : self::OPTION_DEFAULT_VALUE;
+    }
+
+    /**
+     * @param string $name
+     * @return $this
+     */
+    public function removeOption($name)
+    {
+        if (array_key_exists($name, $this->options)) {
+            unset($this->options[$name]);
+        }
+
+        return $this;
     }
 
     /**
@@ -37,6 +74,19 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     public function asArray()
     {
         return $this->options;
+    }
+
+    /**
+     * @param string|null $child
+     * @return array
+     */
+    public function asVariadic($child = null)
+    {
+        if ($child === null) {
+            return array(static::getBuilderType(), $this->asArray());
+        }
+
+        return array($child, static::getBuilderType(), $this->asArray());
     }
 
     /**
@@ -57,6 +107,9 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     public function addAttr($name, $value)
     {
         $attr = $this->getAttr();
+        if (is_array($attr) === false) {
+            $attr = array();
+        }
         $attr[$name] = $value;
         $this->setAttr($attr);
 
@@ -69,17 +122,22 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function getAttr($name = null)
     {
+        $attr = $this->getOption('attr');
+
         if (empty($name)) {
-            return $this->getOption('attr');
+            return $attr;
+        }
+        if (is_array($attr) === false) {
+            return self::OPTION_DEFAULT_VALUE;
         }
 
-        foreach ($this->getOption('attr', array()) as $attrName => $attrValue) {
+        foreach ($attr as $attrName => $attrValue) {
             if ($attrName == $name) {
                 return $attrValue;
             }
         }
 
-        return null;
+        return self::OPTION_DEFAULT_VALUE;
     }
 
     /**
@@ -89,8 +147,12 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     public function removeAttr($name)
     {
         $attr = array();
-        foreach ($this->getOption('attr', array()) as $attrName => $attrValue) {
-            if ($attrName != $name) {
+        $currentAttr = $this->getOption('attr');
+        if (is_array($currentAttr) === false) {
+            return $this;
+        }
+        foreach ($currentAttr as $attrName => $attrValue) {
+            if ($attrName !== $name) {
                 $attr[$attrName] = $attrValue;
             }
         }
@@ -128,12 +190,11 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     }
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getLabelAttr($default = array())
+    public function getLabelAttr()
     {
-        return $this->getOption('label_attr', $default);
+        return $this->getOption('label_attr');
     }
 
     /**
@@ -143,16 +204,15 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function setDisabled($disabled = true)
     {
-        return $this->setOption('disabled', boolval($disabled));
+        return $this->setOption('disabled', $disabled);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getDisabled($default = false)
+    public function getDisabled()
     {
-        return $this->getOption('disabled', $default);
+        return $this->getOption('disabled');
     }
 
     /**
@@ -166,12 +226,11 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     }
 
     /**
-     * @param null|string|false $default
-     * @return string
+     * @return string|false
      */
-    public function getTranslationDomain($default = null)
+    public function getTranslationDomain()
     {
-        return $this->getOption('translation_domain', $default);
+        return $this->getOption('translation_domain');
     }
 
     /**
@@ -191,6 +250,9 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     public function addConstraint(Constraint $constraint)
     {
         $constraints = $this->getConstraints();
+        if (is_array($constraints) === false) {
+            $constraints = array();
+        }
         $constraints[] = $constraint;
         $this->setConstraints($constraints);
 
@@ -198,12 +260,11 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     }
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getConstraints($default = array())
+    public function getConstraints()
     {
-        return $this->getOption('constraints', $default);
+        return $this->getOption('constraints');
     }
 
     /**
@@ -253,12 +314,11 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
     }
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getInvalidMessageParameters($default = array())
+    public function getInvalidMessageParameters()
     {
-        return $this->getOption('invalid_message_parameters', $default);
+        return $this->getOption('invalid_message_parameters');
     }
 
     /**
@@ -268,16 +328,15 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function setReadOnly($readOnly = true)
     {
-        return $this->setOption('read_only', boolval($readOnly));
+        return $this->setOption('read_only', $readOnly);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getReadOnly($default = false)
+    public function getReadOnly()
     {
-        return $this->getOption('read_only', $default);
+        return $this->getOption('read_only');
     }
 
     /**
@@ -287,16 +346,15 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function setRequired($required = true)
     {
-        return $this->setOption('required', boolval($required));
+        return $this->setOption('required', $required);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getRequired($default = true)
+    public function getRequired()
     {
-        return $this->getOption('required', $default);
+        return $this->getOption('required');
     }
 
     /**
@@ -306,16 +364,15 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function setTrim($trim = true)
     {
-        return $this->setOption('trim', boolval($trim));
+        return $this->setOption('trim', $trim);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getTrim($default = true)
+    public function getTrim()
     {
-        return $this->getOption('trim', $default);
+        return $this->getOption('trim');
     }
 
     /**
@@ -325,16 +382,15 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function setAutoInitialize($autoInitialize = true)
     {
-        return $this->setOption('auto_initialize', boolval($autoInitialize));
+        return $this->setOption('auto_initialize', $autoInitialize);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getAutoInitialize($default = true)
+    public function getAutoInitialize()
     {
-        return $this->getOption('auto_initialize', $default);
+        return $this->getOption('auto_initialize');
     }
 
     /**
@@ -343,16 +399,15 @@ class AbstractOptionsBuilder implements OptionsBuilderInterface
      */
     public function setMapped($mapped = true)
     {
-        return $this->setOption('mapped', boolval($mapped));
+        return $this->setOption('mapped', $mapped);
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getMapped($default = true)
+    public function getMapped()
     {
-        return $this->getOption('mapped', $default);
+        return $this->getOption('mapped');
     }
 
     /**

@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
 
-class Percent extends AbstractOptionsBuilder
+class PercentOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
     use Behavior\ScaleTrait;
@@ -26,11 +26,10 @@ class Percent extends AbstractOptionsBuilder
     }
 
     /**
-     * @param null|string $default
      * @return string
      */
-    public function getType($default = self::TYPE_FRACTIONAL)
+    public function getType()
     {
-        return $this->getOption('type', $default);
+        return $this->getOption('type');
     }
 }

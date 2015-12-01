@@ -10,18 +10,19 @@ trait CascadeValidationTrait
      * @param $validation
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/collection.html#cascade-validation
+     * @deprecated Since 2.8
      */
     public function setCascadeValidation($validation = true)
     {
-        return $this->setOption('cascade_validation', boolval($validation));
+        return $this->setOption('cascade_validation', $validation);
     }
 
     /**
-     * @param bool $default
      * @return bool
+     * @deprecated Since 2.8
      */
-    public function getCascadeValidation($default = false)
+    public function getCascadeValidation()
     {
-        return $this->getOption('cascade_validation', $default);
+        return $this->getOption('cascade_validation');
     }
 }

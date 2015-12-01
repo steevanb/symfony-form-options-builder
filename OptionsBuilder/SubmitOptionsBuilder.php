@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Submit extends AbstractOptionsBuilder
+class SubmitOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\AutofocusTrait;
 

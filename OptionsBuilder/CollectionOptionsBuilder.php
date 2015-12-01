@@ -5,7 +5,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\FormTypeInterface;
 
-class Collection extends AbstractOptionsBuilder
+class CollectionOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
     use Behavior\CascadeValidationTrait;
@@ -18,16 +18,15 @@ class Collection extends AbstractOptionsBuilder
      */
     public function setAllowAdd($allow = true)
     {
-        return $this->setOption('allow_add', boolval($allow));
+        return $this->setOption('allow_add', $allow);
     }
 
     /**
-     * @param bool $default
      * @return bool
      */
-    public function getAllowAdd($default = false)
+    public function getAllowAdd()
     {
-        return $this->getOption('allow_add', $default);
+        return $this->getOption('allow_add');
     }
 
     /**
@@ -37,16 +36,15 @@ class Collection extends AbstractOptionsBuilder
      */
     public function setAllowDelete($allow = true)
     {
-        return $this->setOption('allow_delete', boolval($allow));
+        return $this->setOption('allow_delete', $allow);
     }
 
     /**
-     * @param bool $default
      * @return bool
      */
-    public function getAllowDelete($default = false)
+    public function getAllowDelete()
     {
-        return $this->getOption('allow_delete', $default);
+        return $this->getOption('allow_delete');
     }
 
     /**
@@ -56,16 +54,15 @@ class Collection extends AbstractOptionsBuilder
      */
     public function setDeleteEmpty($delete = true)
     {
-        return $this->setOption('delete_empty', boolval($delete));
+        return $this->setOption('delete_empty', $delete);
     }
 
     /**
-     * @param bool $default
      * @return bool
      */
-    public function getDeleteEmpty($default = false)
+    public function getDeleteEmpty()
     {
-        return $this->getOption('delete_empty', $default);
+        return $this->getOption('delete_empty');
     }
 
     /**
@@ -79,12 +76,11 @@ class Collection extends AbstractOptionsBuilder
     }
 
     /**
-     * @param array $default
      * @return array
      */
-    public function getOptions($default = array())
+    public function getOptions()
     {
-        return $this->getOption('options', $default);
+        return $this->getOption('options');
     }
 
     /**
@@ -95,7 +91,7 @@ class Collection extends AbstractOptionsBuilder
      */
     public function setPrototype($prototype = true, $setAllowAdd = true)
     {
-        $this->setOption('prototype', boolval($prototype));
+        $this->setOption('prototype', $prototype);
         if ($prototype && $setAllowAdd) {
             $this->setAllowAdd();
         }
@@ -104,12 +100,11 @@ class Collection extends AbstractOptionsBuilder
     }
 
     /**
-     * @param bool $default
      * @return bool
      */
-    public function getPrototype($default = true)
+    public function getPrototype()
     {
-        return $this->getOption('prototype', $default);
+        return $this->getOption('prototype');
     }
 
     /**

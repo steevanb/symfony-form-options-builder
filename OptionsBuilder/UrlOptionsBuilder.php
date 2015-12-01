@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
 
-class Url extends AbstractOptionsBuilder
+class UrlOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
     use Behavior\PlaceHolderTrait;
@@ -26,11 +26,10 @@ class Url extends AbstractOptionsBuilder
     }
 
     /**
-     * @param null|string $default
      * @return mixed
      */
-    public function getDefaultProtocol($default = self::PROTOCOL_HTTP)
+    public function getDefaultProtocol()
     {
-        return $this->getOption('default_protocol', $default);
+        return $this->getOption('default_protocol');
     }
 }

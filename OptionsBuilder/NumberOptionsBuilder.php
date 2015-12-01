@@ -2,8 +2,11 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Text extends AbstractOptionsBuilder
+class NumberOptionsBuilder extends AbstractOptionsBuilder
 {
+    use Behavior\GroupingTrait;
+    use Behavior\ScaleTrait;
+    use Behavior\RoundingModeTrait;
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;

@@ -18,12 +18,11 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getChoices($default = array())
+    public function getChoices()
     {
-        return $this->getOption('choices', $default);
+        return $this->getOption('choices');
     }
 
     /**
@@ -156,7 +155,7 @@ trait ChoiceTypeTrait
      */
     public function getChoicesAsValues()
     {
-        return $this->getOption('choices_as_values', false);
+        return $this->getOption('choices_as_values');
     }
 
     /**
@@ -190,12 +189,11 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getExpanded($default = false)
+    public function getExpanded()
     {
-        return $this->getOption('expanded', $default);
+        return $this->getOption('expanded');
     }
 
     /**
@@ -209,12 +207,11 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getMultiple($default = false)
+    public function getMultiple()
     {
-        return $this->getOption('multiple', $default);
+        return $this->getOption('multiple');
     }
 
     /**
@@ -260,11 +257,10 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getPreferredChoices($default = array())
+    public function getPreferredChoices()
     {
-        return $this->getOption('preferred_choices', $default);
+        return $this->getOption('preferred_choices');
     }
 }

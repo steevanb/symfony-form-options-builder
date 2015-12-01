@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Locale extends AbstractOptionsBuilder
+class TimezoneOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\ChoiceTypeTrait;
 }

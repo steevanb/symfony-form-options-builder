@@ -21,6 +21,6 @@ trait AlwaysEmptyTrait
      */
     public function getAlwaysEmpty()
     {
-        return $this->getOption('always_empty', true);
+        return $this->getOption('always_empty');
     }
 }

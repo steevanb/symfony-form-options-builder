@@ -13,15 +13,14 @@ trait ByReferenceTrait
      */
     public function setByReference($byReference = true)
     {
-        return $this->setOption('by_reference', boolval($byReference));
+        return $this->setOption('by_reference', $byReference);
     }
 
     /**
-     * @param bool $default
      * @return bool
      */
-    public function getByReference($default = true)
+    public function getByReference()
     {
-        return $this->getOption('by_reference', $default);
+        return $this->getOption('by_reference');
     }
 }

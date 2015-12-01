@@ -5,11 +5,22 @@ namespace steevanb\FormUtils\OptionsBuilder;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 
-class Entity extends AbstractOptionsBuilder
+class EntityOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\ChoiceTypeTrait;
     use Behavior\ChoicesListTrait;
     use Behavior\ByReferenceTrait;
+
+    /**
+     * @param \stdClass $class
+     * @return $this
+     */
+    public function setRequiredOptions($class)
+    {
+        $this->setClass($class);
+
+        return $this;
+    }
 
     /**
      * @param string $class

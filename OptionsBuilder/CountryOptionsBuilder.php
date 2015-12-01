@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Country extends AbstractOptionsBuilder
+class CountryOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\ChoiceTypeTrait;
 }

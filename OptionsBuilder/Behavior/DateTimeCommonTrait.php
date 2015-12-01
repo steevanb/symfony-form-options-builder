@@ -19,12 +19,11 @@ trait DateTimeCommonTrait
     }
 
     /**
-     * @param null|string $default
      * @return string
      */
-    public function getInput($default = 'datetime')
+    public function getInput()
     {
-        return $this->getOption('input', $default);
+        return $this->getOption('input');
     }
 
     /**

@@ -2,9 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
-
-class DateTime extends AbstractOptionsBuilder
+class DateTimeOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\DateTimeCommonTrait;
     use Behavior\DateTypeTrait;
@@ -26,12 +24,11 @@ class DateTime extends AbstractOptionsBuilder
     }
 
     /**
-     * @param null|string $default
      * @return string
      */
-    public function getFormat($default = DateTimeType::HTML5_FORMAT)
+    public function getFormat()
     {
-        return $this->getOption('format', $default);
+        return $this->getOption('format');
     }
 
     /**
@@ -45,12 +42,11 @@ class DateTime extends AbstractOptionsBuilder
     }
 
     /**
-     * @param null|int|string $default
      * @return int|string
      */
-    public function getDateFormat($default = \IntlDateFormatter::MEDIUM)
+    public function getDateFormat()
     {
-        return $this->getOption('date_format', $default);
+        return $this->getOption('date_format');
     }
 
     /**
@@ -64,12 +60,11 @@ class DateTime extends AbstractOptionsBuilder
     }
 
     /**
-     * @param null|string $default
      * @return string
      */
-    public function getDateWidget($default = 'choice')
+    public function getDateWidget()
     {
-        return $this->getOption('date_widget', $default);
+        return $this->getOption('date_widget');
     }
 
     /**
@@ -83,11 +78,10 @@ class DateTime extends AbstractOptionsBuilder
     }
 
     /**
-     * @param null|string $default
      * @return string
      */
-    public function getTimeWidget($default = 'choice')
+    public function getTimeWidget()
     {
-        return $this->getOption('time_widget', $default);
+        return $this->getOption('time_widget');
     }
 }

@@ -17,11 +17,10 @@ trait GroupingTrait
     }
 
     /**
-     * @param null|bool $default
      * @return false|int
      */
-    public function getGrouping($default = false)
+    public function getGrouping()
     {
-        return $this->getOption('grouping', $default);
+        return $this->getOption('grouping');
     }
 }

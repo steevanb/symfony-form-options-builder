@@ -4,8 +4,6 @@ namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
 trait PlaceHolderTrait
 {
-    use OptionAccessorsTrait;
-
     /**
      * @param string $name
      * @param mixed $value

@@ -2,8 +2,6 @@
 
 namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
-use Symfony\Component\Form\Extension\Core\DataTransformer\IntegerToLocalizedStringTransformer;
-
 trait RoundingModeTrait
 {
     use OptionAccessorsTrait;
@@ -19,11 +17,10 @@ trait RoundingModeTrait
     }
 
     /**
-     * @param null|int $default
      * @return int
      */
-    public function getRoundingMode($default = IntegerToLocalizedStringTransformer::ROUND_DOWN)
+    public function getRoundingMode()
     {
-        return $this->getOption('rounding_mode', $default);
+        return $this->getOption('rounding_mode');
     }
 }

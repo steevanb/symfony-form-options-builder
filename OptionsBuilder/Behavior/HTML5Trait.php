@@ -17,11 +17,10 @@ trait HTML5Trait
     }
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getHTML5($default = true)
+    public function getHTML5()
     {
-        return $this->getOption('html5', $default);
+        return $this->getOption('html5');
     }
 }

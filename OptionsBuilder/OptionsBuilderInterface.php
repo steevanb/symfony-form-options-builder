@@ -7,6 +7,16 @@ use Symfony\Component\Validator\Constraint;
 interface OptionsBuilderInterface
 {
     /**
+     * @return OptionsBuilderInterface
+     */
+    public static function create();
+
+    /**
+     * @return string
+     */
+    public static function getBuilderType();
+
+    /**
      * @param string $name
      * @param mixed $value
      * @return $this
@@ -15,15 +25,20 @@ interface OptionsBuilderInterface
 
     /**
      * @param string $name
-     * @param mixed $default
      * @return mixed
      */
-    public function getOption($name, $default = null);
+    public function getOption($name);
 
     /**
      * @return array
      */
     public function asArray();
+
+    /**
+     * @param string $child
+     * @return array
+     */
+    public function asVariadic($child);
 
     /**
      * @param array $attr
@@ -71,10 +86,9 @@ interface OptionsBuilderInterface
     public function setLabelAttr(array $attr);
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getLabelAttr($default = array());
+    public function getLabelAttr();
 
     /**
      * @param bool $disabled
@@ -84,10 +98,9 @@ interface OptionsBuilderInterface
     public function setDisabled($disabled = true);
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getDisabled($default = false);
+    public function getDisabled();
 
     /**
      * @param string|false $domain
@@ -97,10 +110,9 @@ interface OptionsBuilderInterface
     public function setTranslationDomain($domain);
 
     /**
-     * @param null|string|false $default
      * @return string
      */
-    public function getTranslationDomain($default = null);
+    public function getTranslationDomain();
 
     /**
      * @param array $constraints
@@ -116,10 +128,9 @@ interface OptionsBuilderInterface
     public function addConstraint(Constraint $constraint);
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getConstraints($default = array());
+    public function getConstraints();
 
     /**
      * @param mixed $emptyData
@@ -153,10 +164,9 @@ interface OptionsBuilderInterface
     public function setInvalidMessageParameters(array $parameters);
 
     /**
-     * @param null|array $default
      * @return array
      */
-    public function getInvalidMessageParameters($default = array());
+    public function getInvalidMessageParameters();
 
     /**
      * @param bool $readOnly
@@ -166,10 +176,9 @@ interface OptionsBuilderInterface
     public function setReadOnly($readOnly = true);
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getReadOnly($default = false);
+    public function getReadOnly();
 
     /**
      * @param bool $required
@@ -179,10 +188,9 @@ interface OptionsBuilderInterface
     public function setRequired($required = true);
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getRequired($default = true);
+    public function getRequired();
 
     /**
      * @param bool $trim
@@ -192,10 +200,9 @@ interface OptionsBuilderInterface
     public function setTrim($trim = true);
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getTrim($default = true);
+    public function getTrim();
 
     /**
      * @param bool $autoInitialize
@@ -205,10 +212,9 @@ interface OptionsBuilderInterface
     public function setAutoInitialize($autoInitialize = true);
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getAutoInitialize($default = true);
+    public function getAutoInitialize();
 
     /**
      * @param bool $mapped
@@ -217,10 +223,9 @@ interface OptionsBuilderInterface
     public function setMapped($mapped = true);
 
     /**
-     * @param null|bool $default
      * @return bool
      */
-    public function getMapped($default = true);
+    public function getMapped();
 
     /**
      * @param bool $errorBubbling

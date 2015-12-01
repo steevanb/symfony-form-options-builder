@@ -4,7 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
 
-class Checkbox extends AbstractOptionsBuilder
+class CheckboxOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
 
@@ -19,11 +19,10 @@ class Checkbox extends AbstractOptionsBuilder
     }
 
     /**
-     * @param int $default
      * @return mixed
      */
-    public function getValue($default = 1)
+    public function getValue()
     {
-        return $this->getOption('value', $default);
+        return $this->getOption('value');
     }
 }

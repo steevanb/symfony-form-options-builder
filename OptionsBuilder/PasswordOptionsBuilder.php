@@ -2,11 +2,9 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-class Number extends AbstractOptionsBuilder
+class PasswordOptionsBuilder extends AbstractOptionsBuilder
 {
-    use Behavior\GroupingTrait;
-    use Behavior\ScaleTrait;
-    use Behavior\RoundingModeTrait;
+    use Behavior\AlwaysEmptyTrait;
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
