@@ -22,17 +22,7 @@ FormType::buildForm() object oriented instead of array
 
 [Documentation](Documentation/optionsbuilder.md)
 
-Traits\Name
+steevanb\FormUtils\NameTrait
 ------------------------------
 
-Add getName(), allows to always return same syntax for form type name
-
-Traits\TranslatorAware
------------------------------------------
-
-Add setTranslator(TranslatorInterface $translator) and getTranslator()
-
-Traits\TranslatorAwareWithConstruct
-------------------------------------------------------
-
-Based on TranslatorAware, add __construct(TranslatorInterface $translator) with setTranslator($translator) call
+Add getName(), allows to always return same syntax for form type name : form_type_FormTypeClassName
