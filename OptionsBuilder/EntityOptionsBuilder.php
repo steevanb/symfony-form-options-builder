@@ -8,7 +8,6 @@ use Doctrine\ORM\QueryBuilder;
 class EntityOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\ChoiceTypeTrait;
-    use Behavior\ChoicesListTrait;
     use Behavior\ByReferenceTrait;
     use Behavior\DataClassTrait;
 
