@@ -2,10 +2,13 @@
 
 namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
+use Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface;
+
 trait ChoiceTypeTrait
 {
     use OptionAccessorsTrait;
     use PlaceHolderTrait;
+    use ChoicesListTrait;
 
     /**
      * @param array $choices
@@ -26,9 +29,9 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @param mixed $label
+     * @param string|callable|null $label
      * @return $this
-     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-label
      */
     public function setChoiceLabel($label)
     {
@@ -36,11 +39,31 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @return mixed
+     * @return string|callable|null
      */
     public function getChoiceLabel()
     {
         return $this->getOption('choice_label');
+    }
+
+    /**
+     * @param string|callable|null $list
+     * @return $this
+     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-list
+     * @deprecated Since 2.7
+     */
+    public function setChoiceList($list)
+    {
+        return $this->setOption('choice_list', $list);
+    }
+
+    /**
+     * @return string|callable|null
+     * @deprecated Since 2.7
+     */
+    public function getChoiceList()
+    {
+        return $this->getOption('choice_list');
     }
 
     /**
@@ -58,6 +81,24 @@ trait ChoiceTypeTrait
     public function getChoiceTranslationDomain()
     {
         return $this->getOption('choice_translation_domain');
+    }
+
+    /**
+     * @param ChoiceLoaderInterface $loader
+     * @return $this
+     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-loader
+     */
+    public function setChoiceLoader(ChoiceLoaderInterface $loader)
+    {
+        return $this->setOption('choice_loader', $loader);
+    }
+
+    /**
+     * @return ChoiceLoaderInterface|null
+     */
+    public function getChoiceLoader()
+    {
+        return $this->getOption('choice_loader');
     }
 
     /**
@@ -105,9 +146,9 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @param mixed $attr
+     * @param string|callable|array|null $attr
      * @return $this
-     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
+     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-attr
      */
     public function setChoiceAttr($attr)
     {
@@ -115,7 +156,7 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @return mixed
+     * @return string|callable|array|null
      */
     public function getChoiceAttr()
     {
@@ -247,7 +288,7 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @param array $choices
+     * @param string|callable|array $choices
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/choice.html#preferred-choices
      */
@@ -257,10 +298,27 @@ trait ChoiceTypeTrait
     }
 
     /**
-     * @return array
+     * @return string|callable|array
      */
     public function getPreferredChoices()
     {
         return $this->getOption('preferred_choices');
+    }
+
+    /**
+     * @param bool $inChoices
+     * @return $this
+     */
+    public function setPlaceholderInChoices($inChoices)
+    {
+        return $this->setOption('placeholder_in_choices', $inChoices);
+    }
+
+    /**
+     * @return bool
+     */
+    public function getPlaceholderInChoices()
+    {
+        return $this->getOption('placeholder_in_choices');
     }
 }
