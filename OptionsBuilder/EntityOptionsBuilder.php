@@ -10,6 +10,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\ChoiceTypeTrait;
     use Behavior\ChoicesListTrait;
     use Behavior\ByReferenceTrait;
+    use Behavior\DataClassTrait;
 
     /**
      * @param string $class
@@ -38,24 +39,6 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     public function getClass()
     {
         return $this->getOption('class');
-    }
-
-    /**
-     * @param string $dataClass
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data-class
-     */
-    public function setDataClass($dataClass)
-    {
-        return $this->setOption('data_class', $dataClass);
-    }
-
-    /**
-     * @return string
-     */
-    public function getDataClass()
-    {
-        return $this->getOption('data_class');
     }
 
     /**
