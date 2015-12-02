@@ -8,7 +8,6 @@ use Symfony\Component\Form\FormTypeInterface;
 class CollectionOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
-    use Behavior\CascadeValidationTrait;
     use Behavior\ByReferenceTrait;
 
     /**
