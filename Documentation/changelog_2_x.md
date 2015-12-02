@@ -1,3 +1,8 @@
+2.0.2 (2015-12-02)
+------------------
+
+- Fix use of ChoicesListTrait in EntityOptionsBuilder
+
 2.0.1 (2015-12-02)
 ------------------
 
