@@ -6,4 +6,5 @@ class TextareaOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
+    use Behavior\MaxLengthTrait;
 }

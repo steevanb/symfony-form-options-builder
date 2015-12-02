@@ -10,6 +10,7 @@ class UrlOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
+    use Behavior\MaxLengthTrait;
 
     const PROTOCOL_HTTP = 'http';
     const PROTOCOL_HTTPS = 'https';
