@@ -14,6 +14,7 @@ trait ChoicesListTrait
      * @param ChoiceListInterface $choices
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/choice.html#choices
+     * @deprecated Since 2.7
      */
     public function setChoicesList(ChoiceListInterface $choices)
     {
@@ -22,6 +23,7 @@ trait ChoicesListTrait
 
     /**
      * @return null|ChoiceListInterface
+     * @deprecated Since 2.7
      */
     public function getChoicesList()
     {
