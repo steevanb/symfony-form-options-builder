@@ -90,6 +90,80 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     }
 
     /**
+     * @param string|null $action
+     * @return $this
+     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#action
+     */
+    public function setAction($action)
+    {
+        return $this->setOption('action', $action);
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAction()
+    {
+        return $this->getOption('action');
+    }
+
+    /**
+     * @param string $method
+     * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/form.html#method
+     */
+    public function setMethod($method)
+    {
+        return $this->setOption('method', $method);
+    }
+
+    /**
+     * @return string
+     */
+    public function getMethod()
+    {
+        return $this->getOption('method');
+    }
+
+    /**
+     * @param bool $allow
+     * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @since 2.6
+     */
+    public function setAllowExtraFields($allow = true)
+    {
+        return $this->setOption('allow_extra_fields', $allow);
+    }
+
+    /**
+     * @return bool
+     * @since 2.6
+     */
+    public function getAllowExtraFields()
+    {
+        return $this->getOption('allow_extra_fields');
+    }
+
+    /**
+     * @param string $message
+     * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     */
+    public function setExtraFieldsMessage($message)
+    {
+        return $this->setOption('extra_fields_message', $message);
+    }
+
+    /**
+     * @return string
+     */
+    public function getExtraFieldsMessage()
+    {
+        return $this->getOption('extra_fields_message');
+    }
+
+    /**
      * @param array $attr
      * @return array
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#attr
@@ -324,7 +398,8 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     /**
      * @param bool $readOnly
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#read-only
+     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#read-only
+     * @deprecated Since 2.8
      */
     public function setReadOnly($readOnly = true)
     {
@@ -333,6 +408,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
 
     /**
      * @return bool
+     * @deprecated Since 2.8
      */
     public function getReadOnly()
     {
@@ -462,5 +538,117 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     public function getPropertyPath()
     {
         return $this->getOption('property_path');
+    }
+
+    /**
+     * @param bool $compound
+     * @return $this
+     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#compound
+     */
+    public function setCompound($compound)
+    {
+        return $this->setOption('compound', $compound);
+    }
+
+    /**
+     * @return bool
+     */
+    public function getCompound()
+    {
+        return $this->getOption('compound');
+    }
+
+    /**
+     * @param bool $inherit
+     * @return $this
+     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#inherit-data
+     */
+    public function setInheritData($inherit)
+    {
+        return $this->setOption('inherit_data', $inherit);
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function getInheritData()
+    {
+        return $this->getOption('inherit_data');
+    }
+
+    /**
+     * @param $validation
+     * @return $this
+     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#cascade-validation
+     * @deprecated Since 2.8
+     */
+    public function setCascadeValidation($validation = true)
+    {
+        return $this->setOption('cascade_validation', $validation);
+    }
+
+    /**
+     * @return bool
+     * @deprecated Since 2.8
+     */
+    public function getCascadeValidation()
+    {
+        return $this->getOption('cascade_validation');
+    }
+
+    /**
+     * @param string|null $pattern
+     * @return $this
+     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#pattern
+     * @deprecated Since 2.5
+     */
+    public function setPattern($pattern)
+    {
+        return $this->setOption('pattern', $pattern);
+    }
+
+    /**
+     * @return string|null
+     * @deprecated Since 2.5
+     */
+    public function getPattern()
+    {
+        return $this->getOption('pattern');
+    }
+
+    /**
+     * @param string|null $message
+     * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     */
+    public function setPostMaxSizeMessage($message)
+    {
+        return $this->setOption('post_max_size_message', $message);
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getPostMaxSizeMessage()
+    {
+        return $this->getOption('post_max_size_message');
+    }
+
+    /**
+     * @param string $name
+     * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     */
+    public function setBlockName($name)
+    {
+        return $this->setOption('block_name', $name);
+    }
+
+    /**
+     * @return string
+     */
+    public function getBlockName()
+    {
+        return $this->getOption('block_name');
     }
 }
