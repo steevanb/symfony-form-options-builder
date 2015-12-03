@@ -2,6 +2,8 @@
 
 namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
+use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+
 trait TimeTypeTrait
 {
     use OptionAccessorsTrait;

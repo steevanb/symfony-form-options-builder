@@ -2,7 +2,8 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+
+use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
 
 class UrlOptionsBuilder extends AbstractOptionsBuilder
 {
@@ -10,7 +11,6 @@ class UrlOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
-    use Behavior\MaxLengthTrait;
 
     const PROTOCOL_HTTP = 'http';
     const PROTOCOL_HTTPS = 'https';

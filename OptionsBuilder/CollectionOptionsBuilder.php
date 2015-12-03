@@ -2,13 +2,14 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+use steevanb\FormUtils\Behavior\ByReferenceTrait;
+use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\FormTypeInterface;
 
 class CollectionOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
-    use Behavior\ByReferenceTrait;
+    use ByReferenceTrait;
 
     /**
      * @param bool $allow

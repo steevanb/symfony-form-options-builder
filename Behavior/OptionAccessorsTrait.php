@@ -1,6 +1,6 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder\Behavior;
+namespace steevanb\FormUtils\Behavior;
 
 trait OptionAccessorsTrait
 {
@@ -16,4 +16,10 @@ trait OptionAccessorsTrait
      * @return mixed
      */
     abstract public function getOption($name);
+
+    /**
+     * @param string $name
+     * @return $this
+     */
+    abstract public function removeOption($name);
 }

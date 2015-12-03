@@ -1,6 +1,6 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder\Behavior;
+namespace steevanb\FormUtils\Behavior;
 
 trait ByReferenceTrait
 {
@@ -17,10 +17,20 @@ trait ByReferenceTrait
     }
 
     /**
-     * @return bool
+     * @return bool|string
+     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#by-reference
      */
     public function getByReference()
     {
         return $this->getOption('by_reference');
+    }
+
+    /**
+     * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#by-reference
+     */
+    public function removeByReference()
+    {
+        return $this->removeOption('by_reference');
     }
 }

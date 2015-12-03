@@ -2,6 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
+use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface;
 
 trait ChoiceTypeTrait

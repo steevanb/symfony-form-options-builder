@@ -4,12 +4,14 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
+use steevanb\FormUtils\Behavior\ByReferenceTrait;
+use steevanb\FormUtils\Behavior\DataClassTrait;
 
 class EntityOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\ChoiceTypeTrait;
-    use Behavior\ByReferenceTrait;
-    use Behavior\DataClassTrait;
+    use DataClassTrait;
+    use ByReferenceTrait;
 
     /**
      * @param string $class

@@ -2,7 +2,8 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+
+use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
 
 class PercentOptionsBuilder extends AbstractOptionsBuilder
 {
@@ -11,7 +12,6 @@ class PercentOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
-    use Behavior\MaxLengthTrait;
 
     const TYPE_FRACTIONAL = 'fractional';
     const TYPE_INTEGER = 'integer';

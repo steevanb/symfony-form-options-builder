@@ -2,7 +2,7 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
-use steevanb\FormUtils\OptionsBuilder\Behavior\OptionAccessorsTrait;
+use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
 
 class MoneyOptionsBuilder extends AbstractOptionsBuilder
 {
