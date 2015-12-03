@@ -1,7 +1,7 @@
 steevanb\FormUtils\OptionsBuilder\FooOptionsBuilder
 ===================================================
 
-Thisd objects offer you an object vision of generating options for FormType fields.
+This objects offer you an object vision of generating options for FormType fields.
 
 Usage in buildForm()
 --------------------
@@ -37,8 +37,6 @@ use steevanb\FormUtils\OptionsBuilder\EmailOptionsBuilder;
 
 class BarType extends AbstractType
 {
-    use steevanb\FormUtils\OptionsBuilderTrait;
-
     public function onPreSetData(FormEvent $event)
     {
         $form = $event->getForm();
@@ -108,5 +106,14 @@ or extends steevanb\FormUtils\OptionsBuilder\AbstractOptionsBuilder.
 Of course, you can extends an existing OptionsBuilder to override some methods, or add new ones.
 
 To use it, it's same as other OptionsBuilder, just call FooOptionsBuilder::create().
+
+What does removeFoo() do exactly
+--------------------------------
+
+FormType can define default options, with configureOptions(), like label, translation_domain, etc.
+
+If you override this default values with null, eash FormType will read it differently, but will never read default value.
+
+So, if you have set an option (via setFoo()), and you need to get back the default option value, you need to call removeFoo() and not setFoo(null).
 
 [Back to index](../README.md)

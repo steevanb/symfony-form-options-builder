@@ -1,3 +1,12 @@
+2.1.0 (2015-12-03)
+------------------
+
+- Add [FormOptionsBuilder](formoptionsbuilder.md) and [RootFormOptionsBuilder](formoptionsbuilder.md)
+- Fix some PHPDoc types and links
+- Add removeFoo() for each option, to really remove option in array result instead of set it to null
+- Add setBlockName() and getBlockName() to all types
+- Add setCompound() and getCompound() to all types
+
 2.0.2 (2015-12-02)
 ------------------
 
@@ -30,3 +39,5 @@
 - Completly rewritten
 - Remove default value for getters and __construct()
 - You can use PHP 5.6 variadic syntax to add your options easily
+
+[Back to index](../README.md)
