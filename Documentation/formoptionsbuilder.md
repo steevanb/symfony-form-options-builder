@@ -52,7 +52,7 @@ class BarType extends AbstractType
 RootOptionsBuilder extends FormOptionsBuilder, and add this methods :
 ```php
 setCsrfFieldName(), setCsrfFieldName() and removeCsrfFieldName()
-setCsrfMessage, getCsrfMessage() and removeCsrfMessage()
+setCsrfMessage(), getCsrfMessage() and removeCsrfMessage()
 setCsrfProtection(), getCsrfProtection() and removeCsrfProtection()
 setCsrfProvider(), getCsrfProvider() and removeCsrfProvider()
 setCsrfTokenId(), getCsrfTokenId() and removeCsrfTokenId()
