@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/version-2.1.0-green.svg)](https://github.com/steevanb/sf2-form-utils/tree/2.1.0)
+[![version](https://img.shields.io/badge/version-2.1.1-green.svg)](https://github.com/steevanb/sf2-form-utils/tree/2.1.1)
 [![symfony](https://img.shields.io/badge/symfony-%3E%3D%202.3-blue.svg)](https://symfony.com/)
 ![Total Downloads](https://poser.pugx.org/steevanb/sf2-form-utils/downloads)
 [![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/0f599bbe-1431-4f4c-aa7a-2b25c4c121df/analyses/27)
