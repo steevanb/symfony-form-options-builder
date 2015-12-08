@@ -3,6 +3,7 @@
 namespace steevanb\FormUtils\OptionsBuilder;
 
 use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class CheckboxOptionsBuilder extends AbstractOptionsBuilder
 {
@@ -24,5 +25,13 @@ class CheckboxOptionsBuilder extends AbstractOptionsBuilder
     public function getValue()
     {
         return $this->getOption('value');
+    }
+
+    /**
+     * @return string
+     */
+    public static function getBuilderType()
+    {
+        return CheckboxType::class;
     }
 }

@@ -2,6 +2,8 @@
 
 namespace steevanb\FormUtils\OptionsBuilder;
 
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+
 class IntegerOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\GroupingTrait;
@@ -10,4 +12,12 @@ class IntegerOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
+
+    /**
+     * @return string
+     */
+    public static function getBuilderType()
+    {
+        return IntegerType::class;
+    }
 }

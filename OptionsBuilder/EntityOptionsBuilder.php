@@ -6,6 +6,7 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 use steevanb\FormUtils\Behavior\ByReferenceTrait;
 use steevanb\FormUtils\Behavior\DataClassTrait;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class EntityOptionsBuilder extends AbstractOptionsBuilder
 {
@@ -14,14 +15,11 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     use ByReferenceTrait;
 
     /**
-     * @param string $class
-     * @return $this
+     * @return string
      */
-    public function setRequiredOptions($class)
+    public static function getBuilderType()
     {
-        $this->setClass($class);
-
-        return $this;
+        return EntityType::class;
     }
 
     /**

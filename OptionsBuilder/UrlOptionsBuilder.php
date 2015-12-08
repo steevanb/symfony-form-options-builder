@@ -4,6 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 
 use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 
 class UrlOptionsBuilder extends AbstractOptionsBuilder
 {
@@ -15,6 +16,14 @@ class UrlOptionsBuilder extends AbstractOptionsBuilder
     const PROTOCOL_HTTP = 'http';
     const PROTOCOL_HTTPS = 'https';
     const PROTOCOL_FTP = 'ftp';
+
+    /**
+     * @return string
+     */
+    public static function getBuilderType()
+    {
+        return UrlType::class;
+    }
 
     /**
      * @param mixed $protocol

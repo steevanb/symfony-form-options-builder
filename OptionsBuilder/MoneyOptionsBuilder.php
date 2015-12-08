@@ -3,6 +3,7 @@
 namespace steevanb\FormUtils\OptionsBuilder;
 
 use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 
 class MoneyOptionsBuilder extends AbstractOptionsBuilder
 {
@@ -14,6 +15,14 @@ class MoneyOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\PlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
+
+    /**
+     * @return string
+     */
+    public static function getBuilderType()
+    {
+        return MoneyType::class;
+    }
 
     /**
      * @return int

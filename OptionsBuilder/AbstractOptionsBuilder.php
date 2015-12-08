@@ -38,17 +38,6 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     }
 
     /**
-     * @return string
-     */
-    public static function getBuilderType()
-    {
-        $fullClass = get_called_class();
-        $class = substr($fullClass, strrpos($fullClass, '\\') + 1);
-
-        return strtolower(substr($class, 0, -14));
-    }
-
-    /**
      * @return array
      */
     public function asArray()

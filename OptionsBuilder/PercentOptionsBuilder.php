@@ -4,6 +4,7 @@ namespace steevanb\FormUtils\OptionsBuilder;
 
 
 use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+use Symfony\Component\Form\Extension\Core\Type\PercentType;
 
 class PercentOptionsBuilder extends AbstractOptionsBuilder
 {
@@ -15,6 +16,14 @@ class PercentOptionsBuilder extends AbstractOptionsBuilder
 
     const TYPE_FRACTIONAL = 'fractional';
     const TYPE_INTEGER = 'integer';
+
+    /**
+     * @return string
+     */
+    public static function getBuilderType()
+    {
+        return PercentType::class;
+    }
 
     /**
      * @param string $type Use self::TYPE_XXX
