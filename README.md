@@ -1,7 +1,7 @@
 [![version](https://img.shields.io/badge/version-2.1.0-green.svg)](https://github.com/steevanb/sf2-form-utils/tree/2.1.0)
 [![symfony](https://img.shields.io/badge/symfony-%3E%3D%202.3-blue.svg)](https://symfony.com/)
 ![Total Downloads](https://poser.pugx.org/steevanb/sf2-form-utils/downloads)
-[![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/0f599bbe-1431-4f4c-aa7a-2b25c4c121df/analyses/26)
+[![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/0f599bbe-1431-4f4c-aa7a-2b25c4c121df/analyses/27)
 [![Scrutinizer](https://img.shields.io/badge/scrutinizer-10%2F10-brightgreen.svg)](https://scrutinizer-ci.com/g/steevanb/sf2-form-utils/)
 
 sf2-form-utils
@@ -22,7 +22,7 @@ FormType::buildForm() object oriented instead of array
 
 [Documentation](Documentation/optionsbuilder.md)
 
-steevanb\FormUtils\NameTrait
-------------------------------
+steevanb\FormUtils\BlockPrefixTrait
+-----------------------------------
 
-Add getName(), allows to always return same syntax for form type name : form_type_FormTypeClassName
+Add getBlockPrefix(), to always return same syntax for form type getBlockPrefix() method : form_type_FormTypeClassName

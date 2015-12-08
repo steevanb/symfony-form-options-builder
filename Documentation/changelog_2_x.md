@@ -1,3 +1,12 @@
+2.1.1 (2015-12-08)
+------------------
+
+- NameTrait is deprecated since Symfony 2.8, use BlockPrefixTrait instead
+- OptionBuilder::getBuilderType() new return FQCN, instead of service id (deprecated since Symfony 2.8)
+- Add setEntryType() and getEntryType() to CollectionOptionsBuilder, to replace deprecated setType() and getType() since Symfony 2.8
+- Add setEntryOptions() and getEntryOptions() to CollectionOptionsBuilder, to replace deprecated setOptions() and getOptions() since Symfony 2.8
+- Remove EntityOptionsBuilder::setRequireOptions() (not a good idead)
+ 
 2.1.0 (2015-12-03)
 ------------------
 
