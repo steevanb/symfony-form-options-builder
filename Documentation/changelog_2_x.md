@@ -1,3 +1,10 @@
+2.1.2 (2015-12-09)
+------------------
+
+- Rename setPlaceHolder() to setAttrPlaceHolder() in EmailOptionsBuilder, IntegerOptionsBuilder,
+MoneyOptionsBuilder, NumberOptionsBuilder, PasswordOptionsBuilder, PercentOptionsBuilder,
+SearchOptionsBuilder, TextOptionsBuilder, TextareaOptionsBuilder and UrlOptionsBuilder
+
 2.1.1 (2015-12-08)
 ------------------
 
