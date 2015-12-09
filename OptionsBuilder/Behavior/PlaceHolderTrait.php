@@ -2,11 +2,11 @@
 
 namespace steevanb\FormUtils\OptionsBuilder\Behavior;
 
-use steevanb\FormUtils\Behavior\AttrAccessorsTrait;
+use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
 
 trait PlaceHolderTrait
 {
-    use AttrAccessorsTrait;
+    use OptionAccessorsTrait;
 
     /**
      * @param false|string $placeholder
@@ -15,7 +15,7 @@ trait PlaceHolderTrait
      */
     public function setPlaceHolder($placeholder)
     {
-        return $this->addAttr('placeholder', $placeholder);
+        return $this->setOption('placeholder', $placeholder);
     }
 
     /**
@@ -23,6 +23,6 @@ trait PlaceHolderTrait
      */
     public function getPlaceHolder()
     {
-        return $this->getAttr('placeholder');
+        return $this->getOption('placeholder');
     }
 }

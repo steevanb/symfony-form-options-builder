@@ -10,7 +10,7 @@ class PercentOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
     use Behavior\ScaleTrait;
-    use Behavior\PlaceHolderTrait;
+    use Behavior\AttrPlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
 

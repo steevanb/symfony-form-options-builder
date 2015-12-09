@@ -6,7 +6,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class TextareaOptionsBuilder extends AbstractOptionsBuilder
 {
-    use Behavior\PlaceHolderTrait;
+    use Behavior\AttrPlaceHolderTrait;
     use Behavior\AutofocusTrait;
 
     /**

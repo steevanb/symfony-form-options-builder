@@ -9,7 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\UrlType;
 class UrlOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
-    use Behavior\PlaceHolderTrait;
+    use Behavior\AttrPlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
 

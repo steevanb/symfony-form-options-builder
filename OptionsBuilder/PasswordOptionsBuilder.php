@@ -7,7 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 class PasswordOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\AlwaysEmptyTrait;
-    use Behavior\PlaceHolderTrait;
+    use Behavior\AttrPlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
 

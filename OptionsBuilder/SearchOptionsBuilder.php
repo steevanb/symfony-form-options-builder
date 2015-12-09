@@ -6,7 +6,7 @@ use Symfony\Component\Form\Extension\Core\Type\SearchType;
 
 class SearchOptionsBuilder extends AbstractOptionsBuilder
 {
-    use Behavior\PlaceHolderTrait;
+    use Behavior\AttrPlaceHolderTrait;
     use Behavior\AutofocusTrait;
 
     /**

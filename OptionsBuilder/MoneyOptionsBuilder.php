@@ -12,7 +12,7 @@ class MoneyOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\DivisorTrait;
     use Behavior\GroupingTrait;
     use Behavior\ScaleTrait;
-    use Behavior\PlaceHolderTrait;
+    use Behavior\AttrPlaceHolderTrait;
     use Behavior\AutofocusTrait;
     use Behavior\AutocompleteTrait;
 
