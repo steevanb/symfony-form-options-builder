@@ -7,8 +7,7 @@
         "psr-4": { "steevanb\\FormUtils\\": "" }
     },
     "require": {
-      "php": ">=5.4",
-      "symfony/symfony": ">=2.3,<4.0"
+        "symfony/form": "^3"
     },
     "repositories": [
         {
