@@ -75,27 +75,6 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
     }
 
     /**
-     * @param array $options
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/collection.html#entry-options
-     * @deprecated Since 2.8
-     */
-    public function setOptions(array $options)
-    {
-        return $this->setOption('options', $options);
-    }
-
-    /**
-     * @return array
-     * @link http://symfony.com/doc/2.8/reference/forms/types/collection.html#entry-options
-     * @deprecated Since 2.8
-     */
-    public function getOptions()
-    {
-        return $this->getOption('options');
-    }
-
-    /**
      * @param bool $prototype
      * @param bool $setAllowAdd
      * @return $this
@@ -133,27 +112,6 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
         }
 
         return $this;
-    }
-
-    /**
-     * @param string|FormTypeInterface $type
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/collection.html#entry-type
-     * @deprecated Since 2.8
-     */
-    public function setType($type)
-    {
-        return $this->setOption('type', $type);
-    }
-
-    /**
-     * @return string|FormTypeInterface
-     * @link http://symfony.com/doc/2.8/reference/forms/types/collection.html#entry-type
-     * @deprecated Since 2.8
-     */
-    public function getType()
-    {
-        return $this->getOption('type');
     }
 
     /**

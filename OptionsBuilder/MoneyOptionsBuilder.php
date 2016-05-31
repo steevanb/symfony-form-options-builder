@@ -31,13 +31,4 @@ class MoneyOptionsBuilder extends AbstractOptionsBuilder
     {
         return $this->getOption('scale');
     }
-
-    /**
-     * @return int
-     * @deprecated Since 2.7
-     */
-    public function getPrecision()
-    {
-        return $this->getOption('precision');
-    }
 }

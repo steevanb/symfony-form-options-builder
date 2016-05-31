@@ -169,18 +169,6 @@ interface OptionsBuilderInterface
     public function getInvalidMessageParameters();
 
     /**
-     * @param bool $readOnly
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#read-only
-     */
-    public function setReadOnly($readOnly = true);
-
-    /**
-     * @return bool
-     */
-    public function getReadOnly();
-
-    /**
      * @param bool $required
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
@@ -274,18 +262,4 @@ interface OptionsBuilderInterface
      * @return string
      */
     public function getBlockName();
-
-    /**
-     * @param bool $cascade
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#cascade-validation
-     * @deprecated Since 2.8
-     */
-    public function setCascadeValidation($cascade = true);
-
-    /**
-     * @return bool|string
-     * @deprecated Since 2.8
-     */
-    public function getCascadeValidation();
 }

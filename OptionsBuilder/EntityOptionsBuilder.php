@@ -77,24 +77,6 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     }
 
     /**
-     * @param string $property
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/entity.html#property
-     */
-    public function setProperty($property)
-    {
-        return $this->setOption('property', $property);
-    }
-
-    /**
-     * @return string
-     */
-    public function getProperty()
-    {
-        return $this->getOption('property');
-    }
-
-    /**
      * @param QueryBuilder|\Closure $queryBuilder
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/entity.html#query-builder
@@ -105,7 +87,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     }
 
     /**
-     * @return null|QueryBuilder|Closure
+     * @return null|QueryBuilder|\Closure
      */
     public function getQueryBuilder()
     {

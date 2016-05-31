@@ -11,9 +11,11 @@ SF2FormUtils helps you writing your SF2 FormType, with some traits and methods t
 
 [Installation](Documentation/installation.md)
 
-[Changelog 2.x](Documentation/changelog_2_x.md)
+[Changelog 3.* (Symfony ^3)](Documentation/changelog_3_x.md)
 
-[Changelog 1.x](Documentation/changelog_1_x.md)
+[Changelog 2.* (Symfony ^2.3)](Documentation/changelog_2_x.md)
+
+[Changelog 1.* (Symfony ^2.3)](Documentation/changelog_1_x.md)
 
 Object oriented FormType
 ------------------------

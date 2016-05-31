@@ -176,28 +176,6 @@ interface FormOptionsBuilderInterface
     public function removeByReference();
 
     /**
-     * @param $validation
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#cascade-validation
-     * @deprecated Since 2.8
-     */
-    public function setCascadeValidation($validation = true);
-
-    /**
-     * @return bool|string
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#cascade-validation
-     * @deprecated Since 2.8
-     */
-    public function getCascadeValidation();
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#cascade-validation
-     * @deprecated Since 2.8
-     */
-    public function removeCascadeValidation();
-
-    /**
      * @param bool $compound
      * @return bool
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#compound
@@ -496,28 +474,6 @@ interface FormOptionsBuilderInterface
     public function removeMapped();
 
     /**
-     * @param int $max
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#max-length
-     * @deprecated Since 2.5
-     */
-    public function setMaxLength($max);
-
-    /**
-     * @return int|string
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#max-length
-     * @deprecated Since 2.5
-     */
-    public function getMaxLength();
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#max-length
-     * @deprecated Since 2.5
-     */
-    public function removeMaxLength();
-
-    /**
      * @param string $path
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
@@ -535,25 +491,6 @@ interface FormOptionsBuilderInterface
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
      */
     public function removePropertyPath();
-
-    /**
-     * @param bool|string $readOnly
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#read-only
-     */
-    public function setReadOnly($readOnly = true);
-
-    /**
-     * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#read-only
-     */
-    public function getReadOnly();
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#read-only
-     */
-    public function removeReadOnly();
 
     /**
      * @param bool $required

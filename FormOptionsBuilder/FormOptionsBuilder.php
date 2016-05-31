@@ -12,7 +12,6 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
     use Behavior\AttrTrait;
     use Behavior\BlockNameTrait;
     use Behavior\ByReferenceTrait;
-    use Behavior\CascadeValidationTrait;
     use Behavior\CompoundTrait;
     use Behavior\ConstraintsTrait;
     use Behavior\DataTrait;
@@ -27,9 +26,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
     use Behavior\LabelAttrTrait;
     use Behavior\LabelFormatTrait;
     use Behavior\MappedTrait;
-    use Behavior\MaxLengthTrait;
     use Behavior\PropertyPathTrait;
-    use Behavior\ReadOnlyTrait;
     use Behavior\RequiredTrait;
     use Behavior\TranslationDomainTrait;
     use Behavior\TrimTrait;

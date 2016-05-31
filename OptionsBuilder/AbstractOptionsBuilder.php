@@ -8,7 +8,6 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
 {
     use Behavior\OptionTrait;
     use Behavior\AttrTrait;
-    use Behavior\CascadeValidationTrait;
     use Behavior\BlockNameTrait;
     use Behavior\CompoundTrait;
     use Behavior\ConstraintsTrait;
@@ -22,9 +21,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     use Behavior\LabelTrait;
     use Behavior\LabelAttrTrait;
     use Behavior\MappedTrait;
-    use Behavior\MaxLengthTrait;
     use Behavior\PropertyPathTrait;
-    use Behavior\ReadOnlyTrait;
     use Behavior\RequiredTrait;
     use Behavior\TranslationDomainTrait;
     use Behavior\TrimTrait;
@@ -148,26 +145,6 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     public function getAutoInitialize()
     {
         return $this->getOption('auto_initialize');
-    }
-
-    /**
-     * @param string|null $pattern
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#pattern
-     * @deprecated Since 2.5
-     */
-    public function setPattern($pattern)
-    {
-        return $this->setOption('pattern', $pattern);
-    }
-
-    /**
-     * @return string|null
-     * @deprecated Since 2.5
-     */
-    public function getPattern()
-    {
-        return $this->getOption('pattern');
     }
 
     /**

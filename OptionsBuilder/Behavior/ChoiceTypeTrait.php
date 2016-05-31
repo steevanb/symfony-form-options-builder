@@ -9,7 +9,6 @@ trait ChoiceTypeTrait
 {
     use OptionAccessorsTrait;
     use PlaceHolderTrait;
-    use ChoicesListTrait;
 
     /**
      * @param array $choices
@@ -45,26 +44,6 @@ trait ChoiceTypeTrait
     public function getChoiceLabel()
     {
         return $this->getOption('choice_label');
-    }
-
-    /**
-     * @param string|callable|null $list
-     * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-list
-     * @deprecated Since 2.7
-     */
-    public function setChoiceList($list)
-    {
-        return $this->setOption('choice_list', $list);
-    }
-
-    /**
-     * @return string|callable|null
-     * @deprecated Since 2.7
-     */
-    public function getChoiceList()
-    {
-        return $this->getOption('choice_list');
     }
 
     /**
@@ -180,44 +159,6 @@ trait ChoiceTypeTrait
     public function getGroupBy()
     {
         return $this->getOption('group_by');
-    }
-
-    /**
-     * @param bool $asValues
-     * @return $this
-     * @link http://symfony.com/blog/new-in-symfony-2-7-choice-form-type-refactorization
-     */
-    public function setChoicesAsValues($asValues = true)
-    {
-        return $this->setOption('choices_as_values', $asValues);
-    }
-
-    /**
-     * @return bool
-     */
-    public function getChoicesAsValues()
-    {
-        return $this->getOption('choices_as_values');
-    }
-
-    /**
-     * @param false|string $value
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#placeholder
-     * @deprecated Since 2.6
-     */
-    public function setEmptyValue($value)
-    {
-        return $this->setOption('empty_value', $value);
-    }
-
-    /**
-     * @return false|string
-     * @deprecated Since 2.6
-     */
-    public function getEmptyValue()
-    {
-        return $this->getOption('empty_value');
     }
 
     /**
