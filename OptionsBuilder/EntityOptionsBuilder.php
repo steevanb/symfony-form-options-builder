@@ -1,11 +1,11 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder;
+namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
-use steevanb\FormUtils\Behavior\ByReferenceTrait;
-use steevanb\FormUtils\Behavior\DataClassTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\ByReferenceTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\DataClassTrait;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class EntityOptionsBuilder extends AbstractOptionsBuilder

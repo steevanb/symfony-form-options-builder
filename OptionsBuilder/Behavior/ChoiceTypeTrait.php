@@ -1,8 +1,8 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder\Behavior;
+namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
-use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface;
 
 trait ChoiceTypeTrait

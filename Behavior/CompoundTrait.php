@@ -1,6 +1,6 @@
 <?php
 
-namespace steevanb\FormUtils\Behavior;
+namespace steevanb\SymfonyFormOptionsBuilder\Behavior;
 
 trait CompoundTrait
 {
@@ -13,7 +13,7 @@ trait CompoundTrait
      */
     public function setCompound($compound = true)
     {
-        return $this->setOption('compound');
+        return $this->setOption('compound', $compound);
     }
 
     /**

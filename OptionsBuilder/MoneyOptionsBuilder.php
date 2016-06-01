@@ -1,8 +1,8 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder;
+namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 
 class MoneyOptionsBuilder extends AbstractOptionsBuilder

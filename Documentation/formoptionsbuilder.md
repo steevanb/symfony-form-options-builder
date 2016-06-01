@@ -1,4 +1,4 @@
-steevanb\FormUtils\FormOptionsBuilder\FormOptionsBuilder
+SymfonyFormOptionsBuilder\FormOptionsBuilder\FormOptionsBuilder
 ========================================================
 
 This objects offer you an object vision of generating options for FormType configureOptions() method.
@@ -7,7 +7,7 @@ Usage in configureOption()
 --------------------------
 
 ```php
-use steevanb\FormUtils\FormOptionsBuilder\FormOptionsBuilder;
+use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\FormOptionsBuilder;
 
 class BarType extends AbstractType
 {
@@ -30,7 +30,7 @@ Root FormType
 If your FormType is the root one, you can use RootFormOptionsBuilder to access new methods :
 
 ```php
-use steevanb\FormUtils\FormOptionsBuilder\RootFormOptionsBuilder;
+use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\RootFormOptionsBuilder;
 
 class BarType extends AbstractType
 {

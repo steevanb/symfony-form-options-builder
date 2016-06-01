@@ -1,6 +1,6 @@
 <?php
 
-namespace steevanb\FormUtils\FormOptionsBuilder;
+namespace steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder;
 
 use Symfony\Component\Validator\Constraint;
 

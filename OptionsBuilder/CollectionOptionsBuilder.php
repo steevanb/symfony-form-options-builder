@@ -1,9 +1,9 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder;
+namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use steevanb\FormUtils\Behavior\ByReferenceTrait;
-use steevanb\FormUtils\Behavior\OptionAccessorsTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\ByReferenceTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormTypeInterface;
 

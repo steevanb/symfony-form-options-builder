@@ -1,8 +1,8 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder;
+namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use steevanb\FormUtils\Behavior\ValidationGroupsTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\ValidationGroupsTrait;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class SubmitOptionsBuilder extends AbstractOptionsBuilder

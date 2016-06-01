@@ -1,8 +1,8 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder\Behavior;
+namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
-use steevanb\FormUtils\Behavior\AttrAccessorsTrait;
+use steevanb\SymfonyFormOptionsBuilder\Behavior\AttrAccessorsTrait;
 
 trait AttrPlaceHolderTrait
 {

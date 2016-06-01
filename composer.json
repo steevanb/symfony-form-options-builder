@@ -4,7 +4,7 @@
     "type": "lib",
     "description": "buildForm() with objects instead of array",
     "autoload": {
-        "psr-4": { "steevanb\\FormUtils\\": "" }
+        "psr-4": { "steevanb\\SymfonyFormOptionsBuilder\\": "" }
     },
     "require": {
         "symfony/form": "^3"

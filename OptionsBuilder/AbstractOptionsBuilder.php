@@ -1,8 +1,8 @@
 <?php
 
-namespace steevanb\FormUtils\OptionsBuilder;
+namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use steevanb\FormUtils\Behavior;
+use steevanb\SymfonyFormOptionsBuilder\Behavior;
 
 abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
 {
