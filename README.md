@@ -24,7 +24,7 @@ FormType::buildForm() object oriented instead of array
 
 [Documentation](Documentation/optionsbuilder.md)
 
-SymfonyFormOptionsBuilder\BlockPrefixTrait
+steevanb\SymfonyFormOptionsBuilder\BlockPrefixTrait
 -----------------------------------
 
 Add getBlockPrefix(), to always return same syntax for form type getBlockPrefix() method : form_type_FormTypeClassName
