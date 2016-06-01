@@ -1,5 +1,5 @@
-SymfonyFormOptionsBuilder\OptionsBuilder\FooOptionsBuilder
-===================================================
+steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\FooOptionsBuilder
+===================================================================
 
 This objects offer you an object vision of generating options for FormType fields.
 
@@ -9,20 +9,22 @@ Usage in buildForm()
 ```php
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class BarType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('field', 'text', TextOptionsBuilder::create()->asArray());
-        
-        # Since PHP 5.6, you can use the variadic syntax
+        # Since PHP 5.5, you can use FooClass::class
+        $builder->add('field_text', TextType::class, TextOptionsBuilder::create()->asArray());
+
+        # Since PHP 5.6, you can use the variadic syntax. asVariadic() parameter is field name.
         $builder->add(
             ...EmailOptionsBuilder::create()
                 ->setRequired(false)
                 ->setEmptyData('default@mail.com')
                 ->setTrim(false)
-                ->asVariadic('myField')
+                ->asVariadic('field_email')
         );
     }
 }
@@ -69,20 +71,44 @@ BirthdayOptionsBuilder::create()
 ButtonOptionsBuilder::create()
 CheckboxOptionsBuilder::create()
 ChoiceOptionsBuilder::create()
+    - asCheckboxes() will call $this->setMultiple()->setExpanded()
+    - asRadioButtons() will call $this->setMultiple(false)->setExpanded()
+    - asSelect() will call $this->setMultiple(false)->setExpanded(false)
+    - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 CollectionOptionsBuilder::create()
     - setPrototype($prototype = true, $setAllowAdd = true) will call setAllowAdd(), needed when prototype is set to true
     - setPrototypeName($name, $setAllowAdd = true) will call setPrototype() and setAllowAdd(), needed when prototype is set to true
 CountryOptionsBuilder::create()
+    - asCheckboxes() will call $this->setMultiple()->setExpanded()
+    - asRadioButtons() will call $this->setMultiple(false)->setExpanded()
+    - asSelect() will call $this->setMultiple(false)->setExpanded(false)
+    - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 CurrencyOptionsBuilder::create()
+    - asCheckboxes() will call $this->setMultiple()->setExpanded()
+    - asRadioButtons() will call $this->setMultiple(false)->setExpanded()
+    - asSelect() will call $this->setMultiple(false)->setExpanded(false)
+    - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 DateOptionsBuilder::create()
 DateTimeOptionsBuilder::create()
 EmailOptionsBuilder::create()
 EntityOptionsBuilder::create()
     - setRepositoryMethod($method, $params = array()) call setQueryBuilder() with a generic closure, who will call $method on your repository
+    - asCheckboxes() will call $this->setMultiple()->setExpanded()
+    - asRadioButtons() will call $this->setMultiple(false)->setExpanded()
+    - asSelect() will call $this->setMultiple(false)->setExpanded(false)
+    - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 HiddenOptionsBuilder::create()
 IntegerOptionsBuilder::create()
 LanguageOptionsBuilder::create()
+    - asCheckboxes() will call $this->setMultiple()->setExpanded()
+    - asRadioButtons() will call $this->setMultiple(false)->setExpanded()
+    - asSelect() will call $this->setMultiple(false)->setExpanded(false)
+    - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 LocaleOptionsBuilder::create()
+    - asCheckboxes() will call $this->setMultiple()->setExpanded()
+    - asRadioButtons() will call $this->setMultiple(false)->setExpanded()
+    - asSelect() will call $this->setMultiple(false)->setExpanded(false)
+    - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 MoneyOptionsBuilder::create()
 NumberOptionsBuilder::create()
 PasswordOptionsBuilder::create()
@@ -94,6 +120,10 @@ TextareaOptionsBuilder::create()
 TextOptionsBuilder::create()
 TimeOptionsBuilder::create()
 TimezoneOptionsBuilder::create()
+    - asCheckboxes() will call $this->setMultiple()->setExpanded()
+    - asRadioButtons() will call $this->setMultiple(false)->setExpanded()
+    - asSelect() will call $this->setMultiple(false)->setExpanded(false)
+    - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 UrlOptionsBuilder::create()
 ```
 
@@ -114,6 +144,7 @@ FormType can define default options, with configureOptions(), like label, transl
 
 If you override this default values with null, eash FormType will read it differently, but will never read default value.
 
-So, if you have set an option (via setFoo()), and you need to get back the default option value, you need to call removeFoo() and not setFoo(null).
+So, if you have set an option (via setFoo()), and you need to get back the default option value,
+you need to call removeFoo() and not setFoo(null).
 
 [Back to index](../README.md)

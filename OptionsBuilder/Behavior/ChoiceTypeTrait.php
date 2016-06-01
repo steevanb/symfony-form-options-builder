@@ -199,6 +199,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asMultipleSelect()
     {
@@ -207,6 +208,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asSelect()
     {
@@ -215,6 +217,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asRadioButtons()
     {
@@ -223,6 +226,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
+     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asCheckboxes()
     {

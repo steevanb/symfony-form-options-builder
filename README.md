@@ -7,7 +7,7 @@
 symfony-form-options-builder
 ============================
 
-SF2FormUtils helps you writing your SF2 FormType, with some traits and methods to add fields in buildForm() instead of
+It helps you writing your Symfony FormType, with some traits and methods to add fields in buildForm() instead of
 array with some mysterious keys, and other stuff.
 
 [Installation](Documentation/installation.md)
@@ -22,6 +22,31 @@ Object oriented FormType
 ------------------------
 
 FormType::buildForm() object oriented instead of array
+
+Example :
+```php
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+
+class BarType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        # Since PHP 5.5, you can use FooClass::class
+        $builder->add('field_text', TextType::class, TextOptionsBuilder::create()->asArray());
+
+        # Since PHP 5.6, you can use the variadic syntax. asVariadic() parameter is field name.
+        $builder->add(
+            ...EmailOptionsBuilder::create()
+                ->setRequired(false)
+                ->setEmptyData('default@mail.com')
+                ->setTrim(false)
+                ->asVariadic('field_email')
+        );
+    }
+}
+```
 
 [Documentation](Documentation/optionsbuilder.md)
 
