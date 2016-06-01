@@ -1,5 +1,5 @@
-master
-------
+3.0.0 (2016-06-01)
+------------------
 
 - Remove all Symfony 2.8 deprecated, deleted in Symfony 3 :
     - Remove steevanb\SymfonyFormOptionsBuilder\Behavior\CascadeValidationTrait,

@@ -7,6 +7,8 @@ Usage in buildForm()
 --------------------
 
 ```php
+namespace FooBundle\Form\Type;
+
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -34,6 +36,8 @@ Usage in form event
 -------------------
 
 ```php
+namespace FooBundle\Form\Type;
+
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
 
