@@ -1,5 +1,5 @@
 {
-    "name": "steevanb/sf2-form-utils",
+    "name": "steevanb/symfony-form-options-builder",
     "license": "MIT",
     "type": "lib",
     "description": "buildForm() with objects instead of array",
@@ -8,12 +8,12 @@
     },
     "require": {
       "php": ">=5.4",
-      "symfony/symfony": ">=2.3,<4.0"
+      "symfony/form": "^2.3"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/steevanb/sf2-form-utils.git"
+            "url": "https://github.com/steevanb/symfony-form-options-builder.git"
         }
     ]
 }

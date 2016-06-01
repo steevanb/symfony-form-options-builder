@@ -1,3 +1,9 @@
+2.1.5 (2015-06-01)
+------------------
+
+- Rename project steevanb/sf2-form-utils to steevanb/symfony-form-options-builder
+- Change requirement symfony/symfony to symfony/form ^2.3
+
 2.1.4 (2015-05-30)
 ------------------
 
