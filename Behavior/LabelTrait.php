@@ -7,7 +7,7 @@ trait LabelTrait
     use OptionAccessorsTrait;
 
     /**
-     * @param string $label
+     * @param string|false $label
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
      */
@@ -17,7 +17,7 @@ trait LabelTrait
     }
 
     /**
-     * @return string
+     * @return string|false
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
      */
     public function getLabel()
