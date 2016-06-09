@@ -1,3 +1,8 @@
+master
+------
+
+- Fix PHPDoc to allow false to setLabel() and setTranslationDomain()
+
 3.1.0 (2016-06-09)
 ------------------
 
