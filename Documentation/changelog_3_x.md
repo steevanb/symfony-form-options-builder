@@ -1,3 +1,8 @@
+3.1.0 (2016-06-09)
+------------------
+
+- Add steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\FixDisabledBugOptionsBuilder, to fix a bug who delete your record when all FormType fields are disabled
+
 3.0.0 (2016-06-01)
 ------------------
 
