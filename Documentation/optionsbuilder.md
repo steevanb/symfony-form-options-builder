@@ -24,7 +24,7 @@ class BarType extends AbstractType
         $builder->add(
             ...EmailOptionsBuilder::create()
                 ->setRequired(false)
-                ->setEmptyData('default@mail.com')
+                ->setPlaceHolder('default@mail.com')
                 ->setTrim(false)
                 ->asVariadic('field_email')
         );
@@ -53,7 +53,7 @@ class BarType extends AbstractType
         $form->add(
             ...EmailOptionsBuilder::create()
                 ->setRequired(false)
-                ->setEmptyData('default@mail.com')
+                ->setPlaceHolder('default@mail.com')
                 ->setTrim(false)
                 ->asVariadic('myField')
         );
