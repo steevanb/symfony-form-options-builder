@@ -7,7 +7,7 @@ trait TranslationDomainTrait
     use OptionAccessorsTrait;
 
     /**
-     * @param string $domain
+     * @param string|false $domain
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
      */
@@ -17,7 +17,7 @@ trait TranslationDomainTrait
     }
 
     /**
-     * @return string
+     * @return string|false
      * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
      */
     public function getTranslationDomain()
