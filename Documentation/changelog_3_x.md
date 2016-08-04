@@ -1,7 +1,8 @@
-master
-------
+3.2.0 (2016-07-04)
+------------------
 
 - Fix PHPDoc to allow false to setLabel() and setTranslationDomain()
+- Add steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\FileOptionsBuilder
 
 3.1.0 (2016-06-09)
 ------------------
@@ -42,3 +43,4 @@ master
 - Fix AbstractOptionsBuilder::setAutoInitialize() PHPDoc return type
 
 [Back to index](../README.md)
+

@@ -6,7 +6,7 @@ If you want to use it with symfony/symfony ^2.3 (Symfony 2.3.*, 2.4.*, 2.5.*, 2.
 Composer
 --------
 ```
-composer require steevanb/symfony-form-options-builder 3.1.*
+composer require steevanb/symfony-form-options-builder ^3.2
 ```
 
 Or add it manually :
@@ -15,9 +15,10 @@ Or add it manually :
 # composer.json
 {
     "require": {
-        "steevanb/symfony-form-options-builder": "3.1.*"
+        "steevanb/symfony-form-options-builder": "^3.2"
     }
 }
 ```
 
 [Back to index](../README.md)
+
