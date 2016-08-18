@@ -9,7 +9,7 @@ trait TrimTrait
     /**
      * @param bool $trim
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#trim
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
      */
     public function setTrim($trim = true)
     {
@@ -18,7 +18,7 @@ trait TrimTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#trim
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
      */
     public function getTrim()
     {
@@ -27,7 +27,7 @@ trait TrimTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#trim
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
      */
     public function removeTrim()
     {

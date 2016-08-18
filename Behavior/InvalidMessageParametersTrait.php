@@ -9,7 +9,7 @@ trait InvalidMessageParametersTrait
     /**
      * @param array $parameters
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message-parameters
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
      */
     public function setInvalidMessageParameters(array $parameters)
     {
@@ -18,7 +18,7 @@ trait InvalidMessageParametersTrait
 
     /**
      * @return array
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message-parameters
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
      */
     public function getInvalidMessageParameters()
     {
@@ -27,7 +27,7 @@ trait InvalidMessageParametersTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message-parameters
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
      */
     public function removeInvalidMessageParameters()
     {

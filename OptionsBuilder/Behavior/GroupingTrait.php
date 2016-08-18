@@ -11,7 +11,7 @@ trait GroupingTrait
     /**
      * @param false|int $grouping
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/integer.html#grouping
+     * @link http://symfony.com/doc/3.0/reference/forms/types/integer.html#grouping
      */
     public function setGrouping($grouping)
     {

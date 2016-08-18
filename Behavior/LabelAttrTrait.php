@@ -9,7 +9,7 @@ trait LabelAttrTrait
     /**
      * @param array $attr
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
      */
     public function setLabelAttr(array $attr)
     {
@@ -18,7 +18,7 @@ trait LabelAttrTrait
 
     /**
      * @return array|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
      */
     public function getLabelAttr()
     {
@@ -27,7 +27,7 @@ trait LabelAttrTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
      */
     public function removeLabelAttr()
     {

@@ -11,7 +11,7 @@ trait AlwaysEmptyTrait
     /**
      * @param bool $alwaysEmpty
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/password.html#always-empty
+     * @link http://symfony.com/doc/3.0/reference/forms/types/password.html#always-empty
      */
     public function setAlwaysEmpty($alwaysEmpty)
     {

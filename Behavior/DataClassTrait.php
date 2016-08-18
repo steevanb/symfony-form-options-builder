@@ -9,7 +9,7 @@ trait DataClassTrait
     /**
      * @param string $class
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data-class
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
      */
     public function setDataClass($class)
     {
@@ -18,7 +18,7 @@ trait DataClassTrait
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data-class
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
      */
     public function getDataClass()
     {
@@ -27,7 +27,7 @@ trait DataClassTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data-class
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
      */
     public function removeDataClass()
     {

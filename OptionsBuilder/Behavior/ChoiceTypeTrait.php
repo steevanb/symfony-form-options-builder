@@ -13,7 +13,7 @@ trait ChoiceTypeTrait
     /**
      * @param array $choices Format : [$label=>$value, $label2=>$value2]
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#choices
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choices
      */
     public function setChoices(array $choices)
     {
@@ -46,7 +46,7 @@ trait ChoiceTypeTrait
     /**
      * @param string|callable|null $label
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-label
      */
     public function setChoiceLabel($label)
     {
@@ -81,7 +81,7 @@ trait ChoiceTypeTrait
     /**
      * @param ChoiceLoaderInterface $loader
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-loader
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-loader
      */
     public function setChoiceLoader(ChoiceLoaderInterface $loader)
     {
@@ -143,7 +143,7 @@ trait ChoiceTypeTrait
     /**
      * @param string|callable|array|null $attr
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/choice.html#choice-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-attr
      */
     public function setChoiceAttr($attr)
     {
@@ -179,7 +179,7 @@ trait ChoiceTypeTrait
     /**
      * @param bool $expanded
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#expanded
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#expanded
      */
     public function setExpanded($expanded = true)
     {
@@ -197,7 +197,7 @@ trait ChoiceTypeTrait
     /**
      * @param bool $multiple
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#multiple
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#multiple
      */
     public function setMultiple($multiple = true)
     {
@@ -214,7 +214,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asMultipleSelect()
     {
@@ -223,7 +223,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asSelect()
     {
@@ -232,7 +232,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asRadioButtons()
     {
@@ -241,7 +241,7 @@ trait ChoiceTypeTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
      */
     public function asCheckboxes()
     {
@@ -251,7 +251,7 @@ trait ChoiceTypeTrait
     /**
      * @param string|callable|array $choices
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#preferred-choices
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#preferred-choices
      */
     public function setPreferredChoices(array $choices)
     {

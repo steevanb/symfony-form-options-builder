@@ -9,7 +9,7 @@ trait LabelTrait
     /**
      * @param string|false $label
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
      */
     public function setLabel($label)
     {
@@ -18,7 +18,7 @@ trait LabelTrait
 
     /**
      * @return string|false
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
      */
     public function getLabel()
     {
@@ -27,7 +27,7 @@ trait LabelTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
      */
     public function removeLabel()
     {

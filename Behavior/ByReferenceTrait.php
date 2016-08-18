@@ -9,7 +9,7 @@ trait ByReferenceTrait
     /**
      * @param bool $byReference
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#by-reference
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#by-reference
      */
     public function setByReference($byReference = true)
     {
@@ -18,7 +18,7 @@ trait ByReferenceTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#by-reference
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#by-reference
      */
     public function getByReference()
     {
@@ -27,7 +27,7 @@ trait ByReferenceTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#by-reference
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#by-reference
      */
     public function removeByReference()
     {

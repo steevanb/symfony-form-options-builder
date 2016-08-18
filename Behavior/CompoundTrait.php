@@ -9,7 +9,7 @@ trait CompoundTrait
     /**
      * @param bool $compound
      * @return bool
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#compound
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#compound
      */
     public function setCompound($compound = true)
     {
@@ -18,7 +18,7 @@ trait CompoundTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#compound
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#compound
      */
     public function getCompound()
     {
@@ -27,7 +27,7 @@ trait CompoundTrait
 
     /**
      * @return bool
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#compound
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#compound
      */
     public function removeCompound()
     {

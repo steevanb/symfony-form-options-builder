@@ -105,38 +105,38 @@ interface RootFormOptionsBuilderInterface extends FormOptionsBuilderInterface
     /**
      * @param string $method
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function setMethod($method);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function getMethod();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function removeMethod();
 
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function setPostMaxSizeMessage($message);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function getPostMaxSizeMessage();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function removePostMaxSizeMessage();
 }

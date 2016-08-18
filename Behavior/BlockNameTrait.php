@@ -9,7 +9,7 @@ trait BlockNameTrait
     /**
      * @param string $name
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
      */
     public function setBlockName($name)
     {
@@ -18,7 +18,7 @@ trait BlockNameTrait
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
      */
     public function getBlockName()
     {
@@ -27,7 +27,7 @@ trait BlockNameTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
      */
     public function removeBlockName()
     {

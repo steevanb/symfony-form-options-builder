@@ -9,7 +9,7 @@ trait InvalidMessageTrait
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
      */
     public function setInvalidMessage($message)
     {
@@ -18,7 +18,7 @@ trait InvalidMessageTrait
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
      */
     public function getInvalidMessage()
     {
@@ -27,7 +27,7 @@ trait InvalidMessageTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
      */
     public function removeInvalidMessage()
     {

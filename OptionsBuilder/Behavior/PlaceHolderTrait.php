@@ -11,7 +11,7 @@ trait PlaceHolderTrait
     /**
      * @param false|string $placeholder
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#placeholder
+     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#placeholder
      */
     public function setPlaceHolder($placeholder)
     {

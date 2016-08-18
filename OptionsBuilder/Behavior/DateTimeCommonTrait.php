@@ -13,7 +13,7 @@ trait DateTimeCommonTrait
     /**
      * @param string $input
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/datetime.html#input
+     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#input
      */
     public function setInput($input)
     {
@@ -31,7 +31,7 @@ trait DateTimeCommonTrait
     /**
      * @param string $timezone
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#model-timezone
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#model-timezone
      */
     public function setModelTimezone($timezone)
     {
@@ -49,7 +49,7 @@ trait DateTimeCommonTrait
     /**
      * @param string $viewTimezone
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#view-timezone
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#view-timezone
      */
     public function setViewTimezone($viewTimezone)
     {
@@ -67,7 +67,7 @@ trait DateTimeCommonTrait
     /**
      * @param string $widget
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#widget
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#widget
      */
     public function setWidget($widget)
     {

@@ -9,7 +9,7 @@ trait ValidationGroupsTrait
     /**
      * @param null|false|array|\Closure $groups
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/submit.html#validation-groups
+     * @link http://symfony.com/doc/3.0/reference/forms/types/submit.html#validation-groups
      */
     public function setValidationGroups($groups)
     {
@@ -33,7 +33,7 @@ trait ValidationGroupsTrait
     /**
      * @param string $group
      * @return bool
-     * @link http://symfony.com/doc/current/reference/forms/types/submit.html#validation-groups
+     * @link http://symfony.com/doc/3.0/reference/forms/types/submit.html#validation-groups
      */
     public function hasValidationGroup($group)
     {
@@ -42,7 +42,7 @@ trait ValidationGroupsTrait
 
     /**
      * @return null|false|array|\Closure
-     * @link http://symfony.com/doc/current/reference/forms/types/submit.html#validation-groups
+     * @link http://symfony.com/doc/3.0/reference/forms/types/submit.html#validation-groups
      */
     public function getValidationGroups()
     {

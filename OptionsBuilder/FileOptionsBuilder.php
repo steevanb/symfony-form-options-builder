@@ -10,9 +10,9 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 class FileOptionsBuilder extends AbstractOptionsBuilder
 {
     use OptionAccessorsTrait;
-    /** @link http://symfony.com/doc/current/reference/forms/types/file.html#data-class */
+    /** @link http://symfony.com/doc/3.0/reference/forms/types/file.html#data-class */
     use DataClassTrait;
-    /** @link http://symfony.com/doc/current/reference/forms/types/file.html#label-format */
+    /** @link http://symfony.com/doc/3.0/reference/forms/types/file.html#label-format */
     use LabelFormatTrait;
 
     /**
@@ -26,7 +26,7 @@ class FileOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param bool $multiple
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/file.html#multiple
+     * @link http://symfony.com/doc/3.0/reference/forms/types/file.html#multiple
      */
     public function setMultiple($multiple = true)
     {
@@ -52,7 +52,7 @@ class FileOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param array $mapping
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/file.html#error-mapping
+     * @link http://symfony.com/doc/3.0/reference/forms/types/file.html#error-mapping
      */
     public function setErrorMapping(array $mapping)
     {

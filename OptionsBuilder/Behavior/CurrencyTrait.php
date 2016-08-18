@@ -11,7 +11,7 @@ trait CurrencyTrait
     /**
      * @param false|string $currency
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/money.html#currency
+     * @link http://symfony.com/doc/3.0/reference/forms/types/money.html#currency
      */
     public function setCurrency($currency)
     {

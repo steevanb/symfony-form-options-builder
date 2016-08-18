@@ -25,7 +25,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $class
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/entity.html#class
+     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#class
      */
     public function setClass($class)
     {
@@ -43,7 +43,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $em
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/entity.html#em
+     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#em
      */
     public function setEm($em)
     {
@@ -61,7 +61,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $groupBy
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/entity.html#group-by
+     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#group-by
      */
     public function setGroupBy($groupBy)
     {
@@ -79,7 +79,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param QueryBuilder|\Closure $queryBuilder
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/entity.html#query-builder
+     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#query-builder
      */
     public function setQueryBuilder($queryBuilder)
     {

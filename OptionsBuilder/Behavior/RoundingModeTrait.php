@@ -11,7 +11,7 @@ trait RoundingModeTrait
     /**
      * @param int $roundingMode
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/integer.html#rounding-mode
+     * @link http://symfony.com/doc/3.0/reference/forms/types/integer.html#rounding-mode
      */
     public function setRoundingMode($roundingMode)
     {

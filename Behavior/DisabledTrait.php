@@ -9,7 +9,7 @@ trait DisabledTrait
     /**
      * @param bool $disabled
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
      */
     public function setDisabled($disabled = true)
     {
@@ -18,7 +18,7 @@ trait DisabledTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
      */
     public function getDisabled()
     {
@@ -27,7 +27,7 @@ trait DisabledTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
      */
     public function removeDisabled()
     {

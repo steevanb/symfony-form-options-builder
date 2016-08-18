@@ -38,64 +38,64 @@ interface FormOptionsBuilderInterface
     /**
      * @param string $action
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#action
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#action
      */
     public function setAction($action);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#action
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#action
      */
     public function getAction();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#action
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#action
      */
     public function removeAction();
 
     /**
      * @param bool $allow
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
      */
     public function setAllowExtraFields($allow = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
      */
     public function getAllowExtraFields();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
      */
     public function removeAllowExtraFields();
 
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
      */
     public function setExtraFieldsMessage($message);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
      */
     public function getExtraFieldsMessage();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
      */
     public function removeExtraFieldsMessage();
 
     /**
      * @param array $attr
      * @return array
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#attr
      */
     public function setAttr(array $attr);
 
@@ -121,83 +121,83 @@ interface FormOptionsBuilderInterface
     /**
      * @param bool $auto
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function setAutoInitialize($auto = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function getAutoInitialize();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function removeAutoInitialize();
 
     /**
      * @param string $name
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
      */
     public function setBlockName($name);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
      */
     public function getBlockName();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
      */
     public function removeBlockName();
 
     /**
      * @param bool $byReference
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#by-reference
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#by-reference
      */
     public function setByReference($byReference = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#by-reference
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#by-reference
      */
     public function getByReference();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#by-reference
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#by-reference
      */
     public function removeByReference();
 
     /**
      * @param bool $compound
      * @return bool
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#compound
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#compound
      */
     public function setCompound($compound = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#compound
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#compound
      */
     public function getCompound();
 
     /**
      * @return bool
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#compound
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#compound
      */
     public function removeCompound();
 
     /**
      * @param Constraint[] $constraints
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#constraints
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
      */
     public function setConstraints(array $constraints);
 
@@ -209,7 +209,7 @@ interface FormOptionsBuilderInterface
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#constraints
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
      */
     public function removeConstraints();
 
@@ -221,83 +221,83 @@ interface FormOptionsBuilderInterface
     /**
      * @param mixed $data
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
      */
     public function setData($data);
 
     /**
      * @return mixed
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
      */
     public function getData();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
      */
     public function removeData();
 
     /**
      * @param string $class
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data-class
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
      */
     public function setDataClass($class);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data-class
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
      */
     public function getDataClass();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data-class
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
      */
     public function removeDataClass();
 
     /**
      * @param bool $disabled
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
      */
     public function setDisabled($disabled = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
      */
     public function getDisabled();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
      */
     public function removeDisabled();
 
     /**
      * @param mixed $data
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#empty-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
      */
     public function setEmptyData($data);
 
     /**
      * @return mixed
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#empty-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
      */
     public function getEmptyData();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#empty-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
      */
     public function removeEmptyData();
 
     /**
      * @param bool $errorBubbling
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-bubbling
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-bubbling
      */
     public function setErrorBubbling($errorBubbling = true);
 
@@ -308,14 +308,14 @@ interface FormOptionsBuilderInterface
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-bubbling
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-bubbling
      */
     public function removeErrorBubbling();
 
     /**
      * @param array $mapping
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-mapping
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-mapping
      */
     public function setErrorMapping(array $mapping);
 
@@ -327,108 +327,108 @@ interface FormOptionsBuilderInterface
     /**
      * @param bool|string $inherit
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#inherit-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#inherit-data
      */
     public function setInheritData($inherit = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#inherit-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#inherit-data
      */
     public function getInheritData();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#inherit-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#inherit-data
      */
     public function removeInheritData();
 
     /**
      * @param string $intention
      * @return $this
-     * @link http://symfony.com/doc/current/book/forms.html#csrf-protection
+     * @link http://symfony.com/doc/3.0/book/forms.html#csrf-protection
      */
     public function setIntention($intention);
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/book/forms.html#csrf-protection
+     * @link http://symfony.com/doc/3.0/book/forms.html#csrf-protection
      */
     public function getIntention();
 
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#invalid-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
      */
     public function setInvalidMessage($message);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#invalid-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
      */
     public function getInvalidMessage();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#invalid-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
      */
     public function removeInvalidMessage();
 
     /**
      * @param array $parameters
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#invalid-message-parameters
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
      */
     public function setInvalidMessageParameters(array $parameters);
 
     /**
      * @return array
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#invalid-message-parameters
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
      */
     public function getInvalidMessageParameters();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#invalid-message-parameters
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
      */
     public function removeInvalidMessageParameters();
 
     /**
      * @param string $label
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
      */
     public function setLabel($label);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
      */
     public function getLabel();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
      */
     public function removeLabel();
 
     /**
      * @param array $attr
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#label-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
      */
     public function setLabelAttr(array $attr);
 
     /**
      * @return array|string
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#label-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
      */
     public function getLabelAttr();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#label-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
      */
     public function removeLabelAttr();
 
@@ -457,95 +457,95 @@ interface FormOptionsBuilderInterface
     /**
      * @param bool|string $mapped
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#mapped
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#mapped
      */
     public function setMapped($mapped = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#mapped
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#mapped
      */
     public function getMapped();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#mapped
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#mapped
      */
     public function removeMapped();
 
     /**
      * @param string $path
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
      */
     public function setPropertyPath($path);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
      */
     public function getPropertyPath();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
      */
     public function removePropertyPath();
 
     /**
      * @param bool $required
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
      */
     public function setRequired($required = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
      */
     public function getRequired();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
      */
     public function removeRequired();
 
     /**
      * @param string $domain
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
      */
     public function setTranslationDomain($domain);
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
      */
     public function getTranslationDomain();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
      */
     public function removeTranslationDomain();
 
     /**
      * @param bool $trim
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#trim
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
      */
     public function setTrim($trim = true);
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#trim
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
      */
     public function getTrim();
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#trim
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
      */
     public function removeTrim();
 

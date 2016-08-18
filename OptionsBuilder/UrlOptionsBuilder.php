@@ -28,7 +28,7 @@ class UrlOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param mixed $protocol
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/url.html#default-protocol
+     * @link http://symfony.com/doc/3.0/reference/forms/types/url.html#default-protocol
      */
     public function setDefaultProtocol($protocol)
     {

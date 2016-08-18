@@ -26,7 +26,7 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $format
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/datetime.html#format
+     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#format
      */
     public function setFormat($format)
     {
@@ -44,7 +44,7 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param int|string $format
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/datetime.html#date-format
+     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#date-format
      */
     public function setDateFormat($format)
     {
@@ -62,7 +62,7 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $widget
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/datetime.html#date-widget
+     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#date-widget
      */
     public function setDateWidget($widget)
     {
@@ -80,7 +80,7 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $widget
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/datetime.html#time-widget
+     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#time-widget
      */
     public function setTimeWidget($widget)
     {

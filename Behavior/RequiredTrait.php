@@ -9,7 +9,7 @@ trait RequiredTrait
     /**
      * @param bool $required
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
      */
     public function setRequired($required = true)
     {
@@ -18,7 +18,7 @@ trait RequiredTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
      */
     public function getRequired()
     {
@@ -27,7 +27,7 @@ trait RequiredTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
      */
     public function removeRequired()
     {

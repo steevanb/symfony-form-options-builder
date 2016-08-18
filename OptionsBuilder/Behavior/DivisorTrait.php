@@ -11,7 +11,7 @@ trait DivisorTrait
     /**
      * @param int $divisor
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/money.html#divisor
+     * @link http://symfony.com/doc/3.0/reference/forms/types/money.html#divisor
      */
     public function setDivisor($divisor)
     {

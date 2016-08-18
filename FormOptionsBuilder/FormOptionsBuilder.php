@@ -51,7 +51,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
     /**
      * @param string $action
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#action
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#action
      */
     public function setAction($action)
     {
@@ -60,7 +60,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#action
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#action
      */
     public function getAction()
     {
@@ -69,7 +69,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#action
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#action
      */
     public function removeAction()
     {
@@ -79,7 +79,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
     /**
      * @param bool $auto
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function setAutoInitialize($auto = true)
     {
@@ -88,7 +88,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function getAutoInitialize()
     {
@@ -97,7 +97,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function removeAutoInitialize()
     {
@@ -107,7 +107,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
     /**
      * @param array $mapping
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-mapping
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-mapping
      */
     public function setErrorMapping(array $mapping)
     {
@@ -116,7 +116,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return array|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-mapping
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-mapping
      */
     public function getErrorMapping()
     {
@@ -125,7 +125,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-mapping
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-mapping
      */
     public function removeErrorMapping()
     {
@@ -135,7 +135,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
     /**
      * @param string $intention
      * @return $this
-     * @link http://symfony.com/doc/current/book/forms.html#csrf-protection
+     * @link http://symfony.com/doc/3.0/book/forms.html#csrf-protection
      */
     public function setIntention($intention)
     {
@@ -144,7 +144,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/book/forms.html#csrf-protection
+     * @link http://symfony.com/doc/3.0/book/forms.html#csrf-protection
      */
     public function getIntention()
     {
@@ -153,7 +153,7 @@ class FormOptionsBuilder implements FormOptionsBuilderInterface
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/book/forms.html#csrf-protection
+     * @link http://symfony.com/doc/3.0/book/forms.html#csrf-protection
      */
     public function removeIntention()
     {

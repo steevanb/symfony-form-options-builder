@@ -9,7 +9,7 @@ trait ExtraFieldsMessageTrait
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
      */
     public function setExtraFieldsMessage($message)
     {
@@ -18,7 +18,7 @@ trait ExtraFieldsMessageTrait
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
      */
     public function getExtraFieldsMessage()
     {
@@ -27,7 +27,7 @@ trait ExtraFieldsMessageTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
      */
     public function removeExtraFieldsMessage()
     {

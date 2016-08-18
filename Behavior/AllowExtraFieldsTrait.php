@@ -9,7 +9,7 @@ trait AllowExtraFieldsTrait
     /**
      * @param bool $allow
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
      */
     public function setAllowExtraFields($allow = true)
     {
@@ -18,7 +18,7 @@ trait AllowExtraFieldsTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
      */
     public function getAllowExtraFields()
     {
@@ -27,7 +27,7 @@ trait AllowExtraFieldsTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
      */
     public function removeAllowExtraFields()
     {

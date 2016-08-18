@@ -11,7 +11,7 @@ trait HTML5Trait
     /**
      * @param bool $html5
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#html5
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#html5
      */
     public function setHTML5($html5 = true)
     {

@@ -22,7 +22,7 @@ trait DateTypeTrait
     /**
      * @param array $days
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#days
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#days
      */
     public function setDays(array $days = null)
     {
@@ -45,7 +45,7 @@ trait DateTypeTrait
     /**
      * @param int|string $format
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#format
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#format
      */
     public function setFormat($format)
     {
@@ -68,7 +68,7 @@ trait DateTypeTrait
     /**
      * @param null|array $months
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#months
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#months
      */
     public function setMonths(array $months = null)
     {
@@ -91,7 +91,7 @@ trait DateTypeTrait
     /**
      * @param null|array $years
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/date.html#years
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#years
      */
     public function setYears(array $years = null)
     {

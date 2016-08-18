@@ -9,7 +9,7 @@ trait PropertyPathTrait
     /**
      * @param string $path
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
      */
     public function setPropertyPath($path)
     {
@@ -18,7 +18,7 @@ trait PropertyPathTrait
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
      */
     public function getPropertyPath()
     {
@@ -27,7 +27,7 @@ trait PropertyPathTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
      */
     public function removePropertyPath()
     {

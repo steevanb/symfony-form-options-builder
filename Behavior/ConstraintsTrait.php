@@ -11,7 +11,7 @@ trait ConstraintsTrait
     /**
      * @param array $constraints
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#constraints
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
      */
     public function setConstraints(array $constraints)
     {
@@ -21,7 +21,7 @@ trait ConstraintsTrait
     /**
      * @param Constraint $constraint
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#constraints
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
      */
     public function addConstraint(Constraint $constraint)
     {
@@ -37,7 +37,7 @@ trait ConstraintsTrait
 
     /**
      * @return array|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#constraints
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
      */
     public function getConstraints()
     {
@@ -46,7 +46,7 @@ trait ConstraintsTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#constraints
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
      */
     public function removeConstraints()
     {

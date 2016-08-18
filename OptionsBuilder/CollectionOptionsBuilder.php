@@ -23,7 +23,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param bool $allow
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#allow-add
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#allow-add
      */
     public function setAllowAdd($allow = true)
     {
@@ -41,7 +41,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param $allow
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#allow-delete
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#allow-delete
      */
     public function setAllowDelete($allow = true)
     {
@@ -59,7 +59,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param bool $delete
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#delete-empty
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#delete-empty
      */
     public function setDeleteEmpty($delete = true)
     {
@@ -78,7 +78,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
      * @param bool $prototype
      * @param bool $setAllowAdd
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#prototype
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#prototype
      */
     public function setPrototype($prototype = true, $setAllowAdd = true)
     {
@@ -102,7 +102,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
      * @param string $name
      * @param bool $setAllowAdd
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#prototype-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#prototype-name
      */
     public function setPrototypeName($name, $setAllowAdd = true)
     {
@@ -117,7 +117,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $type
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#entry-type
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#entry-type
      * @since 2.8
      */
     public function setEntryType($type)
@@ -127,7 +127,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#entry-type
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#entry-type
      * @since 2.8
      */
     public function getEntryType()
@@ -137,7 +137,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#entry-type
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#entry-type
      * @since 2.8
      */
     public function removeEntryType()
@@ -148,7 +148,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param array $options
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#entry-options
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#entry-options
      * @since 2.8
      */
     public function setEntryOptions(array $options)
@@ -158,7 +158,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
 
     /**
      * @return array|string
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#entry-options
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#entry-options
      * @since 2.8
      */
     public function getEntryOptions()
@@ -168,7 +168,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/collection.html#entry-options
+     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#entry-options
      * @since 2.8
      */
     public function removeEntryOotions()

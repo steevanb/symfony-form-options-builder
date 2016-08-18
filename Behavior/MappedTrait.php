@@ -9,7 +9,7 @@ trait MappedTrait
     /**
      * @param bool|string $mapped
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#mapped
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#mapped
      */
     public function setMapped($mapped = true)
     {
@@ -18,7 +18,7 @@ trait MappedTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#mapped
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#mapped
      */
     public function getMapped()
     {
@@ -27,7 +27,7 @@ trait MappedTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#mapped
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#mapped
      */
     public function removeMapped()
     {

@@ -9,7 +9,7 @@ trait InheritDataTrait
     /**
      * @param bool|string $inherit
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#inherit-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#inherit-data
      */
     public function setInheritData($inherit = true)
     {
@@ -18,7 +18,7 @@ trait InheritDataTrait
 
     /**
      * @return bool|string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#inherit-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#inherit-data
      */
     public function getInheritData()
     {
@@ -27,7 +27,7 @@ trait InheritDataTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#inherit-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#inherit-data
      */
     public function removeInheritData()
     {

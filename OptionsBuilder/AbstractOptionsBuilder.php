@@ -58,7 +58,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     /**
      * @param string|null $action
      * @return $this
-     * @link http://symfony.com/doc/2.8/reference/forms/types/form.html#action
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#action
      */
     public function setAction($action)
     {
@@ -76,7 +76,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     /**
      * @param string $method
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#method
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#method
      */
     public function setMethod($method)
     {
@@ -94,7 +94,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     /**
      * @param bool $allow
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#allow-extra-fields
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
      * @since 2.6
      */
     public function setAllowExtraFields($allow = true)
@@ -114,7 +114,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#extra-fields-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
      */
     public function setExtraFieldsMessage($message)
     {
@@ -132,7 +132,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     /**
      * @param bool $autoInitialize
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function setAutoInitialize($autoInitialize = true)
     {
@@ -150,7 +150,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
     /**
      * @param string|null $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function setPostMaxSizeMessage($message)
     {

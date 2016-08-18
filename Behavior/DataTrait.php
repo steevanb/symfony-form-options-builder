@@ -9,7 +9,7 @@ trait DataTrait
     /**
      * @param mixed $data
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
      */
     public function setData($data)
     {
@@ -18,7 +18,7 @@ trait DataTrait
 
     /**
      * @return mixed
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
      */
     public function getData()
     {
@@ -27,7 +27,7 @@ trait DataTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
      */
     public function removeData()
     {

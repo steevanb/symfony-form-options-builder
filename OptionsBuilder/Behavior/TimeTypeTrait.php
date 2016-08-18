@@ -22,7 +22,7 @@ trait TimeTypeTrait
     /**
      * @param null|array $hours
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/time.html#hours
+     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#hours
      */
     public function setHours(array $hours = null)
     {
@@ -45,7 +45,7 @@ trait TimeTypeTrait
     /**
      * @param null|array $minutes
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/time.html#minutes
+     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#minutes
      */
     public function setMinutes(array $minutes = null)
     {
@@ -68,7 +68,7 @@ trait TimeTypeTrait
     /**
      * @param null|array $seconds
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/time.html#seconds
+     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#seconds
      */
     public function setSeconds(array $seconds = null)
     {
@@ -91,7 +91,7 @@ trait TimeTypeTrait
     /**
      * @param bool $withMinutes
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/time.html#with-minutes
+     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#with-minutes
      */
     public function setWithMinutes($withMinutes = true)
     {
@@ -109,7 +109,7 @@ trait TimeTypeTrait
     /**
      * @param bool $withSeconds
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/time.html#with-seconds
+     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#with-seconds
      */
     public function setWithSeconds($withSeconds = true)
     {

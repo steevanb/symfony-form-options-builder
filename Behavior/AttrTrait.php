@@ -9,7 +9,7 @@ trait AttrTrait
     /**
      * @param array $attr
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#attr
      */
     public function setAttr(array $attr)
     {

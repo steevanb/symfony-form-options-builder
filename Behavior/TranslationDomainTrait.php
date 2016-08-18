@@ -9,7 +9,7 @@ trait TranslationDomainTrait
     /**
      * @param string|false $domain
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
      */
     public function setTranslationDomain($domain)
     {
@@ -18,7 +18,7 @@ trait TranslationDomainTrait
 
     /**
      * @return string|false
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
      */
     public function getTranslationDomain()
     {
@@ -27,7 +27,7 @@ trait TranslationDomainTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
      */
     public function removeTranslationDomain()
     {

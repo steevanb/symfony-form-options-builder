@@ -9,7 +9,7 @@ trait EmptyDataTrait
     /**
      * @param mixed $data
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#empty-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
      */
     public function setEmptyData($data)
     {
@@ -18,7 +18,7 @@ trait EmptyDataTrait
 
     /**
      * @return mixed
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#empty-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
      */
     public function getEmptyData()
     {
@@ -27,7 +27,7 @@ trait EmptyDataTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#empty-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
      */
     public function removeEmptyData()
     {

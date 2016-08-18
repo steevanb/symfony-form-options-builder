@@ -159,7 +159,7 @@ class RootFormOptionsBuilder extends FormOptionsBuilder implements RootFormOptio
     /**
      * @param string $method
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function setMethod($method)
     {
@@ -168,7 +168,7 @@ class RootFormOptionsBuilder extends FormOptionsBuilder implements RootFormOptio
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function getMethod()
     {
@@ -177,7 +177,7 @@ class RootFormOptionsBuilder extends FormOptionsBuilder implements RootFormOptio
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function removeMethod()
     {
@@ -187,7 +187,7 @@ class RootFormOptionsBuilder extends FormOptionsBuilder implements RootFormOptio
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function setPostMaxSizeMessage($message)
     {
@@ -196,7 +196,7 @@ class RootFormOptionsBuilder extends FormOptionsBuilder implements RootFormOptio
 
     /**
      * @return string
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function getPostMaxSizeMessage()
     {
@@ -205,7 +205,7 @@ class RootFormOptionsBuilder extends FormOptionsBuilder implements RootFormOptio
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#post-max-size-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
      */
     public function removePostMaxSizeMessage()
     {

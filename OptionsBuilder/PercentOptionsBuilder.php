@@ -28,7 +28,7 @@ class PercentOptionsBuilder extends AbstractOptionsBuilder
     /**
      * @param string $type Use self::TYPE_XXX
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/percent.html#type
+     * @link http://symfony.com/doc/3.0/reference/forms/types/percent.html#type
      */
     public function setType($type)
     {

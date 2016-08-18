@@ -43,7 +43,7 @@ interface OptionsBuilderInterface
     /**
      * @param array $attr
      * @return array
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#attr
      */
     public function setAttr(array $attr);
 
@@ -69,7 +69,7 @@ interface OptionsBuilderInterface
     /**
      * @param string|false $label
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
      */
     public function setLabel($label);
 
@@ -81,7 +81,7 @@ interface OptionsBuilderInterface
     /**
      * @param array $attr
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#label-attr
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
      */
     public function setLabelAttr(array $attr);
 
@@ -93,7 +93,7 @@ interface OptionsBuilderInterface
     /**
      * @param bool $disabled
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#disabled
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
      */
     public function setDisabled($disabled = true);
 
@@ -105,7 +105,7 @@ interface OptionsBuilderInterface
     /**
      * @param string|false $domain
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#translation-domain
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
      */
     public function setTranslationDomain($domain);
 
@@ -117,7 +117,7 @@ interface OptionsBuilderInterface
     /**
      * @param array $constraints
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#constraints
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
      */
     public function setConstraints(array $constraints);
 
@@ -135,7 +135,7 @@ interface OptionsBuilderInterface
     /**
      * @param mixed $emptyData
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#empty-data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
      */
     public function setEmptyData($emptyData);
 
@@ -147,7 +147,7 @@ interface OptionsBuilderInterface
     /**
      * @param string $message
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
      */
     public function setInvalidMessage($message);
 
@@ -159,7 +159,7 @@ interface OptionsBuilderInterface
     /**
      * @param array $parameters
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#invalid-message-parameters
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
      */
     public function setInvalidMessageParameters(array $parameters);
 
@@ -171,7 +171,7 @@ interface OptionsBuilderInterface
     /**
      * @param bool $required
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#required
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
      */
     public function setRequired($required = true);
 
@@ -183,7 +183,7 @@ interface OptionsBuilderInterface
     /**
      * @param bool $trim
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#trim
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
      */
     public function setTrim($trim = true);
 
@@ -195,7 +195,7 @@ interface OptionsBuilderInterface
     /**
      * @param bool $autoInitialize
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#auto-initialize
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
      */
     public function setAutoInitialize($autoInitialize = true);
 
@@ -218,7 +218,7 @@ interface OptionsBuilderInterface
     /**
      * @param bool $errorBubbling
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#error-bubbling
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-bubbling
      */
     public function setErrorBubbling($errorBubbling = true);
 
@@ -230,7 +230,7 @@ interface OptionsBuilderInterface
     /**
      * @param mixed $data
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#data
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
      */
     public function setData($data);
 
@@ -242,7 +242,7 @@ interface OptionsBuilderInterface
     /**
      * @param string $path
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#property-path
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
      */
     public function setPropertyPath($path);
 
@@ -254,7 +254,7 @@ interface OptionsBuilderInterface
     /**
      * @param string $name
      * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/form.html#block-name
+     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
      */
     public function setBlockName($name);
 
