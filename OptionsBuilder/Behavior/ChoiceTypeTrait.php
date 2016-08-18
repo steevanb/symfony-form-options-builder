@@ -11,7 +11,7 @@ trait ChoiceTypeTrait
     use PlaceHolderTrait;
 
     /**
-     * @param array $choices
+     * @param array $choices Format : [$label=>$value, $label2=>$value2]
      * @return $this
      * @link http://symfony.com/doc/current/reference/forms/types/choice.html#choices
      */
@@ -26,6 +26,21 @@ trait ChoiceTypeTrait
     public function getChoices()
     {
         return $this->getOption('choices');
+    }
+
+    /**
+     * Replacement for removed choice_as_values config
+     *
+     * @param array $choices Format : [$value1=>$label1, $value2=>$label2]
+     * @return $this
+     */
+    public function setFlippedChoices(array $choices)
+    {
+        $this->setChoices(array_keys($choices));
+
+        return $this->setChoiceLabel(function($value) use ($choices) {
+            return $choices[$value];
+        });
     }
 
     /**

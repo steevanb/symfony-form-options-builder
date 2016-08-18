@@ -1,3 +1,8 @@
+3.2.1 (2016-09-18)
+------------------
+
+- Add setFlippedChoices() to ChoiceOptionsBuilder, CountryOptionsBuilder, CurrencyOptionsBuilder, EntityOptionsBuilder, LanguageOptionsBuilder, LocaleOptionsBuilder and TimezoneOptionsBuilder, to replace remove choice_as_values config
+
 3.2.0 (2016-07-04)
 ------------------
 
