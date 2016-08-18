@@ -1,8 +1,8 @@
-[![version](https://img.shields.io/badge/version-3.2.0-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/3.2.0)
+[![version](https://img.shields.io/badge/version-3.2.1-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/3.2.1)
 [![symfony](https://img.shields.io/badge/symfony/form-^3-blue.svg)](https://symfony.com/)
-![Lines](https://img.shields.io/badge/code lines-5849-green.svg)
+![Lines](https://img.shields.io/badge/code lines-5929-green.svg)
 ![Total Downloads](https://poser.pugx.org/steevanb/symfony-form-options-builder/downloads)
-[![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/1353611f-3e46-4f92-a473-8a34cf2f23ec/analyses/6)
+[![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/1353611f-3e46-4f92-a473-8a34cf2f23ec/analyses/8)
 [![Scrutinizer](https://scrutinizer-ci.com/g/steevanb/symfony-form-options-builder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/steevanb/symfony-form-options-builder/)
 
 symfony-form-options-builder

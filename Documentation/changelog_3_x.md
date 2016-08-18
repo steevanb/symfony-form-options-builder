@@ -2,6 +2,7 @@
 ------------------
 
 - Add setFlippedChoices() to ChoiceOptionsBuilder, CountryOptionsBuilder, CurrencyOptionsBuilder, EntityOptionsBuilder, LanguageOptionsBuilder, LocaleOptionsBuilder and TimezoneOptionsBuilder, to replace remove choice_as_values config
+- Fix Symfony documentation links to 3.0 instead of current
 
 3.2.0 (2016-07-04)
 ------------------
