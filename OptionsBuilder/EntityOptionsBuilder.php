@@ -2,7 +2,7 @@
 
 namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\QueryBuilder;
 use steevanb\SymfonyFormOptionsBuilder\Behavior\ByReferenceTrait;
 use steevanb\SymfonyFormOptionsBuilder\Behavior\DataClassTrait;
@@ -101,7 +101,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
      */
     public function setRepositoryMethod($method, $params = array())
     {
-        return $this->setOption('query_builder', function (EntityRepository $repository) use ($method, $params) {
+        return $this->setOption('query_builder', function (ObjectRepository $repository) use ($method, $params) {
             return call_user_func(array($repository, $method), $params);
         });
     }

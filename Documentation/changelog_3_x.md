@@ -1,4 +1,9 @@
-3.2.1 (2016-09-18)
+3.2.2 (2016-08-31)
+------------------
+
+- Use Doctrine\Common\Persistence\ObjectRepository instead of Doctrine\ORM\EntityRepository in EntityOptionsBuilder::setRepositoryMethod()
+
+3.2.1 (2016-08-18)
 ------------------
 
 - Add setFlippedChoices() to ChoiceOptionsBuilder, CountryOptionsBuilder, CurrencyOptionsBuilder, EntityOptionsBuilder, LanguageOptionsBuilder, LocaleOptionsBuilder and TimezoneOptionsBuilder, to replace removed choice_as_values config
