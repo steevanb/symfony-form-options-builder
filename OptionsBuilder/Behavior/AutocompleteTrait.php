@@ -2,24 +2,13 @@
 
 namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
+use steevanb\SymfonyFormOptionsBuilder\Behavior\AttrAccessorsTrait;
 use steevanb\SymfonyFormOptionsBuilder\Behavior\OptionAccessorsTrait;
 
 trait AutocompleteTrait
 {
     use OptionAccessorsTrait;
-
-    /**
-     * @param string $name
-     * @param mixed $value
-     * @return $this
-     */
-    abstract public function addAttr($name, $value);
-
-    /**
-     * @param string $name
-     * @return array|mixed
-     */
-    abstract public function getAttr($name = null);
+    use AttrAccessorsTrait;
 
     /**
      * @param string $name
