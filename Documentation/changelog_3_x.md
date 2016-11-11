@@ -1,3 +1,9 @@
+3.3.0 (2016-11-11)
+------------------
+
+- Add steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EntityEditableQueryBuilderOptionsBuilder, to add a callback called when getQuery() is performed.
+setCallBack() allow you to add your own callback, setPartialQueryCallBack() add a callback who add Query::HINT_FORCE_PARTIAL_LOAD hint.
+
 3.2.2 (2016-08-31)
 ------------------
 

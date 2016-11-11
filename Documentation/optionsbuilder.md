@@ -129,6 +129,9 @@ TimezoneOptionsBuilder::create()
     - asSelect() will call $this->setMultiple(false)->setExpanded(false)
     - asMultipleSelect() will call $this->setMultiple()->setExpanded(false)
 UrlOptionsBuilder::create()
+EntityEditableQueryBuilderOptionsBuilder::create()
+    - setCallBack() will add a callback, who is called when getQuery() will be performed
+    - setPartialQueryCallBack() will add a callback, who add Query::HINT_FORCE_PARTIAL_LOAD hint when getQuery() will be performed
 ```
 
 Build your own OptionsBuilder
