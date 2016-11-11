@@ -1,0 +1,6 @@
+services:
+    huttosoft.back.core.form_type.entity:
+        class: steevanb\SymfonyFormOptionsBuilder\Type\EntityEditableQueryBuilderType
+        arguments: ['@doctrine']
+        tags:
+            - { name: form.type }
