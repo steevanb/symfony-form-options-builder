@@ -1,5 +1,5 @@
 services:
-    huttosoft.back.core.form_type.entity:
+    steevanb.symfony_form_options_builder.entity_editable_query_builder_type:
         class: steevanb\SymfonyFormOptionsBuilder\Type\EntityEditableQueryBuilderType
         arguments: ['@doctrine']
         tags:
