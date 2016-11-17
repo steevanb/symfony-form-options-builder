@@ -1,3 +1,8 @@
+3.3.1 (2016-11-17)
+------------------
+
+- Rename service to steevanb.symfony_form_options_builder.entity_editable_query_builder_type
+
 3.3.0 (2016-11-11)
 ------------------
 
