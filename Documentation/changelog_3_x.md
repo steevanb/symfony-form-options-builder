@@ -1,3 +1,8 @@
+3.3.2 (2016-02-15)
+------------------
+
+- [ZeMarine](https://github.com/zemarine) Fix EntityOptionsBuilder::setRepositoryMethod() with $params is an array of params
+
 3.3.1 (2016-11-17)
 ------------------
 
