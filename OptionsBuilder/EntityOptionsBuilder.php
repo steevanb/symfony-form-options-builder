@@ -96,13 +96,17 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
 
     /**
      * @param string $method
-     * @param array $params
+     * @param mixed|array $params
      * @return $this
      */
     public function setRepositoryMethod($method, $params = array())
     {
+        if (is_array($params) === false) {
+            $params = [$params];
+        }
+
         return $this->setOption('query_builder', function (ObjectRepository $repository) use ($method, $params) {
-            return call_user_func(array($repository, $method), $params);
+            return call_user_func_array(array($repository, $method), $params);
         });
     }
 }
