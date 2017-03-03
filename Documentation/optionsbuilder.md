@@ -137,7 +137,7 @@ EntityEditableQueryBuilderOptionsBuilder::create()
 Build your own OptionsBuilder
 -----------------------------
 
-You need to implements steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\OptionsBuilderInterface,
+You need to implements steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\OptionsBuilderInterface,
 or extends steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\AbstractOptionsBuilder.
 
 Of course, you can extends an existing OptionsBuilder to override some methods, or add new ones.

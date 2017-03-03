@@ -1,214 +1,178 @@
 <?php
 
+declare(strict_types=1);
+
 namespace steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder;
 
+use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\Behavior\AbstractFormOptionsBuilder;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
+use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\Behavior\RootFormOptionsBuilderInterface;
 
-class RootFormOptionsBuilder extends FormOptionsBuilder implements RootFormOptionsBuilderInterface
+class RootFormOptionsBuilder extends AbstractFormOptionsBuilder implements RootFormOptionsBuilderInterface
 {
-    /**
-     * @param string $name
-     * @return $this
-     */
-    public function setCsrfFieldName($name)
+    public function setCsrfFieldName(string $name): RootFormOptionsBuilderInterface
     {
         return $this->setOption('csrf_field_name', $name);
     }
 
-    /**
-     * @return string
-     */
-    public function getCsrfFieldName()
+    public function getCsrfFieldName(): ?string
     {
         return $this->getOption('csrf_field_name');
     }
 
-    /**
-     * @return $this
-     */
-    public function removeCsrfFieldName()
+    public function removeCsrfFieldName(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('csrf_field_name');
     }
 
-    /**
-     * @param string $message
-     * @return $this
-     */
-    public function setCsrfMessage($message)
+    public function setCsrfMessage(string $message): RootFormOptionsBuilderInterface
     {
         return $this->setOption('csrf_message', $message);
     }
 
-    /**
-     * @return string
-     */
-    public function getCsrfMessage()
+    public function getCsrfMessage(): string
     {
         return $this->getOption('csrf_message');
     }
 
-    /**
-     * @return $this
-     */
-    public function removeCsrfMessage()
+    public function removeCsrfMessage(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('csrf_message');
     }
 
-    /**
-     * @param bool $protection
-     * @return $this
-     */
-    public function setCsrfProtection($protection = true)
+    public function setCsrfProtection(bool $protection = true): RootFormOptionsBuilderInterface
     {
         return $this->setOption('csrf_protection', $protection);
     }
 
-    /**
-     * @return bool
-     */
-    public function getCsrfProtection()
+    public function getCsrfProtection(): ?bool
     {
         return $this->getOption('csrf_protection');
     }
 
-    /**
-     * @return $this
-     */
-    public function removeCsrfProtection()
+    public function removeCsrfProtection(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('csrf_protection');
     }
 
-    /**
-     * @param CsrfTokenManagerInterface $provider
-     * @return $this
-     */
-    public function setCsrfProvider(CsrfTokenManagerInterface $provider)
+    public function setCsrfProvider(CsrfTokenManagerInterface $provider): RootFormOptionsBuilderInterface
     {
         return $this->setOption('csrf_provider', $provider);
     }
 
-    /**
-     * @return CsrfTokenManagerInterface|string
-     */
-    public function getCsrfProvider()
+    public function getCsrfProvider(): ?CsrfTokenManagerInterface
     {
         return $this->getOption('csrf_provider');
     }
 
-    /**
-     * @return $this
-     */
-    public function removeCsrfProvider()
+    public function removeCsrfProvider(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('csrf_provider');
     }
 
-    /**
-     * @param string $id
-     * @return $this
-     */
-    public function setCsrfTokenId($id)
+    public function setCsrfTokenId(string $id): RootFormOptionsBuilderInterface
     {
         return $this->setOption('csrf_token_id', $id);
     }
 
-    /**
-     * @return string
-     */
-    public function getCsrfTokenId()
+    public function getCsrfTokenId(): ?string
     {
         return $this->getOption('csrf_token_id');
     }
 
-    /**
-     * @return $this
-     */
-    public function removeCsrfTokenId()
+    public function removeCsrfTokenId(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('csrf_token_id');
     }
 
-    /**
-     * @param CsrfTokenManagerInterface $manager
-     * @return $this
-     */
-    public function setCsrfTokenManager(CsrfTokenManagerInterface $manager)
+    public function setCsrfTokenManager(CsrfTokenManagerInterface $manager): RootFormOptionsBuilderInterface
     {
         return $this->setOption('csrf_token_manager', $manager);
     }
 
-    /**
-     * @return CsrfTokenManagerInterface|string
-     */
-    public function getCsrfTokenManager()
+    public function getCsrfTokenManager(): ?CsrfTokenManagerInterface
     {
         return $this->getOption('csrf_token_manager');
     }
 
-    /**
-     * @return $this
-     */
-    public function removeCsrfTokenManager()
+    public function removeCsrfTokenManager(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('csrf_token_manager');
     }
 
-    /**
-     * @param string $method
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
-     */
-    public function setMethod($method)
+    public function setMethod(string $method): RootFormOptionsBuilderInterface
     {
         return $this->setOption('method', $method);
     }
 
-    /**
-     * @return string
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
-     */
-    public function getMethod()
+    public function getMethod(): string
     {
         return $this->getOption('method');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
-     */
-    public function removeMethod()
+    public function removeMethod(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('method');
     }
 
-    /**
-     * @param string $message
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
-     */
-    public function setPostMaxSizeMessage($message)
+    public function setPostMaxSizeMessage(string $message): RootFormOptionsBuilderInterface
     {
         return $this->setOption('post_max_size_message', $message);
     }
 
-    /**
-     * @return string
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
-     */
-    public function getPostMaxSizeMessage()
+    public function getPostMaxSizeMessage(): ?string
     {
         return $this->getOption('post_max_size_message');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#post-max-size-message
-     */
-    public function removePostMaxSizeMessage()
+    public function removePostMaxSizeMessage(): RootFormOptionsBuilderInterface
     {
         return $this->removeOption('post_max_size_message');
+    }
+
+    public function setValidationGroups(array $groups): RootFormOptionsBuilderInterface
+    {
+        return $this->setOption('validation_groups', $groups);
+    }
+
+    public function setValidationGroupsClosure(\Closure $groups): RootFormOptionsBuilderInterface
+    {
+        return $this->setOption('validation_groups', $groups);
+    }
+
+    /** @return $this */
+    public function addValidationGroup(string $group): RootFormOptionsBuilderInterface
+    {
+        $groups = $this->getValidationGroups();
+        if (in_array($group, $groups) === false) {
+            $groups[] = $group;
+        }
+
+        return $this->setValidationGroups($groups);
+    }
+
+    public function getValidationGroups(): array
+    {
+        return $this->getOption('validation_groups');
+    }
+
+    public function removeValidationGroups(): RootFormOptionsBuilderInterface
+    {
+        return $this->removeOption('validation_groups');
+    }
+
+    public function setAction(string $action): RootFormOptionsBuilderInterface
+    {
+        return $this->setOption('action', $action);
+    }
+
+    public function getAction(): ?string
+    {
+        return $this->getOption('action');
+    }
+
+    public function removeAction(): RootFormOptionsBuilderInterface
+    {
+        return $this->removeOption('action');
     }
 }

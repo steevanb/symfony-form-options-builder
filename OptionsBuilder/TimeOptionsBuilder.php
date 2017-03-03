@@ -1,22 +1,23 @@
 <?php
 
+declare(strict_types=1);
+
 namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
 use Symfony\Component\Form\Extension\Core\Type\TimeType;
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\AbstractOptionsBuilder;
 
 class TimeOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\DateTimeCommonTrait;
-    use Behavior\TimeTypeTrait;
+    use Behavior\TimeTrait;
+    use Behavior\Html5Trait;
 
-    const WIDGET_CHOICE = 'choice';
-    const WIDGET_TEXT = 'text';
-    const WIDGET_SINGLE_TEXT = 'single_text';
+    public const WIDGET_CHOICE = 'choice';
+    public const WIDGET_TEXT = 'text';
+    public const WIDGET_SINGLE_TEXT = 'single_text';
 
-    /**
-     * @return string
-     */
-    public static function getBuilderType()
+    public static function getBuilderType(): string
     {
         return TimeType::class;
     }

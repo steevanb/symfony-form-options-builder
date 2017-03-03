@@ -1,14 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace steevanb\SymfonyFormOptionsBuilder;
 
 trait BlockPrefixTrait
 {
-    /**
-     * @return string
-     * @link https://github.com/symfony/symfony/pull/16724
-     * @since 2.8
-     */
     public function getBlockPrefix()
     {
         $fullClassName = get_class($this);
