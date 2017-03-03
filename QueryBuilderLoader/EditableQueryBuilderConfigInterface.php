@@ -1,11 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace steevanb\SymfonyFormOptionsBuilder\QueryBuilderLoader;
 
 interface EditableQueryBuilderConfigInterface
 {
-    /**
-     * @return callable|null
-     */
-    public function getQueryCallBack();
+    public function getQueryCallBack(): ?callable;
 }

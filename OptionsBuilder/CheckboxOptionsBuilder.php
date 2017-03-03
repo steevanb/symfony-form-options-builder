@@ -1,37 +1,39 @@
 <?php
 
+declare(strict_types=1);
+
 namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use steevanb\SymfonyFormOptionsBuilder\Behavior\OptionAccessorsTrait;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\{
+    OptionsBuilderInterface,
+    AbstractOptionsBuilder
+};
 
 class CheckboxOptionsBuilder extends AbstractOptionsBuilder
 {
-    use OptionAccessorsTrait;
+    public static function getBuilderType(): string
+    {
+        return CheckboxType::class;
+    }
 
     /**
-     * @param mixed $value
      * @return $this
-     * @link http://symfony.com/fr/doc/current/reference/forms/types/checkbox.html#value
+     * @link http://symfony.com/doc/3.0/reference/forms/types/checkbox.html#value
      */
-    public function setValue($value)
+    public function setValue($value): OptionsBuilderInterface
     {
         return $this->setOption('value', $value);
     }
 
-    /**
-     * @return mixed
-     */
     public function getValue()
     {
         return $this->getOption('value');
     }
 
-    /**
-     * @return string
-     */
-    public static function getBuilderType()
+    /** @return $this */
+    public function removeValue(): OptionsBuilderInterface
     {
-        return CheckboxType::class;
+        return $this->removeOption('value');
     }
 }

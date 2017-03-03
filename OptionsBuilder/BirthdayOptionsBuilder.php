@@ -1,22 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\AbstractOptionsBuilder;
 
 class BirthdayOptionsBuilder extends AbstractOptionsBuilder
 {
     use Behavior\DateTimeCommonTrait;
-    use Behavior\DateTypeTrait;
+    use Behavior\DateTrait;
 
-    const WIDGET_CHOICE = 'choice';
-    const WIDGET_TEXT = 'text';
-    const WIDGET_SINGLE_TEXT = 'single_text';
+    public const WIDGET_CHOICE = 'choice';
+    public const WIDGET_TEXT = 'text';
+    public const WIDGET_SINGLE_TEXT = 'single_text';
 
-    /**
-     * @return string
-     */
-    public static function getBuilderType()
+    public static function getBuilderType(): string
     {
         return BirthdayType::class;
     }

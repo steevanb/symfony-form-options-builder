@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
-trait ScaleTrait
+trait Html5Trait
 {
     abstract public function setOption(string $name, $value): OptionsBuilderInterface;
 
@@ -14,21 +14,21 @@ trait ScaleTrait
 
     /**
      * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/integer.html#scale
+     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#html5
      */
-    public function setScale(int $scale): OptionsBuilderInterface
+    public function setHtml5(bool $html5 = true): OptionsBuilderInterface
     {
-        return $this->setOption('scale', $scale);
+        return $this->setOption('html5', $html5);
     }
 
-    public function getScale(): ?int
+    public function getHtml5(): ?bool
     {
-        return $this->getOption('scale');
+        return $this->getOption('html5');
     }
 
     /** @return $this */
-    public function removeScale(): OptionsBuilderInterface
+    public function removeHtml5(): OptionsBuilderInterface
     {
-        return $this->removeOption('scale');
+        return $this->removeOption('html5');
     }
 }
