@@ -1,6 +1,6 @@
-[![version](https://img.shields.io/badge/version-3.3.2-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/3.3.2)
-[![symfony](https://img.shields.io/badge/symfony/form-^3-blue.svg)](https://symfony.com/)
-![Lines](https://img.shields.io/badge/code%20lines-5631-green.svg)
+[![version](https://img.shields.io/badge/version-4.0.0-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/4.0.0)
+[![symfony](https://img.shields.io/badge/symfony/form-^3||^4-blue.svg)](https://symfony.com/)
+![Lines](https://img.shields.io/badge/code%20lines-4727-green.svg)
 ![Total Downloads](https://poser.pugx.org/steevanb/symfony-form-options-builder/downloads)
 [![SensionLabsInsight](https://img.shields.io/badge/SensionLabsInsight-platinum-brightgreen.svg)](https://insight.sensiolabs.com/projects/1353611f-3e46-4f92-a473-8a34cf2f23ec/analyses/16)
 [![Scrutinizer](https://scrutinizer-ci.com/g/steevanb/symfony-form-options-builder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/steevanb/symfony-form-options-builder/)
@@ -13,7 +13,9 @@ array with some mysterious keys, and other stuff.
 
 [Installation](Documentation/installation.md)
 
-[Changelog 3.* (symfony/form ^3, so Symfony ^3)](Documentation/changelog_3_x.md)
+[Changelog 4.* (symfony/form ^3 || ^4 and PHP ^7.1)](Documentation/changelog_4_x.md)
+
+[Changelog 3.* (symfony/form ^3)](Documentation/changelog_3_x.md)
 
 [Changelog 2.* (symfony/form ^2.3, so Symfony 2.3, 2.4, 2.5, 2.6, 2.7 and 2.8)](Documentation/changelog_2_x.md)
 

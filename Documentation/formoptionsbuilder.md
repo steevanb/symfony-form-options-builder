@@ -1,7 +1,7 @@
 SymfonyFormOptionsBuilder\FormOptionsBuilder\FormOptionsBuilder
 ========================================================
 
-This objects offer you an object vision of generating options for FormType configureOptions() method.
+This objects offer you an object vision of generating options for `FormType::configureOptions()`.
 
 Usage in configureOption()
 --------------------------
@@ -27,7 +27,7 @@ class BarType extends AbstractType
 Root FormType
 -------------
 
-If your FormType is the root one, you can use RootFormOptionsBuilder to access new methods :
+If your FormType is the root one, you should use `RootFormOptionsBuilder`:
 
 ```php
 use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\RootFormOptionsBuilder;
@@ -49,25 +49,31 @@ class BarType extends AbstractType
 }
 ```
 
-RootOptionsBuilder extends FormOptionsBuilder, and add this methods :
+Sub FormType
+------------
+
+If your FormType is a sub form (Collection for example), you should use `SubFormOptionsBuilder`:
+
 ```php
-setCsrfFieldName(), setCsrfFieldName() and removeCsrfFieldName()
-setCsrfMessage(), getCsrfMessage() and removeCsrfMessage()
-setCsrfProtection(), getCsrfProtection() and removeCsrfProtection()
-setCsrfProvider(), getCsrfProvider() and removeCsrfProvider()
-setCsrfTokenId(), getCsrfTokenId() and removeCsrfTokenId()
-setCsrfTokenManager(), getCsrfTokenManager() and removeCsrfTokenManager()
-setMethod(), getMethod() and removeMethod()
-setPostMaxSizeMessage(), getPostMaxSizeMessage() and removePostMaxSizeMessage()
+use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\SubFormOptionsBuilder;
+
+class BarType extends AbstractType
+{
+    public function configureOptions(OptionsResolver $resolver)
+    {
+        $resolver->setDefaults(SubFormOptionsBuilder::create()->asArray());
+    }
+}
 ```
+
 
 What does removeFoo() do exactly
 --------------------------------
 
-FormType can define default options, with configureOptions(), like label, translation_domain, etc.
+FormType can define default options, with `configureOptions()`, like `label`, `translation_domain`, etc.
 
-If you override this default values with null, eash FormType will read it differently, but will never read default value.
+If you override this default values with `null`, each FormType will read it differently, but will never read default value.
 
-So, if you have set an option (via setFoo()), and you need to get back the default option value, you need to call removeFoo() and not setFoo(null).
+So, if you have set an option (via `setFoo()`), and you need to get back the default option value, you need to call `removeFoo()` and not `setFoo(null)`.
 
 [Back to index](../README.md)
