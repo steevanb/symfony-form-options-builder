@@ -7,7 +7,7 @@
         "psr-4": { "steevanb\\SymfonyFormOptionsBuilder\\": "" }
     },
     "require": {
-        "symfony/form": "^3"
+        "symfony/form": "^3 || ^4"
     },
     "repositories": [
         {
