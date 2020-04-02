@@ -1,5 +1,8 @@
-4.0.0 (2018-01-18)
-------------------
+# 4.1.0 (2020-04-02)
+
+- Allow `symfony/form ^5.0`.
+
+# 4.0.0 (2018-01-18)
 
 - PHP 7.1 syntax. When a parameter accept multiple types,
 (like `EntityOptionsBuilder::setQueryBuilder()`, who accept `string` or `QueryBuilder`),

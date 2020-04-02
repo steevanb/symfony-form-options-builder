@@ -8,12 +8,6 @@
     },
     "require": {
         "php": "^7.1",
-        "symfony/form": "^3||^4"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/steevanb/symfony-form-options-builder.git"
-        }
-    ]
+        "symfony/form": "^3.0||^4.0||^5.0"
+    }
 }
