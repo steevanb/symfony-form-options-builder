@@ -12,6 +12,7 @@ class NumberOptionsBuilder extends AbstractOptionsBuilder
     use Behavior\GroupingTrait;
     use Behavior\ScaleTrait;
     use Behavior\RoundingModeTrait;
+    use Behavior\Html5Trait;
 
     public static function getBuilderType(): string
     {
