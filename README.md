@@ -1,7 +1,7 @@
-[![version](https://img.shields.io/badge/version-4.1.0-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/4.1.0)
+[![version](https://img.shields.io/badge/version-4.2.0-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/4.2.0)
 [![php](https://img.shields.io/badge/php-^7.1-blue.svg)](https://php.net)
 [![symfony](https://img.shields.io/badge/symfony/form-^3||^4||^5-blue.svg)](https://symfony.com)
-![Lines](https://img.shields.io/badge/code%20lines-4733-green.svg)
+![Lines](https://img.shields.io/badge/code%20lines-4738-green.svg)
 ![Total Downloads](https://poser.pugx.org/steevanb/symfony-form-options-builder/downloads)
 [![Scrutinizer](https://scrutinizer-ci.com/g/steevanb/symfony-form-options-builder/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/steevanb/symfony-form-options-builder/)
 
