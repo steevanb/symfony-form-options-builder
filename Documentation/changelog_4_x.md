@@ -1,3 +1,7 @@
+# 4.3.0 (2021-11-29)
+
+- Add compatibility with PHP 8.0
+
 # 4.2.0 (2020-04-02)
 
 - Add `Html5Trait` to `NumberOptionsBuilder`
