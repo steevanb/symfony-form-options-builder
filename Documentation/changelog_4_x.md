@@ -1,3 +1,7 @@
+# 4.4.0 (2022-12-09)
+
+- Add compatibility with `symfony/form` 6.0
+
 # 4.3.0 (2021-11-29)
 
 - Add compatibility with PHP 8.0
