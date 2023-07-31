@@ -14,7 +14,7 @@ Or add it manually:
 # composer.json
 {
     "require": {
-        "steevanb/symfony-form-options-builder": "^4.2"
+        "Steevanb/symfony-form-options-builder": "^4.2"
     }
 }
 ```
@@ -24,17 +24,7 @@ Add EntityEditableQueryBuilderType
 If you want to use `EntityEditableQueryBuilderType`, who allow you to add a callback when `EntityType` will call `getQuery()` on your query_builder option, you need to add a service:
 ```yml
 services:
-    huttosoft.back.core.form_type.entity:
-        class: steevanb\SymfonyFormOptionsBuilder\Type\EntityEditableQueryBuilderType
-        arguments: ['@doctrine']
-        tags:
-            - { name: form.type }
-```
-Or you can include `services.yml`:
-```yml
-# app/config.yml
-imports:
-    - { resource: ../../vendor/steevanb/symfony-form-options-builder/services.yml }
+    Steevanb\SymfonyFormOptionsBuilder\Type\EntityEditableQueryBuilderType: ~
 ```
 
 [Back to index](../README.md)

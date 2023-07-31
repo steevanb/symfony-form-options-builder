@@ -7,7 +7,7 @@ Usage in configureOption()
 --------------------------
 
 ```php
-use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\FormOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\FormOptionsBuilder;
 
 class BarType extends AbstractType
 {
@@ -29,7 +29,7 @@ Root FormType
 
 If your FormType is the root one, you should use `RootFormOptionsBuilder`:
 ```php
-use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\RootFormOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\RootFormOptionsBuilder;
 
 class BarType extends AbstractType
 {
@@ -53,7 +53,7 @@ Sub FormType
 
 If your FormType is a sub form (Collection for example), you should use `SubFormOptionsBuilder`:
 ```php
-use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\SubFormOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\SubFormOptionsBuilder;
 
 class BarType extends AbstractType
 {

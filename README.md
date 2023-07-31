@@ -24,8 +24,8 @@ Example:
 ```php
 namespace FooBundle\Form\Type;
 
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class BarType extends AbstractType
@@ -58,7 +58,7 @@ Example:
 ```php
 namespace FooBundle\Form\Type;
 
-use steevanb\SymfonyFormOptionsBuilder\BlockPrefixTrait;
+use Steevanb\SymfonyFormOptionsBuilder\BlockPrefixTrait;
 
 class BarType extends AbstractType
 {
