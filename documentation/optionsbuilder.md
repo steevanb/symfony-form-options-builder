@@ -1,4 +1,4 @@
-steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\FooOptionsBuilder
+Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\FooOptionsBuilder
 ===================================================================
 
 This objects offer you an object vision of generating options for FormType fields.
@@ -9,8 +9,8 @@ Usage in buildForm()
 ```php
 namespace FooBundle\Form\Type;
 
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class BarType extends AbstractType
@@ -38,8 +38,8 @@ Usage in form event
 ```php
 namespace FooBundle\Form\Type;
 
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 
 class BarType extends AbstractType
 {
@@ -137,10 +137,10 @@ EntityEditableQueryBuilderOptionsBuilder::create()
 Build your own OptionsBuilder
 -----------------------------
 
-You need to implements steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\OptionsBuilderInterface,
-or extends steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\AbstractOptionsBuilder.
+You need to implement Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\OptionsBuilderInterface,
+or extends Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\AbstractOptionsBuilder.
 
-Of course, you can extends an existing OptionsBuilder to override some methods, or add new ones.
+Of course, you can extend an existing OptionsBuilder to override some methods, or add new ones.
 
 To use it, it's same as other OptionsBuilder, just call FooOptionsBuilder::create().
 
