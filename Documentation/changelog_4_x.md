@@ -1,3 +1,7 @@
+# 4.4.1 (2023-07-31)
+
+- Fix ObjectRepository namespace changed by `doctrine/common`
+
 # 4.4.0 (2022-12-09)
 
 - Add compatibility with `symfony/form` 6.0

@@ -6,8 +6,8 @@ namespace steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Doctrine\{
-    Common\Persistence\ObjectRepository,
-    Common\Persistence\ObjectManager,
+    Persistence\ObjectRepository,
+    Persistence\ObjectManager,
     ORM\QueryBuilder
 };
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\{
