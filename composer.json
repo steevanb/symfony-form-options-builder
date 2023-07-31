@@ -4,7 +4,9 @@
     "type": "lib",
     "description": "buildForm() with objects instead of array",
     "autoload": {
-        "psr-4": { "steevanb\\SymfonyFormOptionsBuilder\\": "" }
+        "psr-4": {
+            "Steevanb\\SymfonyFormOptionsBuilder\\": "src/"
+        }
     },
     "require": {
         "php": "^7.1||^8.0",
@@ -12,7 +14,8 @@
     },
     "require-dev": {
         "doctrine/orm": "^2.8",
-        "symfony/doctrine-bridge": "^6.3"
+        "symfony/doctrine-bridge": "^6.3",
+        "symfony/security-csrf": "^6.3"
     },
     "scripts": {
         "post-install-cmd": [

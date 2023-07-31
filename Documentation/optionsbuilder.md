@@ -9,8 +9,8 @@ Usage in buildForm()
 ```php
 namespace FooBundle\Form\Type;
 
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class BarType extends AbstractType
@@ -38,8 +38,8 @@ Usage in form event
 ```php
 namespace FooBundle\Form\Type;
 
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 
 class BarType extends AbstractType
 {
@@ -61,8 +61,8 @@ class BarType extends AbstractType
 }
 ```
 
-Helpers for SF2 form types
---------------------------
+Helpers for Symfony form types
+------------------------------
 
 Do not hesitate to call autocompletion, to see all methods of each OptionsBuilder.
 
