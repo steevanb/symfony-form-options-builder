@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/version-4.3.0-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/4.3.0)
+[![version](https://img.shields.io/badge/version-4.4.0-green.svg)](https://github.com/steevanb/symfony-form-options-builder/tree/4.4.0)
 [![php](https://img.shields.io/badge/php-^7.1||^8.0-blue.svg)](https://php.net)
 [![symfony](https://img.shields.io/badge/symfony/form-^3||^4||^5||^6-blue.svg)](https://symfony.com)
 ![Lines](https://img.shields.io/badge/code%20lines-4738-green.svg)
@@ -13,7 +13,7 @@ array with some mysterious keys, and other stuff.
 
 [Installation](Documentation/installation.md)
 
-[Changelog 4.* (symfony/form ^3 || ^4 and PHP ^7.1)](Documentation/changelog_4_x.md)
+[Changelog 4.* (symfony/form ^3 || ^4 || ^5 || ^6 and PHP ^7.1 || ^8.0)](Documentation/changelog_4_x.md)
 
 [Changelog 3.* (symfony/form ^3)](Documentation/changelog_3_x.md)
 
