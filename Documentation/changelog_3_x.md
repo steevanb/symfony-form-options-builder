@@ -31,7 +31,7 @@ setCallBack() allow you to add your own callback, setPartialQueryCallBack() add 
 
 ### [3.0.0] - 2016-06-01
 
-- Remove all Symfony 2.8 deprecated, deleted in Symfony 3 :
+- Remove all Symfony 2.8 deprecated, deleted in Symfony 3:
     - Remove steevanb\SymfonyFormOptionsBuilder\Behavior\CascadeValidationTrait,
         so setCascadeValidation() and getCascadeValidation() are removed everywhere.
         If you want to cascade validation like before, add Valid validator to your property.
@@ -62,4 +62,3 @@ setCallBack() allow you to add your own callback, setPartialQueryCallBack() add 
 - Fix AbstractOptionsBuilder::setAutoInitialize() PHPDoc return type
 
 [Back to index](../README.md)
-

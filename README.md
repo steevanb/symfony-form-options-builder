@@ -26,12 +26,12 @@ Object oriented FormType
 
 FormType::buildForm() object oriented instead of array
 
-Example :
+Example:
 ```php
 namespace FooBundle\Form\Type;
 
-use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\EmailOptionsBuilder;
+use steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\TextOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class BarType extends AbstractType
@@ -58,10 +58,9 @@ class BarType extends AbstractType
 BlockPrefixTrait
 ----------------
 
-Add getBlockPrefix(), to always return same syntax for form type getBlockPrefix() method : form_type_formtypeclassname
+Add getBlockPrefix(), to always return same syntax for form type getBlockPrefix() method: form_type_formtypeclassname
 
-Example :
-
+Example:
 ```php
 namespace FooBundle\Form\Type;
 

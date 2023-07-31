@@ -28,7 +28,6 @@ Root FormType
 -------------
 
 If your FormType is the root one, you should use `RootFormOptionsBuilder`:
-
 ```php
 use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\RootFormOptionsBuilder;
 
@@ -53,7 +52,6 @@ Sub FormType
 ------------
 
 If your FormType is a sub form (Collection for example), you should use `SubFormOptionsBuilder`:
-
 ```php
 use steevanb\SymfonyFormOptionsBuilder\FormOptionsBuilder\SubFormOptionsBuilder;
 

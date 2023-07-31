@@ -23,7 +23,7 @@
 - PHP 7.1 syntax. When a parameter accept multiple types,
 (like `EntityOptionsBuilder::setQueryBuilder()`, who accept `string` or `QueryBuilder`),
 one setter per type instead of one setter for every types.
-Exemple : `EntityOptionsBuilder::setQueryBuilder()` and `EntityOptionsBuilder::setQueryBuilderClosure()`.
+Exemple: `EntityOptionsBuilder::setQueryBuilder()` and `EntityOptionsBuilder::setQueryBuilderClosure()`.
 - PHP 7 function return type is strict, so it's hard to use in traits. So, removing lot of traits, which result in copy / paste code.
 - Fix `FileOptionsBuilder::setMultiple()`.
 - Add `removeFoo()` on each missed option, `EntityOptionsBuilder::removeGroupBy()` for exemple.
