@@ -1,7 +1,7 @@
 {
     "name": "steevanb/symfony-form-options-builder",
-    "license": "MIT",
-    "type": "lib",
+    "license": "Apache-2.0",
+    "type": "library",
     "description": "buildForm() with objects instead of array",
     "autoload": {
         "psr-4": {
