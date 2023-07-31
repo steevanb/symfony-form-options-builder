@@ -165,7 +165,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
     }
 
     /** @return $this */
-    public function removeEntryOotions(): OptionsBuilderInterface
+    public function removeEntryOptions(): OptionsBuilderInterface
     {
         return $this->removeOption('entry_options');
     }
