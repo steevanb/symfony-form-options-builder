@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -eu
+
+readonly ROOT_PATH="$(realpath "$(dirname "$(realpath "$0")")/../..")"
+source "${ROOT_PATH}"/bin/common.inc.sh
+source "${ROOT_PATH}"/bin/dockerise.inc.bash
+
+filesToCheck=()
+files=$(find "${ROOT_PATH}"/bin)
+for file in ${files}; do
+    if [ -f "${file}" ] && [ "${file:(-4)}" != ".php" ]; then
+        filesToCheck+=("${file}")
+    fi
+done
+
+exitCode=0
+for fileToCheck in "${filesToCheck[@]}"; do
+    set +e
+    # SC1091 (info): Not following: ./bin/dockerise.inc.bash was not specified as input (see shellcheck -x).
+    # SC2034 (warning): CI_DOCKER_IMAGE_NAME appears unused. Verify use (or export if used externally).
+    # SC2086 (info): Double quote to prevent globbing and word splitting.
+    # SC2155 (warning): Declare and assign separately to avoid masking return values.
+    # SC2181 (style): Check exit code directly with e.g. 'if ! mycmd;', not indirectly with $?.
+    shellcheck --color=always --exclude SC1091,SC2034,SC2086,SC2155,SC2181 "${fileToCheck}"
+    if [ ${?} != 0 ]; then
+        exitCode=1
+    fi
+    set -e
+done
+
+if [ "${exitCode}" == 0 ]; then
+    echo -e "\e[42m All files contains valid syntax. \e[0m"
+fi
+exit ${exitCode}

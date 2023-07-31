@@ -5,10 +5,7 @@ declare(strict_types=1);
 namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
 use Doctrine\ORM\Query;
-use Steevanb\SymfonyFormOptionsBuilder\{
-    OptionsBuilder\Behavior\OptionsBuilderInterface,
-    Type\EntityEditableQueryBuilderType
-};
+use Steevanb\SymfonyFormOptionsBuilder\Type\EntityEditableQueryBuilderType;
 
 class EntityEditableQueryBuilderOptionsBuilder extends EntityOptionsBuilder
 {
@@ -17,11 +14,8 @@ class EntityEditableQueryBuilderOptionsBuilder extends EntityOptionsBuilder
         return EntityEditableQueryBuilderType::class;
     }
 
-    /**
-     * Not in Symfony, allow you to add a callback when getQuery() will be called, to edit your Query
-     * @return $this
-     */
-    public function setQueryCallBack(callable $callBack): OptionsBuilderInterface
+    /** Not in Symfony, allow you to add a callback when getQuery() will be called, to edit your Query */
+    public function setQueryCallBack(callable $callBack): static
     {
         return $this->setOption('query_call_back', $callBack);
     }
@@ -31,14 +25,12 @@ class EntityEditableQueryBuilderOptionsBuilder extends EntityOptionsBuilder
         return $this->getOption('query_call_back');
     }
 
-    /** @return $this */
-    public function removeQueryCallback(): OptionsBuilderInterface
+    public function removeQueryCallback(): static
     {
         return $this->removeOption('query_call_back');
     }
 
-    /** @return $this */
-    public function setPartialQueryCallBack(): OptionsBuilderInterface
+    public function setPartialQueryCallBack(): static
     {
         return $this->setQueryCallBack(function(Query $query) {
             return $query->setHint(Query::HINT_FORCE_PARTIAL_LOAD, true);

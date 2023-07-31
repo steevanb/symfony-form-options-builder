@@ -5,6 +5,11 @@
 - [BC Break] Remove `BlockPrefixTrait`, symfony does the same trick now
 - [BC Break] Fix `removeEntryOptions()` name (it was `removeEntryOotions()`)
 - [BC Break] Remove `services.yml`
+- License changed to `Apache 2.0`
+- [BC Break] Change return type to `static` instead of `self` or the interface
+- Remove `@link` to the Symfony documentation
+- [BC Break] Add missing return or parameters types
+- [BC Break] Remove methods only for the type, use multiple type instead. Example: `setValidationGroups(array $groups)` and `setValidationGroupsClosure(\Closure $groups)`.
 
 ### [4.4.1](../../compare/4.4.0...4.4.1) - 2023-07-31
 

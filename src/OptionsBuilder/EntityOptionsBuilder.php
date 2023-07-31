@@ -13,8 +13,7 @@ use Steevanb\SymfonyFormOptionsBuilder\{
     OptionsBuilder\Behavior\AbstractOptionsBuilder,
     OptionsBuilder\Behavior\ChoiceTypeTrait,
     OptionsBuilder\Behavior\ByReferenceTrait,
-    OptionsBuilder\Behavior\DataClassTrait,
-    OptionsBuilder\Behavior\OptionsBuilderInterface
+    OptionsBuilder\Behavior\DataClassTrait
 };
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
@@ -29,11 +28,7 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
         return EntityType::class;
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#class
-     */
-    public function setClass(string $class): OptionsBuilderInterface
+    public function setClass(string $class): static
     {
         return $this->setOption('class', $class);
     }
@@ -43,105 +38,71 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('class');
     }
 
-    /** @return $this */
-    public function removeClass(): OptionsBuilderInterface
+    public function removeClass(): static
     {
         return $this->removeOption('class');
     }
 
-    /**
-     * @param string|ObjectManager $em
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#em
-     */
-    public function setEm(ObjectManager $em): OptionsBuilderInterface
+    public function setEm(ObjectManager $em): static
     {
         return $this->setOption('em', $em);
     }
 
-    /** @return $this */
-    public function setEmName(string $em): OptionsBuilderInterface
+    public function setEmName(string $em): static
     {
         return $this->setOption('em', $em);
     }
 
-    /** @return string|ObjectManager */
-    public function getEm()
+    public function getEm(): string|ObjectManager
     {
         return $this->getOption('em');
     }
 
-    /** @return $this */
-    public function removeEm(): OptionsBuilderInterface
+    public function removeEm(): static
     {
         return $this->removeOption('em');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#group-by
-     */
-    public function setGroupBy(string $groupBy): OptionsBuilderInterface
+    /** @param string|array<string>|callable $groupBy */
+    public function setGroupBy(string|array|callable $groupBy): static
     {
         return $this->setOption('group_by', $groupBy);
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#group-by
-     */
-    public function setGroupByArray(array $groupBy): OptionsBuilderInterface
-    {
-        return $this->setOption('group_by', $groupBy);
-    }
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#group-by
-     */
-    public function setGroupByCallable(callable $groupBy): OptionsBuilderInterface
-    {
-        return $this->setOption('group_by', $groupBy);
-    }
-
-    /** @return string|array|callable */
-    public function getGroupBy()
+    /** @return string|array<string>|callable|null */
+    public function getGroupBy(): string|array|callable|null
     {
         return $this->getOption('group_by');
     }
 
-    /** @return $this */
-    public function removeGroupBy(): OptionsBuilderInterface
+    public function removeGroupBy(): static
     {
         return $this->removeOption('group_by');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#query-builder
-     */
-    public function setQueryBuilder(QueryBuilder $queryBuilder): OptionsBuilderInterface
+    public function setQueryBuilder(QueryBuilder $queryBuilder): static
     {
         return $this->setOption('query_builder', $queryBuilder);
     }
 
-    /** @return $this */
-    public function setQueryBuilderClosure(\Closure $queryBuilder): OptionsBuilderInterface
+    public function setQueryBuilderClosure(\Closure $queryBuilder): static
     {
         return $this->setOption('query_builder', $queryBuilder);
     }
 
-    /** @return QueryBuilder|\Closure|null */
-    public function getQueryBuilder()
+    public function getQueryBuilder(): QueryBuilder|\Closure|null
     {
         return $this->getOption('query_builder');
     }
 
-    /** @return $this */
-    public function setRepositoryMethod(string $method, array $params = []): OptionsBuilderInterface
+    /** @param array<mixed> $params */
+    public function setRepositoryMethod(string $method, array $params = []): static
     {
-        return $this->setOption('query_builder', function (ObjectRepository $repository) use ($method, $params) {
-            return call_user_func_array([$repository, $method], $params);
-        });
+        return $this->setOption(
+            'query_builder',
+            function (ObjectRepository $repository) use ($method, $params) {
+                return call_user_func_array([$repository, $method], $params);
+            }
+        );
     }
 }

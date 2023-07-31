@@ -5,124 +5,74 @@ declare(strict_types=1);
 namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 use Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface;
+use Symfony\Component\PropertyAccess\PropertyPath;
 
 trait ChoiceTypeTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @param array $choices [$label=>$value, $label2=>$value2]
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choices
-     */
-    public function setChoices(array $choices): OptionsBuilderInterface
+    /** @param array<mixed> $choices */
+    public function setChoices(array $choices): static
     {
         return $this->setOption('choices', $choices);
     }
 
+    /** @return array<mixed>|null */
     public function getChoices(): ?array
     {
         return $this->getOption('choices');
     }
 
-    /** @return $this */
-    public function removeChoices(): OptionsBuilderInterface
+    public function removeChoices(): static
     {
         return $this->removeOption('choices');
     }
 
-    /**
-     * Replacement for removed choice_as_values config
-     * @param array $choices [$value1=>$label1, $value2=>$label2]
-     * @return $this
-     */
-    public function setFlippedChoices(array $choices): OptionsBuilderInterface
-    {
-        $this->setChoices(array_keys($choices));
-
-        return $this->setChoiceLabelCallable(function($value) use ($choices) {
-            return $choices[$value];
-        });
-    }
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-label
-     */
-    public function setChoiceLabel(string $label): OptionsBuilderInterface
+    public function setChoiceLabel(string|callable $label): static
     {
         return $this->setOption('choice_label', $label);
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-label
-     */
-    public function setChoiceLabelCallable(callable $callable): OptionsBuilderInterface
-    {
-        return $this->setOption('choice_label', $callable);
-    }
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-label
-     */
-    public function disableChoiceLabel()
+    public function disableChoiceLabel(): static
     {
         return $this->setOption('choice_label', false);
     }
 
-    /** @return string|callable|null */
-    public function getChoiceLabel()
+    public function getChoiceLabel(): string|callable|false|null
     {
         return $this->getOption('choice_label');
     }
 
-    /** @return $this */
-    public function removeChoiceLabel(): OptionsBuilderInterface
+    public function removeChoiceLabel(): static
     {
         return $this->removeOption('choice_label');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#choice-translation-domain
-     */
-    public function setChoiceTranslationDomain(string $domain): OptionsBuilderInterface
+    public function setChoiceTranslationDomain(string $domain): static
     {
         return $this->setOption('choice_translation_domain', $domain);
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/current/reference/forms/types/choice.html#choice-translation-domain
-     */
-    public function disableChoiceTranslationDomain()
+    public function disableChoiceTranslationDomain(): static
     {
         return $this->setOption('choice_translation_domain', false);
     }
 
-    /** @return string|false|null */
-    public function getChoiceTranslationDomain()
+    public function getChoiceTranslationDomain(): string|false|null
     {
         return $this->getOption('choice_translation_domain');
     }
 
-    /** @return $this */
-    public function removeChoiceTranslationDomain(): OptionsBuilderInterface
+    public function removeChoiceTranslationDomain(): static
     {
         return $this->removeOption('choice_translation_domain');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-loader
-     */
-    public function setChoiceLoader(ChoiceLoaderInterface $loader): OptionsBuilderInterface
+    public function setChoiceLoader(ChoiceLoaderInterface $loader): static
     {
         return $this->setOption('choice_loader', $loader);
     }
@@ -132,133 +82,69 @@ trait ChoiceTypeTrait
         return $this->getOption('choice_loader');
     }
 
-    /** @return $this */
-    public function removeChoiceLoader(): OptionsBuilderInterface
+    public function removeChoiceLoader(): static
     {
         return $this->removeOption('choice_loader');
     }
 
-    /**
-     * @param callable|string $name
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-name
-     */
-    public function setChoiceName($name): OptionsBuilderInterface
+    public function setChoiceName(string|callable $name): static
     {
         return $this->setOption('choice_name', $name);
     }
 
-    /** @return callable|string|null */
-    public function getChoiceName()
+    public function getChoiceName(): string|callable|null
     {
         return $this->getOption('choice_name');
     }
 
-    /** @return $this */
-    public function removeChoiceName(): OptionsBuilderInterface
+    public function removeChoiceName(): static
     {
         return $this->removeOption('choice_name');
     }
 
-    /**
-     * @param callable|string $value
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-value
-     */
-    public function setChoiceValue($value): OptionsBuilderInterface
+    public function setChoiceValue(string|callable $value): static
     {
         return $this->setOption('choice_value', $value);
     }
 
-    /** @return callable|string|null */
-    public function getChoiceValue()
+    public function getChoiceValue(): string|callable|null
     {
         return $this->getOption('choice_value');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-attr
-     */
-    public function setChoiceAttr(array $attr): OptionsBuilderInterface
+    /** @param string|array<array<string, string>>|callable|PropertyPath $attr */
+    public function setChoiceAttr(string|array|callable|PropertyPath $attr): static
     {
         return $this->setOption('choice_attr', $attr);
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-attr
-     */
-    public function setChoiceAttrCallable(callable $callable): OptionsBuilderInterface
-    {
-        return $this->setOption('choice_attr', $callable);
-    }
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#choice-attr
-     */
-    public function setChoiceAttrForAll(string $attr): OptionsBuilderInterface
-    {
-        return $this->setOption('choice_attr', $attr);
-    }
-
-    /** @return string|callable|array|null */
-    public function getChoiceAttr()
+    /** @return string|array<array<string, string>>|callable|PropertyPath|null */
+    public function getChoiceAttr(): string|array|callable|PropertyPath|null
     {
         return $this->getOption('choice_attr');
     }
 
-    /** @return $this */
-    public function removeChoiceAttr(): OptionsBuilderInterface
+    public function removeChoiceAttr(): static
     {
         return $this->removeOption('choice_attr');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#group-by
-     */
-    public function setGroupBy(string $groupBy): OptionsBuilderInterface
+    public function setGroupBy(string|callable|PropertyPath $groupBy): static
     {
         return $this->setOption('group_by', $groupBy);
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#group-by
-     */
-    public function setGroupByArray(array $groupBy): OptionsBuilderInterface
-    {
-        return $this->setOption('group_by', $groupBy);
-    }
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#group-by
-     */
-    public function setGroupByCallable(callable $groupBy): OptionsBuilderInterface
-    {
-        return $this->setOption('group_by', $groupBy);
-    }
-
-    /** @return string|callable|array|null */
-    public function getGroupBy()
+    public function getGroupBy(): string|callable|PropertyPath|null
     {
         return $this->getOption('group_by');
     }
 
-    /** @return $this */
-    public function removeGroupBy(): OptionsBuilderInterface
+    public function removeGroupBy(): static
     {
         return $this->removeOption('gruop_by');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#expanded
-     */
-    public function setExpanded(bool $expanded = true): OptionsBuilderInterface
+    public function setExpanded(bool $expanded = true): static
     {
         return $this->setOption('expanded', $expanded);
     }
@@ -268,17 +154,12 @@ trait ChoiceTypeTrait
         return $this->getOption('expanded');
     }
 
-    /** @return $this */
-    public function removeExpanded(): OptionsBuilderInterface
+    public function removeExpanded(): static
     {
         return $this->removeOption('expanded');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#multiple
-     */
-    public function setMultiple(bool $multiple = true): OptionsBuilderInterface
+    public function setMultiple(bool $multiple = true): static
     {
         return $this->setOption('multiple', $multiple);
     }
@@ -288,97 +169,69 @@ trait ChoiceTypeTrait
         return $this->getOption('multiple');
     }
 
-    /** @return $this */
-    public function removeMultiple(): OptionsBuilderInterface
+    public function removeMultiple(): static
     {
         return $this->removeOption('multiple');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
-     */
-    public function asMultipleSelect(): OptionsBuilderInterface
+    public function asMultipleSelect(): static
     {
         return $this->setMultiple()->setExpanded(false);
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
-     */
-    public function asSelect(): OptionsBuilderInterface
+    public function asSelect(): static
     {
         return $this->setMultiple(false)->setExpanded(false);
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
-     */
-    public function asRadioButtons(): OptionsBuilderInterface
+    public function asRadioButtons(): static
     {
         return $this->setMultiple(false)->setExpanded();
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#select-tag-checkboxes-or-radio-buttons
-     */
-    public function asCheckboxes(): OptionsBuilderInterface
+    public function asCheckboxes(): static
     {
         return $this->setMultiple()->setExpanded();
     }
 
-    /**
-     * @param string|callable|array $choices
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#preferred-choices
-     */
-    public function setPreferredChoices(array $choices): OptionsBuilderInterface
+    /** @param string|callable|array<string|int>|PropertyPath $choices */
+    public function setPreferredChoices(string|callable|array|PropertyPath $choices): static
     {
         return $this->setOption('preferred_choices', $choices);
     }
 
-    /** @return string|callable|array|null */
-    public function getPreferredChoices()
+    /** @return string|callable|array<string|int>|PropertyPath|null */
+    public function getPreferredChoices(): string|callable|array|PropertyPath|null
     {
         return $this->getOption('preferred_choices');
     }
 
-    /** @return $this */
-    public function removePreferredChoices(): OptionsBuilderInterface
+    public function removePreferredChoices(): static
     {
         return $this->removeOption('preferred_choices');
     }
 
-    /**
-     * @param string|false $placeholder
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#placeholder
-     */
-    public function setPlaceHolder($placeholder): OptionsBuilderInterface
+    public function setPlaceHolder(string $placeholder): static
     {
         return $this->setOption('placeholder', $placeholder);
     }
 
-    /** @return string|false */
-    public function getPlaceHolder()
+    public function getPlaceHolder(): string|false|null
     {
         return $this->getOption('placeholder');
     }
 
-    /** @return $this */
-    public function removePlaceholder(): OptionsBuilderInterface
+    public function disablePlaceHolder(): static
+    {
+        return $this->setOption('placeholder', false);
+    }
+
+    public function removePlaceholder(): static
     {
         return $this->removeOption('placeholder');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/choice.html#field-variables
-     */
-    public function setPlaceholderInChoices(bool $inChoices): OptionsBuilderInterface
+    public function setPlaceholderInChoices(bool $inChoices): static
     {
         return $this->setOption('placeholder_in_choices', $inChoices);
     }
@@ -388,8 +241,7 @@ trait ChoiceTypeTrait
         return $this->getOption('placeholder_in_choices');
     }
 
-    /** @return $this */
-    public function removePlaceholderInChoices(): OptionsBuilderInterface
+    public function removePlaceholderInChoices(): static
     {
         return $this->removeOption('placeholder_in_choices');
     }

@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use Steevanb\SymfonyFormOptionsBuilder\{
-    OptionsBuilder\Behavior\AbstractOptionsBuilder,
-    OptionsBuilder\Behavior\OptionsBuilderInterface
-};
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\AbstractOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class SubmitOptionsBuilder extends AbstractOptionsBuilder
@@ -17,33 +14,19 @@ class SubmitOptionsBuilder extends AbstractOptionsBuilder
         return SubmitType::class;
     }
 
-    public function setValidationGroups(array $groups): OptionsBuilderInterface
+    /** @param array<string>|\Closure $groups */
+    public function setValidationGroups(array|\Closure $groups): static
     {
         return $this->setOption('validation_groups', $groups);
     }
 
-    public function setValidationGroupsClosure(\Closure $groups): OptionsBuilderInterface
-    {
-        return $this->setOption('validation_groups', $groups);
-    }
-
-    /** @return $this */
-    public function addValidationGroup(string $group): OptionsBuilderInterface
-    {
-        $groups = $this->getValidationGroups();
-        if (in_array($group, $groups) === false) {
-            $groups[] = $group;
-        }
-
-        return $this->setValidationGroups($groups);
-    }
-
-    public function getValidationGroups(): array
+    /** @return array<string>|\Closure|null */
+    public function getValidationGroups(): array|\Closure|null
     {
         return $this->getOption('validation_groups');
     }
 
-    public function removeValidationGroups(): OptionsBuilderInterface
+    public function removeValidationGroups(): static
     {
         return $this->removeOption('validation_groups');
     }

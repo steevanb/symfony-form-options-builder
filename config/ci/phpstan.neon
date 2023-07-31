@@ -1,0 +1,10 @@
+parameters:
+    level: 9
+    tmpDir: ../../var/ci/phpstan
+    paths:
+        - ../../src
+    ignoreErrors:
+        - '#^Unsafe usage of new static\(\)\.$#'
+includes:
+    - /composer/common/vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - /composer/common/vendor/phpstan/phpstan-strict-rules/rules.neon

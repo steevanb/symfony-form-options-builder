@@ -8,318 +8,177 @@ use Symfony\Component\Validator\Constraint;
 
 interface FormOptionsBuilderInterface
 {
-    /** @return $this */
-    public static function create(): self;
+    public static function create(): static;
 
-    /** @return $this */
-    public function setOption(string $name, $value): self;
+    public function setOption(string $name, $value): static;
 
     public function getOption(string $name);
 
-    /** @return $this */
-    public function removeOption(string $name): self;
+    public function removeOption(string $name): static;
 
     public function asArray(): array;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#allow-extra-fields
-     */
-    public function setAllowExtraFields(bool $allow = true): self;
+    public function setAllowExtraFields(bool $allow = true): static;
 
     public function getAllowExtraFields(): ?bool;
 
-    /** @return $this */
-    public function removeAllowExtraFields(): self;
+    public function removeAllowExtraFields(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#extra-fields-message
-     */
-    public function setExtraFieldsMessage(string $message): self;
+    public function setExtraFieldsMessage(string $message): static;
 
     public function getExtraFieldsMessage(): ?string;
 
-    /** @return $this */
-    public function removeExtraFieldsMessage(): self;
+    public function removeExtraFieldsMessage(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#attr
-     */
-    public function setAttr(array $attr): self;
+    public function setAttr(array $attr): static;
 
     public function getAttr(): ?array;
 
-    /** @return $this */
-    public function removeAttr(): self;
+    public function removeAttr(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#auto-initialize
-     */
-    public function setAutoInitialize(bool $auto = true): self;
+    public function setAutoInitialize(bool $auto = true): static;
 
     public function getAutoInitialize(): ?bool;
 
-    /** @return $this */
-    public function removeAutoInitialize(): self;
+    public function removeAutoInitialize(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#block-name
-     */
-    public function setBlockName(string $name): self;
+    public function setBlockName(string $name): static;
 
     public function getBlockName(): ?string;
 
-    /** @return $this */
-    public function removeBlockName(): self;
+    public function removeBlockName(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#by-reference
-     */
-    public function setByReference(bool $byReference = true): self;
+    public function setByReference(bool $byReference = true): static;
 
     public function getByReference(): ?bool;
 
-    /** @return $this */
-    public function removeByReference(): self;
+    public function removeByReference(): static;
 
-    /**
-     * @return bool
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#compound
-     */
-    public function setCompound(bool $compound = true): self;
+    public function setCompound(bool $compound = true): static;
 
     public function getCompound(): ?bool;
 
-    /** @return $this */
-    public function removeCompound(): self;
+    public function removeCompound(): static;
 
-    /**
-     * @param Constraint[] $constraints
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#constraints
-     */
-    public function setConstraints(array $constraints): self;
+    /** @param array<Constraint> $constraints */
+    public function setConstraints(array $constraints): static;
 
     public function getConstraints(): ?array;
 
-    /** @return $this */
-    public function removeConstraints(): self;
+    public function removeConstraints(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data
-     */
-    public function setData($data): self;
+    public function setData($data): static;
 
     public function getData();
 
-    /** @return $this */
-    public function removeData(): self;
+    public function removeData(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
-     */
-    public function setDataClass(string $class): self;
+    public function setDataClass(string $class): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
-     */
-    public function setDataClassClosure(\Closure $closure): self;
+    public function setDataClassClosure(\Closure $closure): static;
 
     public function getDataClass();
 
-    /** @return $this */
-    public function removeDataClass(): self;
+    public function removeDataClass(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#disabled
-     */
-    public function setDisabled(bool $disabled = true): self;
+    public function setDisabled(bool $disabled = true): static;
 
     public function getDisabled(): ?bool;
 
-    /** @return $this */
-    public function removeDisabled(): self;
+    public function removeDisabled(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#empty-data
-     */
-    public function setEmptyData($data): self;
+    public function setEmptyData($data): static;
 
     public function getEmptyData();
 
-    /** @return $this */
-    public function removeEmptyData(): self;
+    public function removeEmptyData(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-bubbling
-     */
-    public function setErrorBubbling(bool $errorBubbling = true): self;
+    public function setErrorBubbling(bool $errorBubbling = true): static;
 
     public function getErrorBubbling(): ?bool;
 
-    /** @return $this */
-    public function removeErrorBubbling(): self;
+    public function removeErrorBubbling(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#error-mapping
-     */
-    public function setErrorMapping(array $mapping): self;
+    public function setErrorMapping(array $mapping): static;
 
     public function getErrorMapping(): ?array;
 
-    /** @return $this */
-    public function removeErrorMapping(): self;
+    public function removeErrorMapping(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#inherit-data
-     */
-    public function setInheritData(bool $inherit = true): self;
+    public function setInheritData(bool $inherit = true): static;
 
     public function getInheritData(): ?bool;
 
-    /** @return $this */
-    public function removeInheritData(): self;
+    public function removeInheritData(): static;
 
-    /**
-     * @return $this
-     * @link https://php-and-symfony.matthiasnoback.nl/2013/02/symfony2-security-enhancements-part-i/
-     */
-    public function setIntention(string $intention): self;
+    public function setIntention(string $intention): static;
 
     public function getIntention(): ?string;
 
-    /** @return $this */
-    public function removeIntention(): self;
+    public function removeIntention(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message
-     */
-    public function setInvalidMessage(string $message): self;
+    public function setInvalidMessage(string $message): static;
 
     public function getInvalidMessage(): ?string;
 
-    /** @return $this */
-    public function removeInvalidMessage(): self;
+    public function removeInvalidMessage(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#invalid-message-parameters
-     */
-    public function setInvalidMessageParameters(array $parameters): self;
+    public function setInvalidMessageParameters(array $parameters): static;
 
     public function getInvalidMessageParameters(): ?array;
 
-    /** @return $this */
-    public function removeInvalidMessageParameters(): self;
+    public function removeInvalidMessageParameters(): static;
 
-    /**
-     * @param string|false $label
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label
-     */
-    public function setLabel(string $label): self;
+    public function setLabel(string $label): static;
 
-    /** @return $this */
-    public function disableLabel(): self;
+    public function disableLabel(): static;
 
     /** @return string|false|null */
-    public function getLabel();
+    public function getLabel(): string|false|null;
 
-    /** @return $this */
-    public function removeLabel(): self;
+    public function removeLabel(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-attr
-     */
-    public function setLabelAttr(array $attr): self;
+    public function setLabelAttr(array $attr): static;
 
     public function getLabelAttr(): array;
 
-    /** @return $this */
-    public function removeLabelAttr();
+    public function removeLabelAttr(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#label-format
-     */
-    public function setLabelFormat(string $format): self;
+    public function setLabelFormat(string $format): static;
 
     public function getLabelFormat(): ?string;
 
-    /** @return $this */
-    public function removeLabelFormat(): self;
+    public function removeLabelFormat(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#mapped
-     */
-    public function setMapped(bool $mapped = true): self;
+    public function setMapped(bool $mapped = true): static;
 
     public function getMapped(): ?bool;
 
-    /** @return $this */
-    public function removeMapped(): self;
+    public function removeMapped(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#property-path
-     */
-    public function setPropertyPath(string $path): self;
+    public function setPropertyPath(string $path): static;
 
     public function getPropertyPath(): ?string;
 
-    /** @return $this */
-    public function removePropertyPath(): self;
+    public function removePropertyPath(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#required
-     */
-    public function setRequired(bool $required = true): self;
+    public function setRequired(bool $required = true): static;
 
     public function getRequired(): ?bool;
 
-    /** @return $this */
-    public function removeRequired(): self;
+    public function removeRequired(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#translation-domain
-     */
-    public function setTranslationDomain(string $domain): self;
+    public function setTranslationDomain(string $domain): static;
 
-    /** @return $this */
-    public function disableTranslationDomain(): self;
+    public function disableTranslationDomain(): static;
 
-    /** @return string|false */
-    public function getTranslationDomain();
+    public function getTranslationDomain(): string|false;
 
-    /** @return $this */
-    public function removeTranslationDomain(): self;
+    public function removeTranslationDomain(): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#trim
-     */
-    public function setTrim(bool $trim = true): self;
+    public function setTrim(bool $trim = true): static;
 
     public function getTrim(): ?bool;
 
-    /** @return $this */
-    public function removeTrim(): self;
+    public function removeTrim(): static;
 }

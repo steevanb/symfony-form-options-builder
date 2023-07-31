@@ -6,17 +6,13 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait DataClassTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/form.html#data-class
-     */
-    public function setDataClass(string $class): OptionsBuilderInterface
+    public function setDataClass(string $class): static
     {
         return $this->setOption('data_class', $class);
     }
@@ -26,8 +22,7 @@ trait DataClassTrait
         return $this->getOption('data_class');
     }
 
-    /** @return $this */
-    public function removeDataClass(): OptionsBuilderInterface
+    public function removeDataClass(): static
     {
         return $this->removeOption('data_class');
     }

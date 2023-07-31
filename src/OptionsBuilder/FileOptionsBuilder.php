@@ -6,8 +6,7 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
 use Steevanb\SymfonyFormOptionsBuilder\{
     OptionsBuilder\Behavior\AbstractOptionsBuilder,
-    OptionsBuilder\Behavior\DataClassTrait,
-    OptionsBuilder\Behavior\OptionsBuilderInterface
+    OptionsBuilder\Behavior\DataClassTrait
 };
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 
@@ -20,11 +19,7 @@ class FileOptionsBuilder extends AbstractOptionsBuilder
         return FileType::class;
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/file.html#multiple
-     */
-    public function setMultiple(bool $multiple = true): OptionsBuilderInterface
+    public function setMultiple(bool $multiple = true): static
     {
         return $this->setOption('multiple', $multiple);
     }
@@ -34,33 +29,29 @@ class FileOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('multiple');
     }
 
-    /** @return $this */
-    public function removeMultiple(): OptionsBuilderInterface
+    public function removeMultiple(): static
     {
         return $this->removeOption('multiple');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/file.html#error-mapping
-     */
-    public function setErrorMapping(array $mapping): OptionsBuilderInterface
+    /** @param array<string, string> $mapping */
+    public function setErrorMapping(array $mapping): static
     {
         return $this->setOption('error_mapping', $mapping);
     }
 
+    /** @return array<string, string>|null */
     public function getErrorMapping(): ?array
     {
         return $this->getOption('error_mapping');
     }
 
-    /** @return $this */
-    public function removeErrorMapping(): OptionsBuilderInterface
+    public function removeErrorMapping(): static
     {
         return $this->removeOption('error_mapping');
     }
 
-    public function setLabelFormat(string $format): OptionsBuilderInterface
+    public function setLabelFormat(string $format): static
     {
         return $this->setOption('label_format', $format);
     }
@@ -70,7 +61,7 @@ class FileOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('label_format');
     }
 
-    public function removeLabelFormat(): OptionsBuilderInterface
+    public function removeLabelFormat(): static
     {
         return $this->removeOption('label_format');
     }

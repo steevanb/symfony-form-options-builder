@@ -4,14 +4,11 @@ declare(strict_types=1);
 
 namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
-use Symfony\Component\Validator\Constraint;
-
 abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
 {
-    protected $options = [];
+    protected array $options = [];
 
-    /** @return $this */
-    public static function create(): OptionsBuilderInterface
+    public static function create(): static
     {
         return new static();
     }
@@ -28,19 +25,19 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
             : [$child, static::getBuilderType(), $this->asArray()];
     }
 
-    public function setOption(string $name, $value): OptionsBuilderInterface
+    public function setOption(string $name, $value): static
     {
         $this->options[$name] = $value;
 
         return $this;
     }
 
-    public function getOption(string $name)
+    public function getOption(string $name): mixed
     {
         return (array_key_exists($name, $this->options)) ? $this->options[$name] : null;
     }
 
-    public function removeOption(string $name): OptionsBuilderInterface
+    public function removeOption(string $name): static
     {
         if (array_key_exists($name, $this->options)) {
             unset($this->options[$name]);
@@ -49,7 +46,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this;
     }
 
-    public function setAction(?string $action): OptionsBuilderInterface
+    public function setAction(?string $action): static
     {
         return $this->setOption('action', $action);
     }
@@ -59,12 +56,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('action');
     }
 
-    public function removeAction(): OptionsBuilderInterface
+    public function removeAction(): static
     {
         return $this->removeOption('action');
     }
 
-    public function setMethod(string $method): OptionsBuilderInterface
+    public function setMethod(string $method): static
     {
         return $this->setOption('method', $method);
     }
@@ -74,12 +71,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('method');
     }
 
-    public function removeMethod(): OptionsBuilderInterface
+    public function removeMethod(): static
     {
         return $this->removeOption('method');
     }
 
-    public function setAllowExtraFields(bool $allow = true): OptionsBuilderInterface
+    public function setAllowExtraFields(bool $allow = true): static
     {
         return $this->setOption('allow_extra_fields', $allow);
     }
@@ -89,12 +86,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('allow_extra_fields');
     }
 
-    public function removeAllowExtraFields(): OptionsBuilderInterface
+    public function removeAllowExtraFields(): static
     {
         return $this->removeOption('allow_extra_fields');
     }
 
-    public function setExtraFieldsMessage(?string $message): OptionsBuilderInterface
+    public function setExtraFieldsMessage(?string $message): static
     {
         return $this->setOption('extra_fields_message', $message);
     }
@@ -104,12 +101,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('extra_fields_message');
     }
 
-    public function removeExtraFieldsMessage(): OptionsBuilderInterface
+    public function removeExtraFieldsMessage(): static
     {
         return $this->removeOption('extra_fields_message');
     }
 
-    public function setAutoInitialize(bool $autoInitialize = true): OptionsBuilderInterface
+    public function setAutoInitialize(bool $autoInitialize = true): static
     {
         return $this->setOption('auto_initialize', $autoInitialize);
     }
@@ -119,12 +116,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('auto_initialize');
     }
 
-    public function removeAutoInitialize(): OptionsBuilderInterface
+    public function removeAutoInitialize(): static
     {
         return $this->removeOption('auto_initialize');
     }
 
-    public function setPostMaxSizeMessage(?string $message): OptionsBuilderInterface
+    public function setPostMaxSizeMessage(?string $message): static
     {
         return $this->setOption('post_max_size_message', $message);
     }
@@ -134,12 +131,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('post_max_size_message');
     }
 
-    public function removePostMaxSizeMessage(): OptionsBuilderInterface
+    public function removePostMaxSizeMessage(): static
     {
         return $this->removeOption('post_max_size_message');
     }
 
-    public function setTrim(bool $trim = true): OptionsBuilderInterface
+    public function setTrim(bool $trim = true): static
     {
         return $this->setOption('trim', $trim);
     }
@@ -149,17 +146,17 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('trim');
     }
 
-    public function removeTrim(): OptionsBuilderInterface
+    public function removeTrim(): static
     {
         return $this->removeOption('trim');
     }
 
-    public function setTranslationDomain(string $domain): OptionsBuilderInterface
+    public function setTranslationDomain(string $domain): static
     {
         return $this->setOption('translation_domain', $domain);
     }
 
-    public function disableTranslationDomain(): OptionsBuilderInterface
+    public function disableTranslationDomain(): static
     {
         return $this->setOption('translation_domain', false);
     }
@@ -169,12 +166,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('translation_domain');
     }
 
-    public function removeTranslationDomain(): OptionsBuilderInterface
+    public function removeTranslationDomain(): static
     {
         return $this->removeOption('translation_domain');
     }
 
-    public function setRequired(bool $required = true): OptionsBuilderInterface
+    public function setRequired(bool $required = true): static
     {
         return $this->setOption('required', $required);
     }
@@ -184,12 +181,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('required');
     }
 
-    public function removeRequired(): OptionsBuilderInterface
+    public function removeRequired(): static
     {
         return $this->removeOption('required');
     }
 
-    public function setPropertyPath(string $path): OptionsBuilderInterface
+    public function setPropertyPath(string $path): static
     {
         return $this->setOption('property_path', $path);
     }
@@ -199,12 +196,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('property_path');
     }
 
-    public function removePropertyPath(): OptionsBuilderInterface
+    public function removePropertyPath(): static
     {
         return $this->removeOption('property_path');
     }
 
-    public function setMapped(bool $mapped = true): OptionsBuilderInterface
+    public function setMapped(bool $mapped = true): static
     {
         return $this->setOption('mapped', $mapped);
     }
@@ -214,17 +211,17 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('mapped');
     }
 
-    public function removeMapped(): OptionsBuilderInterface
+    public function removeMapped(): static
     {
         return $this->removeOption('mapped');
     }
 
-    public function setLabel(string $label): OptionsBuilderInterface
+    public function setLabel(string $label): static
     {
         return $this->setOption('label', $label);
     }
 
-    public function disableLabel(): OptionsBuilderInterface
+    public function disableLabel(): static
     {
         return $this->setOption('label', false);
     }
@@ -234,12 +231,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('label');
     }
 
-    public function removeLabel(): OptionsBuilderInterface
+    public function removeLabel(): static
     {
         return $this->removeOption('label');
     }
 
-    public function setLabelAttr(array $attr): OptionsBuilderInterface
+    public function setLabelAttr(array $attr): static
     {
         return $this->setOption('label_attr', $attr);
     }
@@ -249,12 +246,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('label_attr');
     }
 
-    public function removeLabelAttr(): OptionsBuilderInterface
+    public function removeLabelAttr(): static
     {
         return $this->removeOption('label_attr');
     }
 
-    public function setInvalidMessage(?string $message): OptionsBuilderInterface
+    public function setInvalidMessage(?string $message): static
     {
         return $this->setOption('invalid_message', $message);
     }
@@ -264,12 +261,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('invalid_message');
     }
 
-    public function removeInvalidMessage(): OptionsBuilderInterface
+    public function removeInvalidMessage(): static
     {
         return $this->removeOption('invalid_message');
     }
 
-    public function setInvalidMessageParameters(array $parameters): OptionsBuilderInterface
+    public function setInvalidMessageParameters(array $parameters): static
     {
         return $this->setOption('invalid_message_parameters', $parameters);
     }
@@ -279,12 +276,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('invalid_message_parameters');
     }
 
-    public function removeInvalidMessageParameters(): OptionsBuilderInterface
+    public function removeInvalidMessageParameters(): static
     {
         return $this->removeOption('invalid_message_parameters');
     }
 
-    public function setInheritData(bool $inherit = true): OptionsBuilderInterface
+    public function setInheritData(bool $inherit = true): static
     {
         return $this->setOption('inherit_data', $inherit);
     }
@@ -294,12 +291,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('inherit_data');
     }
 
-    public function removeInheritData(): OptionsBuilderInterface
+    public function removeInheritData(): static
     {
         return $this->removeOption('inherit_data');
     }
 
-    public function setErrorBubbling(bool $errorBubbling = true): OptionsBuilderInterface
+    public function setErrorBubbling(bool $errorBubbling = true): static
     {
         return $this->setOption('error_bubbling', $errorBubbling);
     }
@@ -309,12 +306,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('error_bubbling');
     }
 
-    public function removeErrorBubbling(): OptionsBuilderInterface
+    public function removeErrorBubbling(): static
     {
         return $this->removeOption('error_bubbling');
     }
 
-    public function setEmptyData($data): OptionsBuilderInterface
+    public function setEmptyData(mixed $data): static
     {
         return $this->setOption('empty_data', $data);
     }
@@ -324,12 +321,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('empty_data');
     }
 
-    public function removeEmptyData(): OptionsBuilderInterface
+    public function removeEmptyData(): static
     {
         return $this->removeOption('empty_data');
     }
 
-    public function setDisabled(bool $disabled = true): OptionsBuilderInterface
+    public function setDisabled(bool $disabled = true): static
     {
         return $this->setOption('disabled', $disabled);
     }
@@ -339,54 +336,42 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('disabled');
     }
 
-    public function removeDisabled(): OptionsBuilderInterface
+    public function removeDisabled(): static
     {
         return $this->removeOption('disabled');
     }
 
-    public function setData($data): OptionsBuilderInterface
+    public function setData(mixed $data): static
     {
         return $this->setOption('data', $data);
     }
 
-    public function getData()
+    public function getData(): mixed
     {
         return $this->getOption('data');
     }
 
-    public function removeData(): OptionsBuilderInterface
+    public function removeData(): static
     {
         return $this->removeOption('data');
     }
 
-    public function setConstraints(array $constraints): OptionsBuilderInterface
+    public function setConstraints(array $constraints): static
     {
         return $this->setOption('constraints', $constraints);
     }
 
-    public function addConstraint(Constraint $constraint): OptionsBuilderInterface
-    {
-        $constraints = $this->getConstraints();
-        if (is_array($constraints) === false) {
-            $constraints = [];
-        }
-        $constraints[] = $constraint;
-        $this->setConstraints($constraints);
-
-        return $this;
-    }
-
-    public function getConstraints()
+    public function getConstraints(): ?array
     {
         return $this->getOption('constraints');
     }
 
-    public function removeConstraints(): OptionsBuilderInterface
+    public function removeConstraints(): static
     {
         return $this->removeOption('constraints');
     }
 
-    public function setCompound(bool $compound = true): OptionsBuilderInterface
+    public function setCompound(bool $compound = true): static
     {
         return $this->setOption('compound', $compound);
     }
@@ -396,12 +381,12 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('compound');
     }
 
-    public function removeCompound(): OptionsBuilderInterface
+    public function removeCompound(): static
     {
         return $this->removeOption('compound');
     }
 
-    public function setBlockName(string $name): OptionsBuilderInterface
+    public function setBlockName(string $name): static
     {
         return $this->setOption('block_name', $name);
     }
@@ -411,18 +396,17 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('block_name');
     }
 
-    public function removeBlockName(): OptionsBuilderInterface
+    public function removeBlockName(): static
     {
         return $this->removeOption('block_name');
     }
 
-    public function setAttr(array $attr): OptionsBuilderInterface
+    public function setAttr(array $attr): static
     {
         return $this->setOption('attr', $attr);
     }
 
-    /** @return $this */
-    public function addAttr(string $name, $value): OptionsBuilderInterface
+    public function addAttr(string $name, $value): static
     {
         $attr = $this->getAttr();
         if (is_null($attr)) {
@@ -439,21 +423,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->getOption('attr');
     }
 
-    public function getAttrByName(string $name)
-    {
-        $attr = $this->getOption('attr');
-
-        if (is_array($attr) === false) {
-            $return = null;
-        } else {
-            $key = array_search($name, $attr);
-            $return = ($key === false) ? null : $attr[$key];
-        }
-
-        return $return;
-    }
-
-    public function removeAttr(): OptionsBuilderInterface
+    public function removeAttr(): static
     {
         return $this->removeOption('attr');
     }

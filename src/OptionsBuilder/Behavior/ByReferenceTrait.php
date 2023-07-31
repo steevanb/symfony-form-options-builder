@@ -6,17 +6,13 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait ByReferenceTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/collection.html#by-reference
-     */
-    public function setByReference(bool $byReference = true): OptionsBuilderInterface
+    public function setByReference(bool $byReference = true): static
     {
         return $this->setOption('by_reference', $byReference);
     }
@@ -26,8 +22,7 @@ trait ByReferenceTrait
         return $this->getOption('by_reference');
     }
 
-    /** @return $this */
-    public function removeByReference(): self
+    public function removeByReference(): static
     {
         return $this->removeOption('by_reference');
     }

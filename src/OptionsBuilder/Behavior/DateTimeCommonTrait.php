@@ -6,39 +6,30 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait DateTimeCommonTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @param string|array $placeholder
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#placeholder
-     */
-    public function setPlaceHolder($placeholder): OptionsBuilderInterface
+    /** @param string|array<string, string> $placeholder */
+    public function setPlaceHolder(string|array $placeholder): static
     {
         return $this->setOption('placeholder', $placeholder);
     }
 
-    /** @return string|array|null */
-    public function getPlaceHolder()
+    /** @return string|array<string, string>|null */
+    public function getPlaceHolder(): string|array|null
     {
         return $this->getOption('placeholder');
     }
 
-    /** @return $this */
-    public function removePlaceholder(): OptionsBuilderInterface
+    public function removePlaceholder(): static
     {
         return $this->removeOption('placeholder');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#input
-     */
-    public function setInput(string $input): OptionsBuilderInterface
+    public function setInput(string $input): static
     {
         return $this->setOption('input', $input);
     }
@@ -48,17 +39,12 @@ trait DateTimeCommonTrait
         return $this->getOption('input');
     }
 
-    /** @return $this */
-    public function removeInput(): OptionsBuilderInterface
+    public function removeInput(): static
     {
         return $this->removeOption('input');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#model-timezone
-     */
-    public function setModelTimezone(string $timezone): OptionsBuilderInterface
+    public function setModelTimezone(string $timezone): static
     {
         return $this->setOption('model_timezone', $timezone);
     }
@@ -68,17 +54,12 @@ trait DateTimeCommonTrait
         return $this->getOption('model_timezone');
     }
 
-    /** @return $this */
-    public function removeModelTimezone(): OptionsBuilderInterface
+    public function removeModelTimezone(): static
     {
         return $this->removeOption('model_timezone');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#view-timezone
-     */
-    public function setViewTimezone(string $viewTimezone): OptionsBuilderInterface
+    public function setViewTimezone(string $viewTimezone): static
     {
         return $this->setOption('view_timezone', $viewTimezone);
     }
@@ -88,17 +69,12 @@ trait DateTimeCommonTrait
         return $this->getOption('view_timezone');
     }
 
-    /** @return $this */
-    public function removeViewTimezone(): OptionsBuilderInterface
+    public function removeViewTimezone(): static
     {
         return $this->removeOption('view_timezone');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#widget
-     */
-    public function setWidget(string $widget): OptionsBuilderInterface
+    public function setWidget(string $widget): static
     {
         return $this->setOption('widget', $widget);
     }
@@ -108,8 +84,7 @@ trait DateTimeCommonTrait
         return $this->getOption('widget');
     }
 
-    /** @return $this */
-    public function removeWidget(): OptionsBuilderInterface
+    public function removeWidget(): static
     {
         return $this->removeOption('widget');
     }

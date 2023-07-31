@@ -21,7 +21,8 @@ class OrmEditableQueryBuilderLoader extends ORMQueryBuilderLoader
         $this->editableQueryBuilderConfig = $editableQueryBuilderConfig;
     }
 
-    public function getEntities()
+    /** @return array<object> */
+    public function getEntities(): array
     {
         $query = $this->getQueryBuilder()->getQuery();
         if (is_callable($this->editableQueryBuilderConfig->getQueryCallBack())) {
@@ -35,6 +36,7 @@ class OrmEditableQueryBuilderLoader extends ORMQueryBuilderLoader
     {
         $reflectionProperty = new \ReflectionProperty(get_parent_class($this), 'queryBuilder');
         $reflectionProperty->setAccessible(true);
+        /** @var QueryBuilder $return */
         $return = $reflectionProperty->getValue($this);
         $reflectionProperty->setAccessible(false);
 

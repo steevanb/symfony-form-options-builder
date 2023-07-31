@@ -6,17 +6,13 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait Html5Trait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#html5
-     */
-    public function setHtml5(bool $html5 = true): OptionsBuilderInterface
+    public function setHtml5(bool $html5 = true): static
     {
         return $this->setOption('html5', $html5);
     }
@@ -26,8 +22,7 @@ trait Html5Trait
         return $this->getOption('html5');
     }
 
-    /** @return $this */
-    public function removeHtml5(): OptionsBuilderInterface
+    public function removeHtml5(): static
     {
         return $this->removeOption('html5');
     }
