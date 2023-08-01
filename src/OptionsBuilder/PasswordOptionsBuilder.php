@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-use Steevanb\SymfonyFormOptionsBuilder\{
-    OptionsBuilder\Behavior\AbstractOptionsBuilder,
-    OptionsBuilder\Behavior\OptionsBuilderInterface
-};
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\AbstractOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class PasswordOptionsBuilder extends AbstractOptionsBuilder
@@ -17,11 +14,7 @@ class PasswordOptionsBuilder extends AbstractOptionsBuilder
         return PasswordType::class;
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/password.html#always-empty
-     */
-    public function setAlwaysEmpty(bool $alwaysEmpty = true)
+    public function setAlwaysEmpty(bool $alwaysEmpty = true):static
     {
         return $this->setOption('always_empty', $alwaysEmpty);
     }
@@ -31,8 +24,7 @@ class PasswordOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('always_empty');
     }
 
-    /** @return $this */
-    public function removeAlwaysEmpty(): OptionsBuilderInterface
+    public function removeAlwaysEmpty(): static
     {
         return $this->removeOption('always_empty');
     }

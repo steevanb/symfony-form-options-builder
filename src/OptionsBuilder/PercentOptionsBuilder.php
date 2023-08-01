@@ -6,8 +6,7 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
 use Steevanb\SymfonyFormOptionsBuilder\{
     OptionsBuilder\Behavior\AbstractOptionsBuilder,
-    OptionsBuilder\Behavior\ScaleTrait,
-    OptionsBuilder\Behavior\OptionsBuilderInterface
+    OptionsBuilder\Behavior\ScaleTrait
 };
 use Symfony\Component\Form\Extension\Core\Type\PercentType;
 
@@ -23,11 +22,7 @@ class PercentOptionsBuilder extends AbstractOptionsBuilder
         return PercentType::class;
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/percent.html#type
-     */
-    public function setType(string $type): OptionsBuilderInterface
+    public function setType(string $type): static
     {
         return $this->setOption('type', $type);
     }
@@ -37,8 +32,7 @@ class PercentOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('type');
     }
 
-    /** @return $this */
-    public function removeType(): OptionsBuilderInterface
+    public function removeType(): static
     {
         return $this->removeOption('type');
     }

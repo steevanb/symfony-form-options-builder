@@ -142,7 +142,6 @@ class RootFormOptionsBuilder extends AbstractFormOptionsBuilder implements RootF
         return $this->setOption('validation_groups', $groups);
     }
 
-    /** @return $this */
     public function addValidationGroup(string $group): RootFormOptionsBuilderInterface
     {
         $groups = $this->getValidationGroups();

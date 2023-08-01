@@ -6,77 +6,64 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait TimeTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#hours
-     */
-    public function setHours(array $hours): OptionsBuilderInterface
+    /** @param array<int> $hours */
+    public function setHours(array $hours): static
     {
         return $this->setOption('hours', $hours);
     }
 
+    /** @return array<int>|null */
     public function getHours(): ?array
     {
         return $this->getOption('hours');
     }
 
-    /** @return $this */
-    public function removeHours(): OptionsBuilderInterface
+    public function removeHours(): static
     {
         return $this->removeOption('hours');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#minutes
-     */
-    public function setMinutes(array $minutes): OptionsBuilderInterface
+    /** @param array<int> $minutes */
+    public function setMinutes(array $minutes): static
     {
         return $this->setOption('minutes', $minutes);
     }
 
+    /** @return array<int>|null */
     public function getMinutes(): ?array
     {
         return $this->getOption('minutes');
     }
 
-    /** @return $this */
-    public function removeMinutes(): OptionsBuilderInterface
+    public function removeMinutes(): static
     {
         return $this->removeOption('minutes');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#seconds
-     */
-    public function setSeconds(array $seconds): OptionsBuilderInterface
+    /** @param array<int> $seconds */
+    public function setSeconds(array $seconds): static
     {
         return $this->setOption('seconds', $seconds);
     }
 
+    /** @return array<int>|null */
     public function getSeconds(): ?array
     {
         return $this->getOption('seconds');
     }
 
-    /** @return $this */
-    public function removeSeconds(): OptionsBuilderInterface
+    public function removeSeconds(): static
     {
         return $this->removeOption('seconds');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#with-minutes
-     */
-    public function setWithMinutes(bool $withMinutes = true): OptionsBuilderInterface
+    public function setWithMinutes(bool $withMinutes = true): static
     {
         return $this->setOption('with_minutes', $withMinutes);
     }
@@ -86,17 +73,12 @@ trait TimeTrait
         return $this->getOption('with_minutes');
     }
 
-    /** @return $this */
-    public function removeWithMinutes(): OptionsBuilderInterface
+    public function removeWithMinutes(): static
     {
         return $this->removeOption('with_minutes');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/time.html#with-seconds
-     */
-    public function setWithSeconds(bool $withSeconds = true): OptionsBuilderInterface
+    public function setWithSeconds(bool $withSeconds = true): static
     {
         return $this->setOption('with_seconds', $withSeconds);
     }
@@ -106,8 +88,7 @@ trait TimeTrait
         return $this->getOption('with_seconds');
     }
 
-    /** @return $this */
-    public function removeWithSeconds(): OptionsBuilderInterface
+    public function removeWithSeconds(): static
     {
         return $this->removeOption('with_seconds');
     }

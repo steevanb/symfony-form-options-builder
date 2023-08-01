@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 
-
-use Steevanb\SymfonyFormOptionsBuilder\{
-    OptionsBuilder\Behavior\AbstractOptionsBuilder,
-    OptionsBuilder\Behavior\OptionsBuilderInterface
-};
+use Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior\AbstractOptionsBuilder;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 
 class UrlOptionsBuilder extends AbstractOptionsBuilder
@@ -22,11 +18,7 @@ class UrlOptionsBuilder extends AbstractOptionsBuilder
         return UrlType::class;
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/url.html#default-protocol
-     */
-    public function setDefaultProtocol(string $protocol): OptionsBuilderInterface
+    public function setDefaultProtocol(string $protocol): static
     {
         return $this->setOption('default_protocol', $protocol);
     }
@@ -36,8 +28,7 @@ class UrlOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('default_protocol');
     }
 
-    /** @return $this */
-    public function removeDefaultProtocol(): OptionsBuilderInterface
+    public function removeDefaultProtocol(): static
     {
         return $this->removeOption('default_protocol');
     }

@@ -6,17 +6,13 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait ScaleTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/integer.html#scale
-     */
-    public function setScale(int $scale): OptionsBuilderInterface
+    public function setScale(int $scale): static
     {
         return $this->setOption('scale', $scale);
     }
@@ -26,8 +22,7 @@ trait ScaleTrait
         return $this->getOption('scale');
     }
 
-    /** @return $this */
-    public function removeScale(): OptionsBuilderInterface
+    public function removeScale(): static
     {
         return $this->removeOption('scale');
     }

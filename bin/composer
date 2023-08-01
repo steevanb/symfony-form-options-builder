@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -eu
+
+readonly ROOT_PATH="$(realpath "$(dirname "$(realpath "$0")")/..")"
+source "${ROOT_PATH}"/bin/common.inc.sh
+BIN_DIR=bin \
+    source "${ROOT_PATH}"/bin/dockerise.inc.bash
+
+php8.1 /usr/local/bin/composer "${@}"

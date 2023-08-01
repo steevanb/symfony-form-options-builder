@@ -10,8 +10,7 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
 {
     protected $options = [];
 
-    /** @return $this */
-    public static function create(): FormOptionsBuilderInterface
+    public static function create(): static
     {
         return new static();
     }
@@ -21,7 +20,7 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->options;
     }
 
-    public function setOption(string $name, $value): FormOptionsBuilderInterface
+    public function setOption(string $name, $value): static
     {
         $this->options[$name] = $value;
 
@@ -33,7 +32,7 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return (array_key_exists($name, $this->options)) ? $this->options[$name] : null;
     }
 
-    public function removeOption(string $name): FormOptionsBuilderInterface
+    public function removeOption(string $name): static
     {
         if (array_key_exists($name, $this->options)) {
             unset($this->options[$name]);
@@ -42,7 +41,7 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this;
     }
 
-    public function setAllowExtraFields(bool $allow = true): FormOptionsBuilderInterface
+    public function setAllowExtraFields(bool $allow = true): static
     {
         return $this->setOption('allow_extra_fields', $allow);
     }
@@ -52,12 +51,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('allow_extra_fields');
     }
 
-    public function removeAllowExtraFields(): FormOptionsBuilderInterface
+    public function removeAllowExtraFields(): static
     {
         return $this->removeOption('allow_extra_fields');
     }
 
-    public function setExtraFieldsMessage(?string $message): FormOptionsBuilderInterface
+    public function setExtraFieldsMessage(?string $message): static
     {
         return $this->setOption('extra_fields_message', $message);
     }
@@ -67,12 +66,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('extra_fields_message');
     }
 
-    public function removeExtraFieldsMessage(): FormOptionsBuilderInterface
+    public function removeExtraFieldsMessage(): static
     {
         return $this->removeOption('extra_fields_message');
     }
 
-    public function setAutoInitialize(bool $autoInitialize = true): FormOptionsBuilderInterface
+    public function setAutoInitialize(bool $autoInitialize = true): static
     {
         return $this->setOption('auto_initialize', $autoInitialize);
     }
@@ -82,12 +81,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('auto_initialize');
     }
 
-    public function removeAutoInitialize(): FormOptionsBuilderInterface
+    public function removeAutoInitialize(): static
     {
         return $this->removeOption('auto_initialize');
     }
 
-    public function setErrorMapping(array $mapping): FormOptionsBuilderInterface
+    public function setErrorMapping(array $mapping): static
     {
         return $this->setOption('error_mapping', $mapping);
     }
@@ -97,12 +96,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('error_mapping');
     }
 
-    public function removeErrorMapping(): FormOptionsBuilderInterface
+    public function removeErrorMapping(): static
     {
         return $this->removeOption('error_mapping');
     }
 
-    public function setIntention(string $intention): FormOptionsBuilderInterface
+    public function setIntention(string $intention): static
     {
         return $this->setOption('intention', $intention);
     }
@@ -112,17 +111,17 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('intention');
     }
 
-    public function removeIntention(): FormOptionsBuilderInterface
+    public function removeIntention(): static
     {
         return $this->removeOption('intention');
     }
 
-    public function setAttr(array $attr): FormOptionsBuilderInterface
+    public function setAttr(array $attr): static
     {
         return $this->setOption('attr', $attr);
     }
 
-    public function addAttr(string $name, $value): FormOptionsBuilderInterface
+    public function addAttr(string $name, $value): static
     {
         $attr = $this->getAttr();
         if (is_null($attr)) {
@@ -153,17 +152,17 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $return;
     }
 
-    public function removeAttr(): FormOptionsBuilderInterface
+    public function removeAttr(): static
     {
         return $this->removeOption('attr');
     }
 
-    public function setLabel(string $label): FormOptionsBuilderInterface
+    public function setLabel(string $label): static
     {
         return $this->setOption('label', $label);
     }
 
-    public function disableLabel(): FormOptionsBuilderInterface
+    public function disableLabel(): static
     {
         return $this->setOption('label', false);
     }
@@ -173,12 +172,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('label');
     }
 
-    public function removeLabel(): FormOptionsBuilderInterface
+    public function removeLabel(): static
     {
         return $this->removeOption('label');
     }
 
-    public function setLabelAttr(array $attr): FormOptionsBuilderInterface
+    public function setLabelAttr(array $attr): static
     {
         return $this->setOption('label_attr', $attr);
     }
@@ -188,12 +187,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('label_attr');
     }
 
-    public function removeLabelAttr(): FormOptionsBuilderInterface
+    public function removeLabelAttr(): static
     {
         return $this->removeOption('label_attr');
     }
 
-    public function setLabelFormat(string $format): FormOptionsBuilderInterface
+    public function setLabelFormat(string $format): static
     {
         return $this->setOption('label_format', $format);
     }
@@ -203,12 +202,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('label_format');
     }
 
-    public function removeLabelFormat(): FormOptionsBuilderInterface
+    public function removeLabelFormat(): static
     {
         return $this->removeOption('label_format');
     }
 
-    public function setBlockName(string $name): FormOptionsBuilderInterface
+    public function setBlockName(string $name): static
     {
         return $this->setOption('block_name', $name);
     }
@@ -218,12 +217,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('block_name');
     }
 
-    public function removeBlockName(): FormOptionsBuilderInterface
+    public function removeBlockName(): static
     {
         return $this->removeOption('block_name');
     }
 
-    public function setCompound(bool $compound = true): FormOptionsBuilderInterface
+    public function setCompound(bool $compound = true): static
     {
         return $this->setOption('compound', $compound);
     }
@@ -233,17 +232,17 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('compound');
     }
 
-    public function removeCompound(): FormOptionsBuilderInterface
+    public function removeCompound(): static
     {
         return $this->removeOption('compound');
     }
 
-    public function setConstraints(array $constraints): FormOptionsBuilderInterface
+    public function setConstraints(array $constraints): static
     {
         return $this->setOption('constraints', $constraints);
     }
 
-    public function addConstraint(Constraint $constraint): FormOptionsBuilderInterface
+    public function addConstraint(Constraint $constraint): static
     {
         $constraints = $this->getConstraints();
         if (is_array($constraints) === false) {
@@ -260,12 +259,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('constraints');
     }
 
-    public function removeConstraints(): FormOptionsBuilderInterface
+    public function removeConstraints(): static
     {
         return $this->removeOption('constraints');
     }
 
-    public function setDisabled(bool $disabled = true): FormOptionsBuilderInterface
+    public function setDisabled(bool $disabled = true): static
     {
         return $this->setOption('disabled', $disabled);
     }
@@ -275,12 +274,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('disabled');
     }
 
-    public function removeDisabled(): FormOptionsBuilderInterface
+    public function removeDisabled(): static
     {
         return $this->removeOption('disabled');
     }
 
-    public function setEmptyData($emptyData): FormOptionsBuilderInterface
+    public function setEmptyData($emptyData): static
     {
         return $this->setOption('empty_data', $emptyData);
     }
@@ -290,12 +289,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('empty_data');
     }
 
-    public function removeEmptyData(): FormOptionsBuilderInterface
+    public function removeEmptyData(): static
     {
         return $this->removeOption('empty_data');
     }
 
-    public function setErrorBubbling(bool $errorBubbling = true): FormOptionsBuilderInterface
+    public function setErrorBubbling(bool $errorBubbling = true): static
     {
         return $this->setOption('error_bubbling', $errorBubbling);
     }
@@ -305,12 +304,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('error_bubbling');
     }
 
-    public function removeErrorBubbling(): FormOptionsBuilderInterface
+    public function removeErrorBubbling(): static
     {
         return $this->removeOption('error_bubbling');
     }
 
-    public function setInheritData(bool $inherit = true): FormOptionsBuilderInterface
+    public function setInheritData(bool $inherit = true): static
     {
         return $this->setOption('inherit_data', $inherit);
     }
@@ -320,12 +319,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('inherit_data');
     }
 
-    public function removeInheritData(): FormOptionsBuilderInterface
+    public function removeInheritData(): static
     {
         return $this->removeOption('inherit_data');
     }
 
-    public function setInvalidMessage(string $message): FormOptionsBuilderInterface
+    public function setInvalidMessage(string $message): static
     {
         return $this->setOption('invalid_message', $message);
     }
@@ -335,12 +334,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('invalid_message');
     }
 
-    public function removeInvalidMessage(): FormOptionsBuilderInterface
+    public function removeInvalidMessage(): static
     {
         return $this->removeOption('invalid_message');
     }
 
-    public function setInvalidMessageParameters(array $parameters): FormOptionsBuilderInterface
+    public function setInvalidMessageParameters(array $parameters): static
     {
         return $this->setOption('invalid_message_parameters', $parameters);
     }
@@ -350,12 +349,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('invalid_message_parameters');
     }
 
-    public function removeInvalidMessageParameters(): FormOptionsBuilderInterface
+    public function removeInvalidMessageParameters(): static
     {
         return $this->removeOption('invalid_message_parameters');
     }
 
-    public function setMapped(bool $mapped = true): FormOptionsBuilderInterface
+    public function setMapped(bool $mapped = true): static
     {
         return $this->setOption('mapped', $mapped);
     }
@@ -365,12 +364,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('mapped');
     }
 
-    public function removeMapped(): FormOptionsBuilderInterface
+    public function removeMapped(): static
     {
         return $this->removeOption('mapped');
     }
 
-    public function setPropertyPath(string $path): FormOptionsBuilderInterface
+    public function setPropertyPath(string $path): static
     {
         return $this->setOption('property_path', $path);
     }
@@ -380,12 +379,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('property_path');
     }
 
-    public function removePropertyPath(): FormOptionsBuilderInterface
+    public function removePropertyPath(): static
     {
         return $this->removeOption('property_path');
     }
 
-    public function setRequired(bool $required = true): FormOptionsBuilderInterface
+    public function setRequired(bool $required = true): static
     {
         return $this->setOption('required', $required);
     }
@@ -395,17 +394,17 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('required');
     }
 
-    public function removeRequired(): FormOptionsBuilderInterface
+    public function removeRequired(): static
     {
         return $this->removeOption('required');
     }
 
-    public function setTranslationDomain(string $domain): FormOptionsBuilderInterface
+    public function setTranslationDomain(string $domain): static
     {
         return $this->setOption('translation_domain', $domain);
     }
 
-    public function disableTranslationDomain(): FormOptionsBuilderInterface
+    public function disableTranslationDomain(): static
     {
         return $this->setOption('translation_domain', false);
     }
@@ -415,12 +414,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('translation_domain');
     }
 
-    public function removeTranslationDomain(): FormOptionsBuilderInterface
+    public function removeTranslationDomain(): static
     {
         return $this->removeOption('translation_domain');
     }
 
-    public function setTrim(bool $trim = true): FormOptionsBuilderInterface
+    public function setTrim(bool $trim = true): static
     {
         return $this->setOption('trim', $trim);
     }
@@ -430,12 +429,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('trim');
     }
 
-    public function removeTrim(): FormOptionsBuilderInterface
+    public function removeTrim(): static
     {
         return $this->removeOption('trim');
     }
 
-    public function setByReference(bool $byReference = true): FormOptionsBuilderInterface
+    public function setByReference(bool $byReference = true): static
     {
         return $this->setOption('by_reference', $byReference);
     }
@@ -445,12 +444,12 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('by_reference');
     }
 
-    public function removeByReference(): FormOptionsBuilderInterface
+    public function removeByReference(): static
     {
         return $this->removeOption('by_reference');
     }
 
-    public function setData($data): FormOptionsBuilderInterface
+    public function setData($data): static
     {
         return $this->setOption('data', $data);
     }
@@ -460,17 +459,17 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('data');
     }
 
-    public function removeData(): FormOptionsBuilderInterface
+    public function removeData(): static
     {
         return $this->removeOption('data');
     }
 
-    public function setDataClass(string $class): FormOptionsBuilderInterface
+    public function setDataClass(string $class): static
     {
         return $this->setOption('data_class', $class);
     }
 
-    public function setDataClassClosure(\Closure $closure): FormOptionsBuilderInterface
+    public function setDataClassClosure(\Closure $closure): static
     {
         return $this->setOption('data_class', $closure);
     }
@@ -480,7 +479,7 @@ abstract class AbstractFormOptionsBuilder implements FormOptionsBuilderInterface
         return $this->getOption('data_class');
     }
 
-    public function removeDataClass(): FormOptionsBuilderInterface
+    public function removeDataClass(): static
     {
         return $this->removeOption('data_class');
     }

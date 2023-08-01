@@ -9,8 +9,7 @@ use Steevanb\SymfonyFormOptionsBuilder\{
     OptionsBuilder\Behavior\DateTimeCommonTrait,
     OptionsBuilder\Behavior\DateTrait,
     OptionsBuilder\Behavior\Html5Trait,
-    OptionsBuilder\Behavior\TimeTrait,
-    OptionsBuilder\Behavior\OptionsBuilderInterface
+    OptionsBuilder\Behavior\TimeTrait
 };
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
@@ -30,38 +29,27 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
         return DateTimeType::class;
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#date-format
-     */
-    public function setDateFormat(string $format): OptionsBuilderInterface
+    public function setDateFormat(string $format): static
     {
         return $this->setOption('date_format', $format);
     }
 
-    /** @return $this */
-    public function setDateFormatCode(int $format): OptionsBuilderInterface
+    public function setDateFormatCode(int $format): static
     {
         return $this->setOption('date_format', $format);
     }
 
-    /** @return int|string|null */
-    public function getDateFormat()
+    public function getDateFormat(): string|int|null
     {
         return $this->getOption('date_format');
     }
 
-    /** @return $this */
-    public function removeDateFormat(): OptionsBuilderInterface
+    public function removeDateFormat(): static
     {
         return $this->removeOption('date_format');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#date-widget
-     */
-    public function setDateWidget(string $widget): OptionsBuilderInterface
+    public function setDateWidget(string $widget): static
     {
         return $this->setOption('date_widget', $widget);
     }
@@ -71,17 +59,12 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('date_widget');
     }
 
-    /** @return $this */
-    public function removeDateWidget(): OptionsBuilderInterface
+    public function removeDateWidget(): static
     {
         return $this->removeOption('date_widget');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#time-widget
-     */
-    public function setTimeWidget(string $widget): OptionsBuilderInterface
+    public function setTimeWidget(string $widget): static
     {
         return $this->setOption('time_widget', $widget);
     }
@@ -91,8 +74,7 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('time_widget');
     }
 
-    /** @return $this */
-    public function removeTimeWidget()
+    public function removeTimeWidget(): static
     {
         return $this->removeOption('time_widget');
     }

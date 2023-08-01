@@ -6,41 +6,34 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait DateTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    abstract public function setWidget(string $widget): OptionsBuilderInterface;
+    abstract public function setWidget(string $widget): static;
 
     abstract public function getWidget(): ?string;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#days
-     */
-    public function setDays(array $days): OptionsBuilderInterface
+    /** @param array<int> $days */
+    public function setDays(array $days): static
     {
         return $this->setOption('days', $days);
     }
 
+    /** @return array<int>|null */
     public function getDays(): ?array
     {
         return $this->getOption('days');
     }
 
-    /** @return $this */
-    public function removeDays(): OptionsBuilderInterface
+    public function removeDays(): static
     {
         return $this->removeOption('days');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/date.html#format
-     */
-    public function setFormat(string $format): OptionsBuilderInterface
+    public function setFormat(string $format): static
     {
         return $this->setOption('format', $format);
     }
@@ -50,48 +43,41 @@ trait DateTrait
         return $this->getOption('format');
     }
 
-    /** @return $this */
-    public function removeFormat(): OptionsBuilderInterface
+    public function removeFormat(): static
     {
         return $this->removeOption('format');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#months
-     */
-    public function setMonths(array $months): OptionsBuilderInterface
+    /** @param array<int> $months */
+    public function setMonths(array $months): static
     {
         return $this->setOption('months', $months);
     }
 
-    public function getMonths(): array
+    /** @return array<int>|null */
+    public function getMonths(): ?array
     {
         return $this->getOption('months');
     }
 
-    /** @return $this */
-    public function removeMonths(): OptionsBuilderInterface
+    public function removeMonths(): static
     {
         return $this->removeOption('months');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/datetime.html#years
-     */
-    public function setYears(array $years): OptionsBuilderInterface
+    /** @param array<int> $years */
+    public function setYears(array $years): static
     {
         return $this->setOption('years', $years);
     }
 
-    public function getYears(): array
+    /** @return array<int>|null */
+    public function getYears(): ?array
     {
         return $this->getOption('years');
     }
 
-    /** @return $this */
-    public function removeYears(): OptionsBuilderInterface
+    public function removeYears(): static
     {
         return $this->removeOption('years');
     }

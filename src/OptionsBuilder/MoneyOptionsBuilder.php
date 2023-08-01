@@ -7,7 +7,6 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder;
 use Steevanb\SymfonyFormOptionsBuilder\{
     OptionsBuilder\Behavior\AbstractOptionsBuilder,
     OptionsBuilder\Behavior\GroupingTrait,
-    OptionsBuilder\Behavior\OptionsBuilderInterface,
     OptionsBuilder\Behavior\ScaleTrait
 };
 use Symfony\Component\Form\Extension\Core\Type\MoneyType;
@@ -22,17 +21,12 @@ class MoneyOptionsBuilder extends AbstractOptionsBuilder
         return MoneyType::class;
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/money.html#currency
-     */
-    public function setCurrency(string $currency): OptionsBuilderInterface
+    public function setCurrency(string $currency): static
     {
         return $this->setOption('currency', $currency);
     }
 
-    /** @return $this */
-    public function disableCurrency()
+    public function disableCurrency(): static
     {
         return $this->setOption('currency', false);
     }
@@ -43,17 +37,12 @@ class MoneyOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('currency');
     }
 
-    /** @return $this */
-    public function removeCurrency(): OptionsBuilderInterface
+    public function removeCurrency(): static
     {
         return $this->removeOption('currency');
     }
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/money.html#divisor
-     */
-    public function setDivisor(int $divisor): OptionsBuilderInterface
+    public function setDivisor(int $divisor): static
     {
         return $this->setOption('divisor', $divisor);
     }
@@ -63,8 +52,7 @@ class MoneyOptionsBuilder extends AbstractOptionsBuilder
         return $this->getOption('divisor');
     }
 
-    /** @return $this */
-    public function removeDivisor(): OptionsBuilderInterface
+    public function removeDivisor(): static
     {
         return $this->removeOption('divisor');
     }

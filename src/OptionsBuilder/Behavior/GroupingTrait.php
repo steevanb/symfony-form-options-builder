@@ -6,30 +6,23 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait GroupingTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @param int|false $grouping
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/integer.html#grouping
-     */
-    public function setGrouping($grouping): OptionsBuilderInterface
+    public function setGrouping(bool $grouping): static
     {
         return $this->setOption('grouping', $grouping);
     }
 
-    /** @return int|false|null */
-    public function getGrouping()
+    public function getGrouping(): ?bool
     {
         return $this->getOption('grouping');
     }
 
-    /** @return $this */
-    public function removeGrouping(): OptionsBuilderInterface
+    public function removeGrouping(): static
     {
         return $this->removeOption('grouping');
     }

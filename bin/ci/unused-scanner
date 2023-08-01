@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -eu
+
+readonly ROOT_PATH="$(realpath "$(dirname "$(realpath "$0")")/../..")"
+source "${ROOT_PATH}"/bin/common.inc.sh
+source "${ROOT_PATH}"/bin/dockerise.inc.bash
+
+unused-scanner "${ROOT_PATH}"/config/ci/unused-scanner.php

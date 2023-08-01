@@ -6,17 +6,13 @@ namespace Steevanb\SymfonyFormOptionsBuilder\OptionsBuilder\Behavior;
 
 trait RoundingModeTrait
 {
-    abstract public function setOption(string $name, $value): OptionsBuilderInterface;
+    abstract public function setOption(string $name, $value): static;
 
     abstract public function getOption(string $name);
 
-    abstract public function removeOption(string $name): OptionsBuilderInterface;
+    abstract public function removeOption(string $name): static;
 
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/integer.html#rounding-mode
-     */
-    public function setRoundingMode(int $roundingMode): OptionsBuilderInterface
+    public function setRoundingMode(int $roundingMode): static
     {
         return $this->setOption('rounding_mode', $roundingMode);
     }
@@ -26,8 +22,7 @@ trait RoundingModeTrait
         return $this->getOption('rounding_mode');
     }
 
-    /** @return $this */
-    public function removeRoundingMode(): OptionsBuilderInterface
+    public function removeRoundingMode(): static
     {
         return $this->removeOption('rounding_mode');
     }
