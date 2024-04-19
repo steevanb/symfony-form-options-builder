@@ -1,10 +1,11 @@
-# master
+# 5.0.0
 
 - Move files from root to `src/`
 - Change namespace from `steevanb\SymfonyFormOptionsBuilder` to `Steevanb\SymfonyFormOptionsBuilder`
 - [BC Break] Remove `BlockPrefixTrait`, symfony does the same trick now
 - [BC Break] Fix `removeEntryOptions()` name (it was `removeEntryOotions()`)
 - [BC Break] Remove `services.yml`
+- Add Symfony ^7.0 compatibility
 
 ### [4.4.1](../../compare/4.4.0...4.4.1) - 2023-07-31
 
