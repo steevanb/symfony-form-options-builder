@@ -20,6 +20,7 @@ class NumberOptionsBuilder extends AbstractOptionsBuilder
     use RoundingModeTrait;
     use Html5Trait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return NumberType::class;

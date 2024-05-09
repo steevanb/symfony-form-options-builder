@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class TextOptionsBuilder extends AbstractOptionsBuilder
 {
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return TextType::class;

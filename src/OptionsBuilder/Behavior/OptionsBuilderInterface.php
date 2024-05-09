@@ -9,6 +9,7 @@ interface OptionsBuilderInterface
     /** @return $this */
     public static function create(): self;
 
+    /** @return class-string */
     public static function getBuilderType(): string;
 
     /** @return $this */
@@ -21,6 +22,7 @@ interface OptionsBuilderInterface
 
     public function asArray(): array;
 
+    /** @return ($child is null ? array{string, array<mixed>} : array{string, string, array<mixed>}) */
     public function asVariadic(?string $child = null): array;
 
     /**

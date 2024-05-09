@@ -13,6 +13,7 @@ use Steevanb\SymfonyFormOptionsBuilder\{
     OptionsBuilder\Behavior\AbstractOptionsBuilder,
     OptionsBuilder\Behavior\ChoiceTypeTrait,
     OptionsBuilder\Behavior\ByReferenceTrait,
+    OptionsBuilder\Behavior\ClassTrait,
     OptionsBuilder\Behavior\DataClassTrait,
     OptionsBuilder\Behavior\OptionsBuilderInterface
 };
@@ -23,24 +24,12 @@ class EntityOptionsBuilder extends AbstractOptionsBuilder
     use ChoiceTypeTrait;
     use DataClassTrait;
     use ByReferenceTrait;
+    use ClassTrait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return EntityType::class;
-    }
-
-    /**
-     * @return $this
-     * @link http://symfony.com/doc/3.0/reference/forms/types/entity.html#class
-     */
-    public function setClass(string $class): OptionsBuilderInterface
-    {
-        return $this->setOption('class', $class);
-    }
-
-    public function getClass(): ?string
-    {
-        return $this->getOption('class');
     }
 
     /** @return $this */

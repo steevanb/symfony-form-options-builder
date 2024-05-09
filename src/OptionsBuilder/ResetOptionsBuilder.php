@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\ResetType;
 
 class ResetOptionsBuilder extends AbstractOptionsBuilder
 {
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return ResetType::class;

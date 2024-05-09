@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class TextareaOptionsBuilder extends AbstractOptionsBuilder
 {
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return TextareaType::class;

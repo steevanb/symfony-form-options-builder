@@ -14,6 +14,7 @@ class ChoiceOptionsBuilder extends AbstractOptionsBuilder
 {
     use ChoiceTypeTrait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return ChoiceType::class;
