@@ -18,6 +18,7 @@ class IntegerOptionsBuilder extends AbstractOptionsBuilder
     use ScaleTrait;
     use RoundingModeTrait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return IntegerType::class;

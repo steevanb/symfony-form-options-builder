@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class SubmitOptionsBuilder extends AbstractOptionsBuilder
 {
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return SubmitType::class;

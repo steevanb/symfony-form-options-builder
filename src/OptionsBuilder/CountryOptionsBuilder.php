@@ -14,6 +14,7 @@ class CountryOptionsBuilder extends AbstractOptionsBuilder
 {
     use ChoiceTypeTrait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return CountryType::class;

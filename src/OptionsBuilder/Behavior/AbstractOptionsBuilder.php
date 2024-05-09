@@ -21,6 +21,7 @@ abstract class AbstractOptionsBuilder implements OptionsBuilderInterface
         return $this->options;
     }
 
+    /** @return ($child is null ? array{string, array<mixed>} : array{string, string, array<mixed>}) */
     public function asVariadic(?string $child = null): array
     {
         return ($child === null)

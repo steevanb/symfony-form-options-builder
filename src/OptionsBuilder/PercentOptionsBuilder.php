@@ -18,6 +18,7 @@ class PercentOptionsBuilder extends AbstractOptionsBuilder
     public const TYPE_FRACTIONAL = 'fractional';
     public const TYPE_INTEGER = 'integer';
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return PercentType::class;

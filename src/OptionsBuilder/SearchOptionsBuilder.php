@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\SearchType;
 
 class SearchOptionsBuilder extends AbstractOptionsBuilder
 {
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return SearchType::class;

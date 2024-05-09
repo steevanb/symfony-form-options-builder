@@ -15,6 +15,7 @@ class FileOptionsBuilder extends AbstractOptionsBuilder
 {
     use DataClassTrait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return FileType::class;

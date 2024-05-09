@@ -18,6 +18,7 @@ class CollectionOptionsBuilder extends AbstractOptionsBuilder
 {
     use ByReferenceTrait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return CollectionType::class;

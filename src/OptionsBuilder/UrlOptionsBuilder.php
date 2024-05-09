@@ -17,6 +17,7 @@ class UrlOptionsBuilder extends AbstractOptionsBuilder
     public const PROTOCOL_HTTPS = 'https';
     public const PROTOCOL_FTP = 'ftp';
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return UrlType::class;

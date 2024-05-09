@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 
 class ButtonOptionsBuilder extends AbstractOptionsBuilder
 {
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return ButtonType::class;

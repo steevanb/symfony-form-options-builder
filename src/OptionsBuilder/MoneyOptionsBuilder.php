@@ -17,6 +17,7 @@ class MoneyOptionsBuilder extends AbstractOptionsBuilder
     use GroupingTrait;
     use ScaleTrait;
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return MoneyType::class;

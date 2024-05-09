@@ -12,6 +12,7 @@ use Steevanb\SymfonyFormOptionsBuilder\{
 
 class EntityEditableQueryBuilderOptionsBuilder extends EntityOptionsBuilder
 {
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return EntityEditableQueryBuilderType::class;

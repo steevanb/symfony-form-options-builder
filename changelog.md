@@ -1,4 +1,11 @@
-# 5.0.0
+### [5.1.0](../../compare/5.0.0...5.1.0) - 2023-05-09
+
+- Add conditionnal array shapes on `asVariadic()`
+- Add class-string on `setClass()` and `getClass()`
+- Add `EnumOptionsBuilder`
+- Add `ClassTrait`
+
+### [5.0.0](../../compare/4.4.1...5.5.0) - 2024-04-19
 
 - Move files from root to `src/`
 - Change namespace from `steevanb\SymfonyFormOptionsBuilder` to `Steevanb\SymfonyFormOptionsBuilder`

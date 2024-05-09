@@ -25,6 +25,7 @@ class DateTimeOptionsBuilder extends AbstractOptionsBuilder
     public const WIDGET_TEXT = 'text';
     public const WIDGET_SINGLE_TEXT = 'single_text';
 
+    /** @return class-string */
     public static function getBuilderType(): string
     {
         return DateTimeType::class;
